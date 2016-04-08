@@ -39,7 +39,8 @@ PRODUCT_COPY_FILES += \
 
 # Copy LatinIME for gesture typing
 PRODUCT_COPY_FILES += \
-    vendor/bootleggers/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+    vendor/bootleggers/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
+    vendor/bootleggers/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
 
 # SELinux filesystem labels
 PRODUCT_COPY_FILES += \
