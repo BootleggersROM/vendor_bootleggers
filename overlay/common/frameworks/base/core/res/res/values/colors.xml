@@ -27,4 +27,8 @@
     <color name="user_icon_7">#ffff9800</color>
     <color name="user_icon_8">#ffff7043</color>
 
+    <!-- Multi-sim sim colors -->
+    <color name="Teal_700">@*android:color/accent_device_default_light</color>
+    <color name="Teal_800">@*android:color/accent_device_default_light</color>
+
 </resources>
