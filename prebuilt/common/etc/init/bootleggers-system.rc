@@ -13,6 +13,10 @@ on post-fs-data
     chown root log /dev/fscklogs/log
     chmod 0640 /dev/fscklogs/log
 
+    # Create an additional OTA package directory that unlike /data/ota_package
+    # will not be touched by GmsCore.
+    mkdir /data/shishu_updates 0770 system cache
+
 on boot
     # Persistent properties (only created if persist exists)
     mkdir /persist/properties 0770 system system
