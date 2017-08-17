@@ -83,6 +83,9 @@ ifeq ($(WITH_TWRP),true)
 include vendor/bootleggers/config/twrp.mk
 endif
 
+# Disable vendor restrictions
+PRODUCT_RESTRICT_VENDOR_FILES := false
+
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
