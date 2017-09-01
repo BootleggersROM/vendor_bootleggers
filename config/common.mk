@@ -154,7 +154,8 @@ PRODUCT_PACKAGES += \
     FootprintPurple \
     BubblegumPink \
     DryPaintMint \
-    FrenchBleu
+    FrenchBleu \
+    Stock
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
