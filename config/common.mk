@@ -192,8 +192,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_GENERIC_PROPERTIES += \
     media.sf.omx-plugin=libffmpeg_omx.so \
-    media.sf.extractor-plugin=libffmpeg_extractor.so \
-    ro.boot.vendor.overlay.theme=com.google.android.theme.footprintpurple
+    media.sf.extractor-plugin=libffmpeg_extractor.so
 
 # Storage manager
 PRODUCT_GENERIC_PROPERTIES += \
