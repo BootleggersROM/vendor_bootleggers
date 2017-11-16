@@ -90,7 +90,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Calculator \
     LatinIME \
-    BluetoothExt
+    BluetoothExt \
 #    WolvesDen \
 #    ThemeInterfacer \
 #    Eleven \
@@ -101,7 +101,13 @@ PRODUCT_PACKAGES += \
 #    GZRoms \
 #    Nova \
 #    NovaGoogleCompanion
-
+     CameraRoll \
+     LawnchairStable \
+     LawnchairFeed \
+     MiXplorerPrebuilt \
+     RetroMusic \
+     ViaPrebuilt
+     
 # Extra tools
 PRODUCT_PACKAGES += \
     openvpn \
