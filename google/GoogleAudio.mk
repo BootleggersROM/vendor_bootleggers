@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := vendor/gzosp/google
+LOCAL_PATH := vendor/bootleggers/google
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/alarms/A_real_hoot.ogg:system/media/audio/alarms/A_real_hoot.ogg \
@@ -79,8 +79,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ringtones/Schools_out.ogg:system/media/audio/ringtones/Schools_out.ogg \
     $(LOCAL_PATH)/ringtones/The_big_adventure.ogg:system/media/audio/ringtones/The_big_adventure.ogg \
     $(LOCAL_PATH)/ringtones/Zen_too.ogg:system/media/audio/ringtones/Zen_too.ogg
-
-PRODUCT_PROPERTY_OVERRIDES += \
-   ro.config.ringtone=The_big_adventure.ogg \
-   ro.config.notification_sound=Duet.ogg \
-   ro.config.alarm_alert=Sunshower.ogg

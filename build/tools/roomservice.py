@@ -41,12 +41,12 @@ except ImportError:
     urllib.request = urllib2
 
 DEBUG = False
-default_manifest = ".repo/manifests/gzosp_default.xml"
-custom_local_manifest = ".repo/local_manifests/gzosp_manifest.xml"
-custom_default_revision = "8.1"
-custom_dependencies = "gzosp.dependencies"
-org_manifest = "GZOSP-Devices"  # leave empty if org is provided in manifest
-org_display = "GZOSP-Devices"  # needed for displaying
+default_manifest = ".repo/manifests/bootleg_default.xml"
+custom_local_manifest = ".repo/local_manifests/bootleg_manifest.xml"
+custom_default_revision = "oreo.1"
+custom_dependencies = "bootleg.dependencies"
+org_manifest = "BootleggersROM-Devices"  # leave empty if org is provided in manifest
+org_display = "BootleggersROM-Devices"  # needed for displaying
 
 github_auth = None
 
