@@ -1,3 +1,3 @@
-. "$(gettop)/vendor/gzosp/build/envsetup.sh"
+. "$(gettop)/vendor/bootleggers/build/envsetup.sh"
 
-gzosp_device_combos
+bootleg_device_combos

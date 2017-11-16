@@ -20,29 +20,29 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Backup tool
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/gzosp/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/gzosp/prebuilt/common/bin/50-gzosp.sh:system/addon.d/50-gzosp.sh
+    vendor/bootleggers/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/bootleggers/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/bootleggers/prebuilt/common/bin/50-bootleg.sh:system/addon.d/50-bootleg.sh
 
 # Backup services whitelist
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+    vendor/bootleggers/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
+    vendor/bootleggers/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
 
 # Gzosp-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/etc/init.local.rc:root/init.gzosp.rc
+    vendor/bootleggers/prebuilt/common/etc/init.local.rc:root/init.bootleg.rc
 
 # Copy LatinIME for gesture typing
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+    vendor/bootleggers/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 
 # SELinux filesystem labels
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
+    vendor/bootleggers/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -50,18 +50,18 @@ PRODUCT_COPY_FILES += \
 
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
-    vendor/gzosp/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
+    vendor/bootleggers/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
+    vendor/bootleggers/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
 
 # Fix Dialer
 PRODUCT_COPY_FILES +=  \
-    vendor/gzosp/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+    vendor/bootleggers/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
 # Gzosp-specific startup services
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/gzosp/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
-    vendor/gzosp/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/bootleggers/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/bootleggers/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
+    vendor/bootleggers/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # Required packages
 PRODUCT_PACKAGES += \
@@ -130,7 +130,7 @@ PRODUCT_PACKAGES += \
 #endif
 
 # DU Utils library
-#PRODUCT_BOOT_JARS += \
+#PRODUCT_BOOTLEG_JARS += \
 #    org.dirtyunicorns.utils
 
 # DU Utils library
@@ -144,14 +144,14 @@ PRODUCT_PACKAGES += \
 
 # Magisk
 #PRODUCT_COPY_FILES += \
-#   vendor/gzosp/prebuilt/common/addon.d/magisk.zip:system/addon.d/magisk.zip
+#   vendor/bootleggers/prebuilt/common/addon.d/magisk.zip:system/addon.d/magisk.zip
 #endif
 
 #ifeq ($(DEFAULT_ROOT_METHOD),supersu)
 # SuperSU
 #PRODUCT_COPY_FILES += \
-#   vendor/gzosp/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
-#   vendor/gzosp/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
+#   vendor/bootleggers/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+#   vendor/bootleggers/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 #endif
 
 # Explict rootless defined, or none of the root methods defined,
@@ -176,7 +176,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/gzosp/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/common
 
 # Boot animation include
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
@@ -190,7 +190,7 @@ TARGET_BOOTANIMATION_SIZE := $(shell \
   fi )
 
 # get a sorted list of the sizes
-bootanimation_sizes := $(subst .zip,, $(shell ls vendor/gzosp/prebuilt/common/bootanimation))
+bootanimation_sizes := $(subst .zip,, $(shell ls vendor/bootleggers/prebuilt/common/bootanimation))
 bootanimation_sizes := $(shell echo -e $(subst $(space),'\n',$(bootanimation_sizes)) | sort -rn)
 
 # find the appropriate size and set
@@ -208,37 +208,37 @@ $(foreach size,$(bootanimation_sizes), $(call check_and_set_bootanimation,$(size
 
 ifeq ($(TARGET_BOOTANIMATION_HALF_RES),true)
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/bootanimation/halfres/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
+    vendor/bootleggers/prebuilt/common/bootanimation/halfres/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
 else
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
+    vendor/bootleggers/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
 endif
 endif
 
 # Versioning System
-# gzosp first version.
-PRODUCT_VERSION_MAJOR = 8.0
-PRODUCT_VERSION_MINOR = Beta
+# Bootleggers version over here.
+PRODUCT_VERSION_MAJOR = Oreo
+PRODUCT_VERSION_MINOR = Amandla
 PRODUCT_VERSION_MAINTENANCE = 1.0
-GZOSP_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
-ifdef GZOSP_BUILD_EXTRA
-    GZOSP_POSTFIX := -$(GZOSP_BUILD_EXTRA)
+BOOTLEG_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
+ifdef BOOTLEG_BUILD_EXTRA
+    BOOTLEG_POSTFIX := -$(BOOTLEG_BUILD_EXTRA)
 endif
 
-ifndef GZOSP_BUILD_TYPE
-    GZOSP_BUILD_TYPE := UNOFFICIAL
+ifndef BOOTLEG_BUILD_TYPE
+    BOOTLEG_BUILD_TYPE := Unshishufied
 endif
 
 # Set all versions
-GZOSP_VERSION := Gzosp-$(GZOSP_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(GZOSP_BUILD_TYPE)$(GZOSP_POSTFIX)
-GZOSP_MOD_VERSION := Gzosp-$(GZOSP_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(GZOSP_BUILD_TYPE)$(GZOSP_POSTFIX)
+BOOTLEG_VERSION := BootleggersROM-$(PRODUCT_VERSION_MAJOR)4$(BOOTLEG_BUILD).$(PRODUCT_VERSION_MAINTENANCE).$(PRODUCT_VERSION_MINOR).$(BOOTLEG_BUILD_TYPE)-$(BOOTLEG_POSTFIX)
+BOOTLEG_MOD_VERSION := BootleggersROM-$(PRODUCT_VERSION_MAJOR)4$(BOOTLEG_BUILD).$(PRODUCT_VERSION_MAINTENANCE).$(PRODUCT_VERSION_MINOR).$(BOOTLEG_BUILD_TYPE)-$(BOOTLEG_POSTFIX)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
-    gzosp.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
-    ro.gzosp.version=$(GZOSP_VERSION) \
-    ro.modversion=$(GZOSP_MOD_VERSION) \
-    ro.gzosp.buildtype=$(GZOSP_BUILD_TYPE)
+    bootleg.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
+    ro.bootleg.version=$(BOOTLEG_VERSION) \
+    ro.modversion=$(BOOTLEG_MOD_VERSION) \
+    ro.bootleg.buildtype=$(BOOTLEG_BUILD_TYPE)
 
-EXTENDED_POST_PROCESS_PROPS := vendor/gzosp/tools/gzosp_process_props.py
+EXTENDED_POST_PROCESS_PROPS := vendor/bootleggers/tools/bootleg_process_props.py
 
