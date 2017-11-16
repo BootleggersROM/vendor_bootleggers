@@ -91,8 +91,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Calculator \
     LatinIME \
-    BluetoothExt
-
+    BluetoothExt \
+    CameraRoll \
+    LawnchairStable \
+    LawnchairFeed \
+    MiXplorerPrebuilt \
+    RetroMusic \
+    ViaPrebuilt
 
 # Extra tools
 PRODUCT_PACKAGES += \
