@@ -7,3 +7,6 @@ PRODUCT_PACKAGES += \
     GoogleMarkup \
     ShishuWalls \
     VisualizationWallpapers 
+
+#Call special ringtones makefile
+include vendor/bootleggers/config/common_audio.mk
