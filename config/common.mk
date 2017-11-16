@@ -91,22 +91,12 @@ PRODUCT_PACKAGES += \
     Calculator \
     LatinIME \
     BluetoothExt \
-#    WolvesDen \
-#    ThemeInterfacer \
-#    Eleven \
-#    OmniSwitch \
-#    OmniJaws \
-#    OmniStyle \
-#    Turbo \
-#    GZRoms \
-#    Nova \
-#    NovaGoogleCompanion
-     CameraRoll \
-     LawnchairStable \
-     LawnchairFeed \
-     MiXplorerPrebuilt \
-     RetroMusic \
-     ViaPrebuilt
+    CameraRoll \
+    LawnchairStable \
+    LawnchairFeed \
+    MiXplorerPrebuilt \
+    RetroMusic \
+    ViaPrebuilt
      
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -236,8 +226,8 @@ ifndef BOOTLEG_BUILD_TYPE
 endif
 
 # Set all versions
-BOOTLEG_VERSION := BootleggersROM-$(PRODUCT_VERSION_MAJOR)4$(BOOTLEG_BUILD).$(PRODUCT_VERSION_MAINTENANCE).$(PRODUCT_VERSION_MINOR).$(BOOTLEG_BUILD_TYPE)-$(BOOTLEG_POSTFIX)
-BOOTLEG_MOD_VERSION := BootleggersROM-$(PRODUCT_VERSION_MAJOR)4$(BOOTLEG_BUILD).$(PRODUCT_VERSION_MAINTENANCE).$(PRODUCT_VERSION_MINOR).$(BOOTLEG_BUILD_TYPE)-$(BOOTLEG_POSTFIX)
+BOOTLEG_VERSION := BootleggersROM-$(PRODUCT_VERSION_MAJOR)4$(BOOTLEG_BUILD).$(PRODUCT_VERSION_MAINTENANCE).$(BOOTLEG_BUILD_TYPE)$(BOOTLEG_POSTFIX)
+BOOTLEG_MOD_VERSION := BootleggersROM-$(PRODUCT_VERSION_MAJOR)4$(BOOTLEG_BUILD).$(PRODUCT_VERSION_MAINTENANCE).$(BOOTLEG_BUILD_TYPE)-$(BOOTLEG_POSTFIX)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
