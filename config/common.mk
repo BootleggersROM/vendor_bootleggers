@@ -193,7 +193,7 @@ bootanimation_sizes := $(shell echo -e $(subst $(space),'\n',$(bootanimation_siz
 define check_and_set_bootanimation
 $(eval TARGET_BOOTANIMATION_NAME := $(shell \
   if [ -z "$(TARGET_BOOTANIMATION_NAME)" ]; then
-    if [ $(1) -le $(TARGET_BOOTANIMATION_SIZE) ]; then \
+    if [ $(1) -le $(TARGET_SCREEN_WIDTH) ]; then \
       echo $(1); \
       exit 0; \
     fi;
@@ -227,7 +227,7 @@ endif
 
 # Set all versions
 BOOTLEG_VERSION := BootleggersROM-$(PRODUCT_VERSION_MAJOR)4$(BOOTLEG_BUILD).$(PRODUCT_VERSION_MAINTENANCE).$(BOOTLEG_BUILD_TYPE)$(BOOTLEG_POSTFIX)
-BOOTLEG_MOD_VERSION := BootleggersROM-$(PRODUCT_VERSION_MAJOR)4$(BOOTLEG_BUILD).$(PRODUCT_VERSION_MAINTENANCE).$(BOOTLEG_BUILD_TYPE)-$(BOOTLEG_POSTFIX)
+BOOTLEG_MOD_VERSION := BootleggersROM-$(PRODUCT_VERSION_MAJOR)4$(BOOTLEG_BUILD).$(PRODUCT_VERSION_MAINTENANCE).$(BOOTLEG_BUILD_TYPE)$(BOOTLEG_POSTFIX)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
@@ -238,3 +238,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 EXTENDED_POST_PROCESS_PROPS := vendor/bootleggers/tools/bootleg_process_props.py
 
+#Call special ringtones makefile
+include vendor/bootleggers/config/common_audio.mk
