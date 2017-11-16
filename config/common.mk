@@ -177,4 +177,6 @@ DEVICE_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/common
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/bootleggers/config/partner_gms.mk
 
+include vendor/bootleggers/config/btlg_main.mk
+
 $(call prepend-product-if-exists, vendor/extra/product.mk)
