@@ -68,7 +68,7 @@ PRODUCT_COPY_FILES += \
     
     
 # Default notification/alarm sounds
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PROPERTY_OVERRIDES := \
     ro.config.notification_sound=Electra.ogg \
     ro.config.alarm_alert=LikeWhat.ogg \
     ro.config.ringtone=Frost.ogg
