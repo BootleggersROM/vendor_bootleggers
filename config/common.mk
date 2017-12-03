@@ -63,6 +63,9 @@ PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/bootleggers/prebuilt/common/bin/sysinit:system/bin/sysinit
 
+# Call special ringtones makefile
+include vendor/bootleggers/config/common_audio.mk
+
 # Required packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
@@ -97,7 +100,7 @@ PRODUCT_PACKAGES += \
     MiXplorerPrebuilt \
     RetroMusic \
     ViaPrebuilt
-     
+
 # Extra tools
 PRODUCT_PACKAGES += \
     openvpn \
@@ -108,6 +111,10 @@ PRODUCT_PACKAGES += \
     mkfs.exfat \
     ntfsfix \
     ntfs-3g
+
+# Extra Stuff from Omni/DU/Whatever
+#PRODUCT_PACKAGES += \
+#    OmniJaws
 
 # MusicFX advanced effects
 #ifneq ($(TARGET_NO_DSPMANAGER), true)
@@ -126,34 +133,12 @@ PRODUCT_PACKAGES += \
 #endif
 
 # DU Utils library
-#PRODUCT_BOOTLEG_JARS += \
+#PRODUCT_BOOT_JARS += \
 #    org.dirtyunicorns.utils
 
 # DU Utils library
 #PRODUCT_PACKAGES += \
 #    org.dirtyunicorns.utils
-
-#ifeq ($(DEFAULT_ROOT_METHOD),magisk)
-# Magisk Manager
-#PRODUCT_PACKAGES += \
-#    MagiskManager
-
-# Magisk
-#PRODUCT_COPY_FILES += \
-#   vendor/bootleggers/prebuilt/common/addon.d/magisk.zip:system/addon.d/magisk.zip
-#endif
-
-#ifeq ($(DEFAULT_ROOT_METHOD),supersu)
-# SuperSU
-#PRODUCT_COPY_FILES += \
-#   vendor/bootleggers/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
-#   vendor/bootleggers/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
-#endif
-
-# Explict rootless defined, or none of the root methods defined,
-# default rootless : nothing todo
-#ifeq ($(DEFAULT_ROOT_METHOD),rootless)
-#endif
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
@@ -193,7 +178,7 @@ bootanimation_sizes := $(shell echo -e $(subst $(space),'\n',$(bootanimation_siz
 define check_and_set_bootanimation
 $(eval TARGET_BOOTANIMATION_NAME := $(shell \
   if [ -z "$(TARGET_BOOTANIMATION_NAME)" ]; then
-    if [ $(1) -le $(TARGET_SCREEN_WIDTH) ]; then \
+    if [ $(1) -le $(TARGET_BOOTANIMATION_SIZE) ]; then \
       echo $(1); \
       exit 0; \
     fi;
@@ -217,12 +202,16 @@ PRODUCT_VERSION_MAJOR = Oreo
 PRODUCT_VERSION_MINOR = Amandla
 PRODUCT_VERSION_MAINTENANCE = 1.0
 BOOTLEG_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
-ifdef BOOTLEG_BUILD_EXTRA
-    BOOTLEG_POSTFIX := -$(BOOTLEG_BUILD_EXTRA)
-endif
 
 ifndef BOOTLEG_BUILD_TYPE
     BOOTLEG_BUILD_TYPE := Unshishufied
+endif
+
+ifdef BOOTLEG_BUILD_EXTRA
+    BOOTLEG_POSTFIX := -$(BOOTLEG_BUILD_EXTRA)
+    BOOTLEG_MOD_SHORT := BootleggersROM-$(PRODUCT_VERSION_MAJOR)4$(BOOTLEG_BUILD).$(BOOTLEG_BUILD_TYPE)$(BOOTLEG_POSTFIX)
+else
+    BOOTLEG_MOD_SHORT := BootleggersROM-$(PRODUCT_VERSION_MAJOR)4$(BOOTLEG_BUILD).$(BOOTLEG_BUILD_TYPE)
 endif
 
 # Set all versions
@@ -234,9 +223,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     bootleg.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
     ro.bootleg.version=$(BOOTLEG_VERSION) \
     ro.modversion=$(BOOTLEG_MOD_VERSION) \
-    ro.bootleg.buildtype=$(BOOTLEG_BUILD_TYPE)
+    ro.bootleg.buildshort=$(BOOTLEG_MOD_SHORT) \
+    ro.bootleg.buildtype=$(BOOTLEG_BUILD_TYPE) \
+    ro.bootleg.songcodename=$(PRODUCT_VERSION_MINOR) \
+    ro.bootleg.display.version=$(BOOTLEG_VERSION)
 
 EXTENDED_POST_PROCESS_PROPS := vendor/bootleggers/tools/bootleg_process_props.py
-
-#Call special ringtones makefile
-include vendor/bootleggers/config/common_audio.mk
