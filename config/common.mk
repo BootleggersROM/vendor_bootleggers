@@ -101,6 +101,11 @@ PRODUCT_PACKAGES += \
     RetroMusic \
     ViaPrebuilt
 
+
+#Our Bootleggers stuff
+PRODUCT_PACKAGES += \
+    VisualizationWallpapers
+
 # Extra tools
 PRODUCT_PACKAGES += \
     openvpn \
