@@ -139,12 +139,12 @@ PRODUCT_PACKAGES += \
 #endif
 
 # DU Utils library
-#PRODUCT_BOOT_JARS += \
-#    org.dirtyunicorns.utils
+PRODUCT_BOOT_JARS += \
+    org.dirtyunicorns.utils
 
 # DU Utils library
-#PRODUCT_PACKAGES += \
-#    org.dirtyunicorns.utils
+PRODUCT_PACKAGES += \
+    org.dirtyunicorns.utils
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
