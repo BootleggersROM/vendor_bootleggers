@@ -118,8 +118,8 @@ PRODUCT_PACKAGES += \
     ntfs-3g
 
 # Extra Stuff from Omni/DU/Whatever
-#PRODUCT_PACKAGES += \
-#    OmniJaws
+PRODUCT_PACKAGES += \
+    OmniJaws
 
 # MusicFX advanced effects
 #ifneq ($(TARGET_NO_DSPMANAGER), true)
