@@ -120,7 +120,8 @@ PRODUCT_PACKAGES += \
 
 # Extra Stuff from Omni/DU/Whatever
 PRODUCT_PACKAGES += \
-    OmniJaws
+    OmniJaws \
+    OmniStyle
 
 # MusicFX advanced effects
 #ifneq ($(TARGET_NO_DSPMANAGER), true)
