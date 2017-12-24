@@ -104,7 +104,8 @@ PRODUCT_PACKAGES += \
 #Our Bootleggers stuff
 PRODUCT_PACKAGES += \
     VisualizationWallpapers \
-    bootanimation.zip
+    bootanimation.zip \
+    ShishuWalls
 
 # Extra tools
 PRODUCT_PACKAGES += \
