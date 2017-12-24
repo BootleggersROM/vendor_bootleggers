@@ -98,7 +98,6 @@ PRODUCT_PACKAGES += \
     LawnchairStable \
     LawnchairFeed \
     MiXplorerPrebuilt \
-    RetroMusic \
     ViaPrebuilt
 
 
@@ -180,7 +179,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/common
 # Bootleggers version over here.
 PRODUCT_VERSION_MAJOR = Oreo
 PRODUCT_VERSION_MINOR = Amandla
-PRODUCT_VERSION_MAINTENANCE = 1.0
+PRODUCT_VERSION_MAINTENANCE = 1.0-ALPHA
 BOOTLEG_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
 
 ifndef BOOTLEG_BUILD_TYPE
