@@ -120,6 +120,10 @@ PRODUCT_PACKAGES += \
     ntfsfix \
     ntfs-3g
 
+# Extra Stuff from Omni/DU/Whatever
+PRODUCT_PACKAGES += \
+    OmniStyle
+
 # Bootleggers Stuff - Copy to System fonts
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/fonts/gobold/Gobold.ttf:system/fonts/Gobold.ttf \
@@ -133,12 +137,12 @@ PRODUCT_PACKAGES += \
     charger_res_images
 
 # DU Utils library
-#PRODUCT_BOOT_JARS += \
-#    org.dirtyunicorns.utils
+PRODUCT_BOOT_JARS += \
+    org.dirtyunicorns.utils
 
 # DU Utils library
-#PRODUCT_PACKAGES += \
-#    org.dirtyunicorns.utils
+PRODUCT_PACKAGES += \
+    org.dirtyunicorns.utils
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
