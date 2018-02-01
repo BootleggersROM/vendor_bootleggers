@@ -185,7 +185,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/common
 # Bootleggers version over here.
 PRODUCT_VERSION_MAJOR = Oreo
 PRODUCT_VERSION_MINOR = BluePrint
-PRODUCT_VERSION_MAINTENANCE = 1.9-ALPHA
+PRODUCT_VERSION_MAINTENANCE = 2.0-BETA
 BOOTLEG_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
 
 ifndef BOOTLEG_BUILD_TYPE
