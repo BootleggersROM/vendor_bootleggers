@@ -161,6 +161,10 @@ PRODUCT_PACKAGES += \
 endif
 endif
 
+# Dex preopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUIGoogle
+
 # Some props that we need for the google stuff we're adding
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.ime.height_ratio=1.05 \
