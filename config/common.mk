@@ -107,7 +107,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     VisualizationWallpapers \
     bootanimation.zip \
-    ShishuWalls
+    ShishuWalls \
+    Recorder
 
 # Extra tools
 PRODUCT_PACKAGES += \
