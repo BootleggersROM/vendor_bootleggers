@@ -62,28 +62,6 @@ LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_OVERRIDES_PACKAGES := Browser Browser2 Jelly ViaBrowser Chromium Quark Quarks Bolt
 include $(BUILD_PREBUILT)
 
-#Launcher App
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := LawnchairStable
-LOCAL_SRC_FILES := common/app/$(LOCAL_MODULE).apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_OVERRIDES_PACKAGES := Launcher2 Launcher3 Trebuchet PixelLauncher VLauncher NovaLauncher Luna Nova
-include $(BUILD_PREBUILT)
-
-#Launcher App - Companion app
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := LawnchairFeed
-LOCAL_SRC_FILES := common/app/$(LOCAL_MODULE).apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_OVERRIDES_PACKAGES := NovaGoogleCompanion
-include $(BUILD_PREBUILT)
-
 #ShishuWalls, my photo wallpaper app
 
 include $(CLEAR_VARS)
@@ -93,6 +71,8 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := PRESIGNED
 include $(BUILD_PREBUILT)
+
+# Magisk
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := MagiskManager
@@ -104,6 +84,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
 include $(BUILD_PREBUILT)
 
+# Turbo
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := Turbo

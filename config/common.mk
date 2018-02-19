@@ -96,19 +96,17 @@ PRODUCT_PACKAGES += \
     LatinIME \
     BluetoothExt \
     CameraRoll \
-    LawnchairStable \
-    LawnchairFeed \
     MiXplorerPrebuilt \
     RetroMusic \
     ViaPrebuilt
 
-
 #Our Bootleggers stuff
 PRODUCT_PACKAGES += \
-    VisualizationWallpapers \
     bootanimation.zip \
+    Launcher3 \
+    Recorder \
     ShishuWalls \
-    Recorder
+    VisualizationWallpapers 
 
 # Extra tools
 PRODUCT_PACKAGES += \
