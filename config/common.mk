@@ -103,6 +103,7 @@ PRODUCT_PACKAGES += \
 #Our Bootleggers stuff
 PRODUCT_PACKAGES += \
     bootanimation.zip \
+    BootlegOTA \
     Launcher3 \
     Recorder \
     ShishuWalls \
