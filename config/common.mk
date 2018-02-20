@@ -90,24 +90,39 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX
 
-# Extra Optional packages
-PRODUCT_PACKAGES += \
-    Calculator \
-    LatinIME \
-    BluetoothExt \
-    CameraRoll \
-    MiXplorerPrebuilt \
-    RetroMusic \
-    ViaPrebuilt
-
-#Our Bootleggers stuff
-PRODUCT_PACKAGES += \
-    bootanimation.zip \
-    BootlegOTA \
-    Launcher3 \
-    Recorder \
-    ShishuWalls \
-    VisualizationWallpapers 
+ifneq ($(BOOTLEG_MINIMAL_BUILD), true)
+    # Extra Optional packages
+    PRODUCT_PACKAGES += \
+        Calculator \
+        LatinIME \
+        BluetoothExt \
+        CameraRoll \
+        MiXplorerPrebuilt \
+        RetroMusic \
+        ViaPrebuilt
+    
+    #Our Bootleggers stuff
+    PRODUCT_PACKAGES += \
+        bootanimation.zip \
+        BootlegOTA \
+        Launcher3 \
+        Recorder \
+        ShishuWalls \
+        VisualizationWallpapers 
+else
+    # Extra Optional packages
+    PRODUCT_PACKAGES += \
+        LatinIME \
+        BluetoothExt \
+        MiXplorerPrebuilt \
+        ViaPrebuilt
+    
+    #Our Bootleggers stuff
+    PRODUCT_PACKAGES += \
+        bootanimation.zip \
+        BootlegOTA \
+        Launcher3
+endif
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -191,6 +206,11 @@ BOOTLEG_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
 ifndef BOOTLEG_BUILD_TYPE
     BOOTLEG_BUILD_TYPE := Unshishufied
 endif
+
+ifeq ($(BOOTLEG_MINIMAL_BUILD), true)
+    BOOTLEG_BUILD_TYPE := MinimalShishu
+end if
+
 
 ifdef BOOTLEG_BUILD_EXTRA
     BOOTLEG_POSTFIX := -$(BOOTLEG_BUILD_EXTRA)
