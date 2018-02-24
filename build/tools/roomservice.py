@@ -41,7 +41,7 @@ except ImportError:
     urllib.request = urllib2
 
 DEBUG = False
-default_manifest = ".repo/manifests/bootleg_default.xml"
+default_manifest = ".repo/manifests/boot_default.xml"
 custom_local_manifest = ".repo/local_manifests/bootleg_manifest.xml"
 custom_default_revision = "oreo.1"
 custom_dependencies = "bootleg.dependencies"
