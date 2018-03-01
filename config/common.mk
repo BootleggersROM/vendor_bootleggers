@@ -201,6 +201,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/common
 PRODUCT_VERSION_MAJOR = Oreo
 PRODUCT_VERSION_MINOR = BluePrint
 PRODUCT_VERSION_MAINTENANCE = 2.0-BETA
+BOOTLEG_SONGCODEURL = https://google.com
 BOOTLEG_POSTFIX := -$(shell date +"%Y%m%d")
 
 ifndef BOOTLEG_BUILD_TYPE
@@ -231,6 +232,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bootleg.buildshort=$(BOOTLEG_MOD_SHORT) \
     ro.bootleg.buildtype=$(BOOTLEG_BUILD_TYPE) \
     ro.bootleg.songcodename=$(PRODUCT_VERSION_MINOR) \
+    ro.bootleg.songcodeurl=$(BOOTLEG_SONGCODEURL) \
     ro.bootleg.display.version=$(BOOTLEG_VERSION)
 
 # Google sounds
