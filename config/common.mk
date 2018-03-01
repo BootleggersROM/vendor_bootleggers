@@ -104,7 +104,6 @@ ifneq ($(BOOTLEG_MINIMAL_BUILD), true)
     #Our Bootleggers stuff
     PRODUCT_PACKAGES += \
         bootanimation.zip \
-        BootlegOTA \
         Launcher3 \
         Recorder \
         ShishuWalls \
@@ -120,8 +119,12 @@ else
     #Our Bootleggers stuff
     PRODUCT_PACKAGES += \
         bootanimation.zip \
-        BootlegOTA \
         Launcher3
+endif
+
+ifneq ($(BOOTLEG_BUILD_TYPE), Unshishufied)
+    PRODUCT_PACKAGES += \
+        BootlegOTA
 endif
 
 # Extra tools
