@@ -80,6 +80,10 @@ PRODUCT_PACKAGES += \
     AWMAWYOrange \
     IllusionsPurple
 
+# DU-Fonts
+PRODUCT_PACKAGES += \
+    CustomFonts
+
 # Fonts to copy
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/fonts/gobold/Gobold.ttf:system/fonts/Gobold.ttf \
