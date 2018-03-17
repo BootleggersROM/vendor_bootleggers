@@ -91,6 +91,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX
 
+# Call our external colors makefile to make it organized
+include vendor/bootleggers/config/extra_colors.mk
+
 ifneq ($(BOOTLEG_MINIMAL_BUILD), true)
     # Extra Optional packages
     PRODUCT_PACKAGES += \
@@ -163,19 +166,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     org.dirtyunicorns.utils
 
-# Themes
-PRODUCT_PACKAGES += \
-    ObfusBleu \
-    NotImpPurple \
-    Holillusion \
-    MoveMint \
-    NotSoBadRed \
-    FootprintPurple \
-    BubblegumPink \
-    DryPaintMint \
-    FrenchBleu \
-    Stock
-
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
     libffmpeg_extractor \
@@ -193,10 +183,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
-
-PRODUCT_PACKAGES += \
-    AndroidDarkThemeOverlay \
-    SettingsDarkThemeOverlay
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/common
 
