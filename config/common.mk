@@ -144,7 +144,8 @@ PRODUCT_PACKAGES += \
 
 # Extra Stuff from Omni/DU/Whatever
 PRODUCT_PACKAGES += \
-    OmniStyle
+    OmniStyle \
+    OmniJaws
 
 # Bootleggers Stuff - Copy to System fonts
 PRODUCT_COPY_FILES += \
