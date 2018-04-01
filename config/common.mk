@@ -139,6 +139,8 @@ PRODUCT_PACKAGES += \
     tune2fs \
     fsck.exfat \
     mkfs.exfat \
+    mkfs.ntfs \
+    mount.ntfs \
     ntfsfix \
     ntfs-3g
 
