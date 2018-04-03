@@ -103,8 +103,9 @@ ifneq ($(BOOTLEG_MINIMAL_BUILD), true)
         CameraRoll \
         MiXplorerPrebuilt \
         RetroMusic \
-        ViaPrebuilt
-    
+        ViaPrebuilt \
+        WallpaperPickerGoogle
+
     #Our Bootleggers stuff
     PRODUCT_PACKAGES += \
         bootanimation.zip \
@@ -118,8 +119,9 @@ else
         LatinIME \
         BluetoothExt \
         MiXplorerPrebuilt \
-        ViaPrebuilt
-    
+        ViaPrebuilt \
+        WallpaperPickerGoogle
+
     #Our Bootleggers stuff
     PRODUCT_PACKAGES += \
         bootanimation.zip \
