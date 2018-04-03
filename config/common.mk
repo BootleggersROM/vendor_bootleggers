@@ -104,22 +104,22 @@ ifneq ($(BOOTLEG_MINIMAL_BUILD), true)
         MiXplorerPrebuilt \
         RetroMusic \
         ViaPrebuilt
-    
     #Our Bootleggers stuff
     PRODUCT_PACKAGES += \
         bootanimation.zip \
         Launcher3 \
         Recorder \
         ShishuWalls \
-        VisualizationWallpapers 
+        VisualizationWallpapers
 else
     # Extra Optional packages
     PRODUCT_PACKAGES += \
         LatinIME \
         BluetoothExt \
         MiXplorerPrebuilt \
-        ViaPrebuilt
-    
+        ViaPrebuilt \
+        WallpaperPickerGoogle
+
     #Our Bootleggers stuff
     PRODUCT_PACKAGES += \
         bootanimation.zip \
@@ -199,7 +199,7 @@ BOOTLEG_POSTFIX := -$(shell date +"%Y%m%d")
 
 ifndef BOOTLEG_BUILD_TYPE
     BOOTLEG_BUILD_TYPE := Unshishufied
-endif
+endif7
 
 ifeq ($(BOOTLEG_MINIMAL_BUILD), true)
     BOOTLEG_BUILD_TYPE := MinimalShishu
