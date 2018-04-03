@@ -29,11 +29,18 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
+# Google Exclusives
+PRODUCT_COPY_FILES += \
+    vendor/bootleggers/config/permissions/google_build.xml:system/etc/sysconfig/google_build.xml \
+    vendor/bootleggers/config/permissions/nexus.xml:system/etc/sysconfig/nexus.xml \
+    vendor/bootleggers/config/permissions/pixel_2017.xml:system/etc/sysconfig/pixel_2017.xml \
+    vendor/bootleggers/config/permissions/pixel_2017_exclusive.xml:system/etc/sysconfig/pixel_2017_exclusive.xml
+
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
 
-# Gzosp-specific init file
+# Bootleggers-specific init file
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/etc/init.local.rc:root/init.bootleg.rc
 
@@ -59,7 +66,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES +=  \
     vendor/bootleggers/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
-# Gzosp-specific startup services
+# Bootleggers-specific startup services
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/bootleggers/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
