@@ -20,7 +20,7 @@ PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/fonts/roadrage/road_rage.ttf:system/fonts/RoadRage-Regular.ttf \
     vendor/bootleggers/prebuilt/fonts/snowstorm/snowstorm.ttf:system/fonts/Snowstorm-Regular.ttf \
     vendor/bootleggers/prebuilt/fonts/vcrosd/vcr_osd_mono.ttf:system/fonts/ThemeableFont-Regular.ttf \
-    vendor/bootleggers/prebuilt/fonts/googlesans/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf
+    vendor/bootleggers/prebuilt/fonts/googlesans/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Medium.ttf
 
 #Call special ringtones makefile
 include vendor/bootleggers/config/common_audio.mk
