@@ -111,7 +111,8 @@ ifneq ($(BOOTLEG_MINIMAL_BUILD), true)
         MiXplorerPrebuilt \
         RetroMusic \
         ViaPrebuilt \
-        WallpaperPickerGoogle
+        WallpaperPickerGoogle \
+        GoogleMarkup
 
     #Our Bootleggers stuff
     PRODUCT_PACKAGES += \
@@ -127,7 +128,8 @@ else
         BluetoothExt \
         MiXplorerPrebuilt \
         ViaPrebuilt \
-        WallpaperPickerGoogle
+        WallpaperPickerGoogle \
+        GoogleMarkup
 
     #Our Bootleggers stuff
     PRODUCT_PACKAGES += \
