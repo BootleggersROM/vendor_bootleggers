@@ -207,9 +207,9 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/common
 # Versioning System
 # Bootleggers version over here.
 PRODUCT_VERSION_MAJOR = Oreo
-PRODUCT_VERSION_MINOR = Calma
+PRODUCT_VERSION_MINOR = Dxxxxxxxxxx
 PRODUCT_VERSION_MAINTENANCE = 2.1-Stable
-BOOTLEG_SONGCODEURL = https://goo.gl/yn9B2s
+BOOTLEG_SONGCODEURL = http://bit.ly/2qlbPVt
 BOOTLEG_POSTFIX := -$(shell date +"%Y%m%d")
 
 ifndef BOOTLEG_BUILD_TYPE
