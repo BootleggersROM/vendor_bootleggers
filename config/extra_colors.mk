@@ -8,22 +8,19 @@ PRODUCT_PACKAGES += \
     NotImpPurple \
     Holillusion \
     MoveMint \
-    NotSoBadRed \
     FootprintPurple \
     BubblegumPink \
-    DryPaintMint \
     FrenchBleu \
     Stock \
     ManiaAmber \
     SeasideMint \
     BoucheRed \
-    UnexpectedBlueGray \
     DreamyPurple \
     KABlue \
     SpookedPurple \
-    SlateGray \
     MisleadingRed \
     FSRGrey \
     HeirloomBleu \
-    DawnBlue \
-    AntemasqueGrey
+    TruFilRed \
+    WarmthOrange \
+    NaturedGreen
