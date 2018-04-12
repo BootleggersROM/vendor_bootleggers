@@ -21,6 +21,6 @@ PRODUCT_PACKAGES += \
     MisleadingRed \
     FSRGrey \
     HeirloomBleu \
-    TruFilRed \
+    TruFilPink \
     WarmthOrange \
     NaturedGreen
