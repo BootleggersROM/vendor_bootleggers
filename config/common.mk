@@ -153,7 +153,8 @@ PRODUCT_PACKAGES += \
     mkfs.ntfs \
     mount.ntfs \
     ntfsfix \
-    ntfs-3g
+    ntfs-3g \
+    curl
 
 # Extra Stuff from Omni/DU/Whatever
 PRODUCT_PACKAGES += \
