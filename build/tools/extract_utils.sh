@@ -147,16 +147,22 @@ function target_args() {
 #
 # prefix_match:
 #
-# $1: the prefix to match on
-#
-# Internal function which loops thru the packages list and returns a new
-# list containing the matched files with the prefix stripped away.
+# input:
+#   - $1: prefix
+#   - (global variable) PRODUCT_PACKAGES_LIST: array of [src:]dst[;args] specs.
+# output:
+#   - new array consisting of dst[;args] entries where $1 is a prefix of ${dst}.
 #
 function prefix_match() {
     local PREFIX="$1"
     for FILE in "${PRODUCT_PACKAGES_LIST[@]}"; do
         if [[ "$FILE" =~ ^"$PREFIX" ]]; then
-            printf '%s\n' "${FILE#$PREFIX}"
+            local ARGS=$(target_args "$LINE")
+            if [ -z "${ARGS}" ]; then
+                echo "${FILE#$PREFIX}"
+            else
+                echo "${FILE#$PREFIX};${ARGS}"
+            fi
         fi
     done
 }
