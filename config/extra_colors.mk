@@ -23,4 +23,14 @@ PRODUCT_PACKAGES += \
     HeirloomBleu \
     TruFilPink \
     WarmthOrange \
-    NaturedGreen
+    NaturedGreen \
+    ColdBleu \
+    DiffDayGreen \
+    DuskPurple \
+    BurningRed \
+    HazedPink \
+    ColdYellow \
+    NewHouseOrange \
+    LimedGreen \
+    AWMAWYOrange \
+    IllusionsPurple
