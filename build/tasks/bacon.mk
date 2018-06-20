@@ -14,12 +14,12 @@
 # limitations under the License.
 
 # -----------------------------------------------------------------
-# Lineage OTA update package
+# Bootleggers OTA update package
 
-LINEAGE_TARGET_PACKAGE := $(PRODUCT_OUT)/lineage-$(LINEAGE_VERSION).zip
+BOOTLEGGERS_TARGET_PACKAGE := $(PRODUCT_OUT)/bootleggers-$(BOOTLEGGERS_VERSION).zip
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(LINEAGE_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(LINEAGE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(LINEAGE_TARGET_PACKAGE).md5sum
-	@echo "Package Complete: $(LINEAGE_TARGET_PACKAGE)" >&2
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(BOOTLEGGERS_TARGET_PACKAGE)
+	$(hide) $(MD5SUM) $(BOOTLEGGERS_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(BOOTLEGGERS_TARGET_PACKAGE).md5sum
+	@echo "Package Complete: $(BOOTLEGGERS_TARGET_PACKAGE)" >&2
