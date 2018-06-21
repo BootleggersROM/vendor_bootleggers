@@ -233,9 +233,9 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/common
 # Versioning System
 # Bootleggers version over here.
 PRODUCT_VERSION_MAJOR = Oreo
-PRODUCT_VERSION_MINOR = Dreambender
-PRODUCT_VERSION_MAINTENANCE = 2.2-Stable
-BOOTLEG_SONGCODEURL = http://bit.ly/2Hn1XEk
+PRODUCT_VERSION_MINOR = EverybodyShutUp
+PRODUCT_VERSION_MAINTENANCE = 2.3-Stable
+BOOTLEG_SONGCODEURL = http://bit.ly/2McsqUb
 BOOTLEG_POSTFIX := -$(shell date +"%Y%m%d")
 
 ifndef BOOTLEG_BUILD_TYPE
