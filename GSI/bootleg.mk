@@ -15,7 +15,8 @@
 
 $(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
 
-DEVICE_MAINTAINERS="Francesco M. (Dil3mm4)"
+
 BOOTLEG_BUILD_TYPE="Shishufied"
 
-
+PRODUCT_BUILD_PROP_OVERRIDES += \
+DEVICE_MAINTAINERS="Francesco M. (Dil3mm4)"

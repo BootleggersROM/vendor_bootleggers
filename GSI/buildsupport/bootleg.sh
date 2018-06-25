@@ -14,7 +14,7 @@ fi
 
 localManifestBranch=$1
 rom=$2
-vers=$3
+vers=$4
 if [ -z "$USER" ];then
 	export USER="$(id -un)"
 fi
@@ -70,8 +70,8 @@ buildVariant() {
 
 repo manifest -r > release/$rom_fp/manifest.xml
 
-if [[ vers == arm64-aonly ]];then
+if [[ $vers == "arm64-aonly" ]];then
 buildVariant treble_arm64_avN-userdebug arm64-aonly
-elif [[ vers == arm64-ab ]];then
+elif [[ $vers == "arm64-ab" ]];then
 buildVariant treble_arm64_bvN-userdebug arm64-ab
 fi
