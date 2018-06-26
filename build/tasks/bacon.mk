@@ -16,7 +16,7 @@
 # -----------------------------------------------------------------
 # Bootleggers OTA update package
 
-BOOTLEGGERS_TARGET_PACKAGE := $(PRODUCT_OUT)/bootleggers-$(BOOTLEGGERS_VERSION).zip
+BOOTLEGGERS_TARGET_PACKAGE := $(PRODUCT_OUT)/$(BOOTLEGGERS_VERSION).zip
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
