@@ -1,5 +1,5 @@
 # Such Bootleg
-$(call inherit-product vendor/bootleggers/GSI/bootleg.mk)
+$(call inherit-product, vendor/bootleggers/GSI/bootleg.mk)
 
 # Wow, GApps
 $(call inherit-product, vendor/bootleggers/GSI/GApps/gapps.mk)

@@ -52,7 +52,7 @@ rm -f .repo/local_manifests/opengapps.xml
 
 repo sync -c -j$jobs --force-sync
 rm -f device/*/sepolicy/common/private/genfs_contexts
-(cd device/phh/treble; git clean -fdx; bash generate.sh $rom)
+
 
 #We want our Table
 rm -rf device/phh/treble
