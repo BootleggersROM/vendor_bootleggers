@@ -71,7 +71,7 @@ buildVariant() {
 repo manifest -r > release/$rom_fp/manifest.xml
 
 if [[ $vers == "arm64-aonly" ]];then
-buildVariant treble_arm64_avN-userdebug arm64-aonly
+buildVariant table_arm64_a-userdebug arm64-aonly
 elif [[ $vers == "arm64-ab" ]];then
-buildVariant treble_arm64_bvN-userdebug arm64-ab
+buildVariant table_arm64_ab-userdebug arm64-ab
 fi
