@@ -6,7 +6,8 @@ PRODUCT_PACKAGES += \
     WallpaperPickerGoogle \
     GoogleMarkup \
     ShishuWalls \
-    VisualizationWallpapers 
+    VisualizationWallpapers \
+    Jelly
 
 #Call special ringtones makefile
 include vendor/bootleggers/config/common_audio.mk
