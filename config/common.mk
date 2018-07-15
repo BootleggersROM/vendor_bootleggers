@@ -25,6 +25,13 @@ PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/bin/50-bootleg.sh:system/addon.d/50-bootleg.sh \
     vendor/bootleggers/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
 
+ifeq ($(AB_OTA_UPDATER),true)
+PRODUCT_COPY_FILES += \
+    vendor/bootleggers/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/bootleggers/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/bootleggers/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+endif
+
 # Backup services whitelist
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
