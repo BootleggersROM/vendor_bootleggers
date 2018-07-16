@@ -16,10 +16,35 @@
 # -----------------------------------------------------------------
 # Bootleggers OTA update package
 
+ifneq ($(BUILD_WITH_COLORS),0)
+    include $(TOP_DIR)vendor/bootleggers/build/core/colors.mk
+endif
+
 BOOTLEGGERS_TARGET_PACKAGE := $(PRODUCT_OUT)/$(BOOTLEGGERS_VERSION).zip
 
-.PHONY: bacon
+.PHONY: bacon bootleg bootleggers
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(BOOTLEGGERS_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(BOOTLEGGERS_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(BOOTLEGGERS_TARGET_PACKAGE).md5sum
-	@echo "Package Complete: $(BOOTLEGGERS_TARGET_PACKAGE)" >&2
+	$(hide) $(MD5SUM) $(BOOTLEGGERS_TARGET_PACKAGE) > $(BOOTLEGGERS_TARGET_PACKAGE).md5sum
+	@echo -e ${CL_BLU}""${CL_BLU}
+	@echo -e ${CL_BLU}" ######  ####### #        #####  "${CL_BLU}
+	@echo -e ${CL_BLU}" #     #    #    #       #     # "${CL_BLU}
+	@echo -e ${CL_BLU}" #     #    #    #       #       "${CL_BLU}
+	@echo -e ${CL_BLU}" ######     #    #       #  #### "${CL_BLU}
+	@echo -e ${CL_BLU}" #     #    #    #       #     # "${CL_BLU}
+	@echo -e ${CL_BLU}" #     #    #    #       #     # "${CL_BLU}
+	@echo -e ${CL_BLU}" ######     #    #######  #####  "${CL_BLU}
+	@echo -e ${CL_BLU}"                                 "${CL_BLU}
+	@echo -e ${CL_CYN}"          Bootleggers ROM         "${CL_CYN}
+	@echo -e ${CL_CYN}"          #KeepTheBootleg        "${CL_CYN}
+	@echo -e ${CL_CYN}"                "${CL_CYN}
+	@echo -e ${CL_CYN}"                "${CL_CYN}
+	@echo -e ${CL_CYN}"                "${CL_CYN}
+	@echo -e ${CL_CYN}"The build is done, be sure to get it on:"${CL_CYN}
+	@echo -e ${CL_CYN}"$(BOOTLEGGERS_TARGET_PACKAGE)"${CL_CYN}
+	@echo -e ${CL_CYN}"                "${CL_CYN}
+	@echo -e ${CL_CYN}"Also, enjoy your $(BOOTLEGGERS_BUILD_TYPE) build"${CL_CYN}  
+
+bootleggers: bacon
+
+bootleg: bacon
