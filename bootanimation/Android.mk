@@ -15,12 +15,16 @@
 # limitations under the License.
 #
 
+ifeq ($(TARGET_BOOTANIMATION_HALF_RES),)
+    TARGET_BOOTANIMATION_HALF_RES := false
+endif
+
 define build-bootanimation
     sh vendor/bootleggers/bootanimation/generate-bootanimation.sh \
     $(TARGET_SCREEN_WIDTH) \
     $(TARGET_SCREEN_HEIGHT) \
     $(TARGET_BOOTANIMATION_HALF_RES) \
-    $(BOOTLEGGERS_BOOTANIMATION)
+    $(TARGET_BOOTLEGGERS_BOOTANIMATION)
 endef
 
 TARGET_GENERATED_BOOTANIMATION := $(TARGET_OUT_INTERMEDIATES)/BOOTANIMATION/bootanimation.zip
