@@ -15,17 +15,8 @@
 # limitations under the License.
 #
 
-ifeq ($(TARGET_SCREEN_WIDTH),)
-    $(warning TARGET_SCREEN_WIDTH is not set, using default value: 1080)
-    TARGET_SCREEN_WIDTH := 1080
-endif
-ifeq ($(TARGET_SCREEN_HEIGHT),)
-    $(warning TARGET_SCREEN_HEIGHT is not set, using default value: 1920)
-    TARGET_SCREEN_HEIGHT := 1920
-endif
-
 define build-bootanimation
-    sh vendor/lineage/bootanimation/generate-bootanimation.sh \
+    sh vendor/bootleggers/bootanimation/generate-bootanimation.sh \
     $(TARGET_SCREEN_WIDTH) \
     $(TARGET_SCREEN_HEIGHT) \
     $(TARGET_BOOTANIMATION_HALF_RES)
@@ -38,7 +29,7 @@ $(TARGET_GENERATED_BOOTANIMATION):
 
 ifeq ($(TARGET_BOOTANIMATION),)
     TARGET_BOOTANIMATION := $(TARGET_GENERATED_BOOTANIMATION)
-    ifeq ($(shell command -v mogrify),)
+    ifeq ($(shell command -v convert),)
         $(info **********************************************)
         $(info The boot animation could not be generated as)
         $(info ImageMagick is not installed in your system.)

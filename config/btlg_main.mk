@@ -7,7 +7,8 @@ PRODUCT_PACKAGES += \
     GoogleMarkup \
     ShishuWalls \
     VisualizationWallpapers \
-    Jelly
+    Jelly \
+    bootanimation.zip
 
 # Fonts to copy
 PRODUCT_COPY_FILES += \
