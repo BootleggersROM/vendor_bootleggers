@@ -10,6 +10,14 @@ PRODUCT_PACKAGES += \
     Jelly \
     bootanimation.zip
 
+# Some Extra packages required to be built from here
+PRODUCT_PACKAGES += \
+    org.dirtyunicorns.utils
+
+# DU Utils library
+PRODUCT_BOOT_JARS += \
+    org.dirtyunicorns.utils
+
 # Fonts to copy
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/fonts/gobold/Gobold.ttf:system/fonts/Gobold.ttf \
