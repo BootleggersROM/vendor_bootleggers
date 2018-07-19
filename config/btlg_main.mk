@@ -12,7 +12,8 @@ PRODUCT_PACKAGES += \
 
 # Some Extra packages required to be built from here
 PRODUCT_PACKAGES += \
-    org.dirtyunicorns.utils
+    org.dirtyunicorns.utils \
+    OmniStyle
 
 # DU Utils library
 PRODUCT_BOOT_JARS += \
