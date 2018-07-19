@@ -19,6 +19,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils
 
+# Theme-Required overlays packages
+PRODUCT_PACKAGES += \
+    DarkThemeAndroidOverlay \
+    DarkThemeSettingsOverlay \
+    BlackThemeAndroidOverlay \
+    BlackThemeSettingsOverlay
+
+
 # Fonts to copy
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/fonts/gobold/Gobold.ttf:system/fonts/Gobold.ttf \
