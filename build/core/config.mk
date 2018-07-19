@@ -20,4 +20,4 @@ include $(TOPDIR)vendor/bootleggers/build/core/mtk_target.mk
 include $(TOPDIR)vendor/bootleggers/build/core/qcom_target.mk
 
 # Build RRO packages as System apps
-BUILD_RRO_SYSTEM_PACKAGE := $(TOP)/vendor/lineage/build/core/system_rro.mk
+BUILD_RRO_SYSTEM_PACKAGE := $(TOP)/vendor/bootleggers/build/core/system_rro.mk
