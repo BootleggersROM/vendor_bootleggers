@@ -26,6 +26,40 @@ PRODUCT_PACKAGES += \
     BlackThemeAndroidOverlay \
     BlackThemeSettingsOverlay
 
+# Color required overlays packages
+PRODUCT_PACKAGES += \
+    AndroidDarkThemeOverlay \
+    SettingsDarkThemeOverlay \
+    ObfusBleu \
+    NotImpPurple \
+    Holillusion \
+    MoveMint \
+    FootprintPurple \
+    BubblegumPink \
+    FrenchBleu \
+    Stock \
+    ManiaAmber \
+    SeasideMint \
+    BoucheRed \
+    DreamyPurple \
+    KABlue \
+    SpookedPurple \
+    MisleadingRed \
+    FSRGrey \
+    HeirloomBleu \
+    TruFilPink \
+    WarmthOrange \
+    NaturedGreen \
+    ColdBleu \
+    DiffDayGreen \
+    DuskPurple \
+    BurningRed \
+    HazedPink \
+    ColdYellow \
+    NewHouseOrange \
+    LimedGreen \
+    AWMAWYOrange \
+    IllusionsPurple
 
 # Fonts to copy
 PRODUCT_COPY_FILES += \
