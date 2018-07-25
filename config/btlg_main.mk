@@ -23,8 +23,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     DarkThemeAndroidOverlay \
     DarkThemeSettingsOverlay \
+    DarkThemeSystemUIOverlay \
     BlackThemeAndroidOverlay \
-    BlackThemeSettingsOverlay
+    BlackThemeSettingsOverlay \
+    BlackThemeSystemUIOverlay
 
 # Color required overlays packages
 PRODUCT_PACKAGES += \
