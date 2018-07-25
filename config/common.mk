@@ -100,19 +100,14 @@ PRODUCT_PACKAGES += \
     bzip2 \
     curl \
     fsck.ntfs \
-    gdbserver \
     htop \
     lib7z \
     libsepol \
-    micro_bench \
     mke2fs \
     mkfs.ntfs \
     mount.ntfs \
-    oprofiled \
     pigz \
     powertop \
-    sqlite3 \
-    strace \
     tune2fs \
     unrar \
     unzip \
@@ -155,15 +150,15 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.disable_rescue=true
 
-
-
 # These packages are excluded from user builds
-ifneq ($(TARGET_BUILD_VARIANT),user)
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES_DEBUG += \
+    micro_bench \
     procmem \
-    procrank
+    procrank \
+    strace
 
 # Conditionally build in su
+ifneq ($(TARGET_BUILD_VARIANT),user)
 ifeq ($(WITH_SU),true)
 PRODUCT_PACKAGES += \
     su
