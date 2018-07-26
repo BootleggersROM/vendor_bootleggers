@@ -26,7 +26,13 @@ PRODUCT_PACKAGES += \
     DarkThemeSystemUIOverlay \
     BlackThemeAndroidOverlay \
     BlackThemeSettingsOverlay \
-    BlackThemeSystemUIOverlay
+    BlackThemeSystemUIOverlay \
+    ShishuThemeAndroidOverlay \
+    ShishuThemeSettingsOverlay \
+    ShishuThemeSystemUIOverlay \
+    ShishuNightsThemeAndroidOverlay \
+    ShishuNightsThemeSettingsOverlay \
+    ShishuNightsThemeSystemUIOverlay
 
 # Color required overlays packages
 PRODUCT_PACKAGES += \
