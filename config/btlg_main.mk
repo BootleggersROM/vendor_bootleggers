@@ -32,7 +32,13 @@ PRODUCT_PACKAGES += \
     ShishuThemeSystemUIOverlay \
     ShishuNightsThemeAndroidOverlay \
     ShishuNightsThemeSettingsOverlay \
-    ShishuNightsThemeSystemUIOverlay
+    ShishuNightsThemeSystemUIOverlay \
+    ShishuIllusionsThemeAndroidOverlay \
+    ShishuIllusionsThemeSettingsOverlay \
+    ShishuIllusionsThemeSystemUIOverlay \
+    ShishuImmensityThemeAndroidOverlay \
+    ShishuImmensityThemeSettingsOverlay \
+    ShishuImmensityThemeSystemUIOverlay
 
 # Color required overlays packages
 PRODUCT_PACKAGES += \
