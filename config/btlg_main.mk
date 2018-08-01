@@ -13,7 +13,8 @@ PRODUCT_PACKAGES += \
 # Some Extra packages required to be built from here
 PRODUCT_PACKAGES += \
     org.dirtyunicorns.utils \
-    OmniStyle
+    OmniStyle \
+    OmniJaws
 
 # DU Utils library
 PRODUCT_BOOT_JARS += \
@@ -32,7 +33,7 @@ PRODUCT_PACKAGES += \
     ShishuThemeSystemUIOverlay \
     ShishuNightsThemeAndroidOverlay \
     ShishuNightsThemeSettingsOverlay \
-    ShishuNightsThemeSystemUIOverlay \
+    ShishuNOightsThemeSystemUIOverlay \
     ShishuIllusionsThemeAndroidOverlay \
     ShishuIllusionsThemeSettingsOverlay \
     ShishuIllusionsThemeSystemUIOverlay \
