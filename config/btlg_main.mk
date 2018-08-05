@@ -8,6 +8,7 @@ PRODUCT_PACKAGES += \
     ShishuWalls \
     VisualizationWallpapers \
     Jelly \
+    MusicPlayer \
     bootanimation.zip
 
 # Some Extra packages required to be built from here
