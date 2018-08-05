@@ -115,16 +115,23 @@ PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/fonts/fontage/TheOutbox-Regular.ttf:system/fonts/TheOutbox-Regular.ttf \
     vendor/bootleggers/prebuilt/fonts/fontage/Union-Regular.ttf:system/fonts/Union-Regular.ttf \
     vendor/bootleggers/prebuilt/fonts/fontagev2/Abel-Regular.ttf:system/fonts/Abel-Regular.ttf \
+    vendor/bootleggers/prebuilt/fonts/fontagev2/AdventPro-Regular.ttf:system/fonts/AdventPro-Regular.ttf \
     vendor/bootleggers/prebuilt/fonts/fontagev2/ArchivoNarrow-Regular.ttf:system/fonts/ArchivoNarrow-Regular.ttf \
+    vendor/bootleggers/prebuilt/fonts/fontagev2/AutourOne-Regular.ttf:system/fonts/AutourOne-Regular.ttf \
     vendor/bootleggers/prebuilt/fonts/fontagev2/BadScript-Regular.ttf:system/fonts/BadScript-Regular.ttf \
     vendor/bootleggers/prebuilt/fonts/fontagev2/CherrySwash-Regular.ttf:system/fonts/CherrySwash-Regular.ttf \
+    vendor/bootleggers/prebuilt/fonts/fontagev2/Codystar.ttf:system/fonts/Codystar.ttf \
+    vendor/bootleggers/prebuilt/fonts/fontagev2/IBMPlexMono.ttf:system/fonts/IBMPlexMono.ttf \
     vendor/bootleggers/prebuilt/fonts/fontagev2/IBMPlexMono-Light.ttf:system/fonts/IBMPlexMono-Light.ttf \
+    vendor/bootleggers/prebuilt/fonts/fontagev2/Jura-Regular.ttf:system/fonts/Jura-Regular.ttf \
     vendor/bootleggers/prebuilt/fonts/fontagev2/KellySlab-Regular.ttf:system/fonts/KellySlab-Regular.ttf \
     vendor/bootleggers/prebuilt/fonts/fontagev2/Pompiere-Regular.ttf:system/fonts/Pompiere-Regular.ttf \
     vendor/bootleggers/prebuilt/fonts/fontagev2/Raleway-Light.ttf:system/fonts/Raleway-Light.ttf \
     vendor/bootleggers/prebuilt/fonts/fontagev2/ReemKufi-Regular.ttf:system/fonts/ReemKufi-Regular.ttf \
     vendor/bootleggers/prebuilt/fonts/fontagev2/Satisfy-Regular.ttf:system/fonts/Satisfy-Regular.ttf \
     vendor/bootleggers/prebuilt/fonts/fontagev2/SeaweedScript-Regular.ttf:system/fonts/SeaweedScript-Regular.ttf \
+    vendor/bootleggers/prebuilt/fonts/fontagev2/SedgwickAveDisplay-Regular.ttf:system/fonts/SedgwickAveDisplay-Regular.ttf \
+    vendor/bootleggers/prebuilt/fonts/fontagev2/Vibur.ttf:system/fonts/Vibur.ttf \
     vendor/bootleggers/prebuilt/fonts/fontagev2/Voltaire.ttf:system/fonts/Voltaire.ttf
 
 #Call special ringtones makefile
