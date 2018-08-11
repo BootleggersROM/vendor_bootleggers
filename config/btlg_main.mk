@@ -41,9 +41,9 @@ PRODUCT_PACKAGES += \
     ShishuImmensityThemeAndroidOverlay \
     ShishuImmensityThemeSettingsOverlay \
     ShishuImmensityThemeSystemUIOverlay \
-    ProjectAATOMMAndroidOverlay \
-    ProjectAATOMMSettingsOverlay \
-    ProjectAATOMMSystemUIOverlay
+    ProjectAATOMMThemeAndroidOverlay \
+    ProjectAATOMMThemeSettingsOverlay \
+    ProjectAATOMMThemeSystemUIOverlay
 
 # Color required overlays packages
 PRODUCT_PACKAGES += \
