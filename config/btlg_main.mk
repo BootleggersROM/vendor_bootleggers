@@ -70,6 +70,11 @@ PRODUCT_PACKAGES += \
     AWMAWYOrange \
     IllusionsPurple
 
+# Markup libs
+PRODUCT_COPY_FILES += \
+    vendor/bootleggers/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
+    vendor/bootleggers/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
+
 # Fonts to copy
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/fonts/gobold/Gobold.ttf:system/fonts/Gobold.ttf \
