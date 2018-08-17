@@ -21,3 +21,8 @@ include $(TOPDIR)vendor/bootleggers/build/core/qcom_target.mk
 
 # Build RRO packages as System apps
 BUILD_RRO_SYSTEM_PACKAGE := $(TOP)/vendor/bootleggers/build/core/system_rro.mk
+
+# We modify several neverallows, so let the build proceed
+ifneq ($(TARGET_BUILD_VARIANT),user)
+SELINUX_IGNORE_NEVERALLOWS := true
+endif
