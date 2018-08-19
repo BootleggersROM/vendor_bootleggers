@@ -31,4 +31,7 @@
     <color name="Teal_700">@*android:color/accent_device_default_light</color>
     <color name="Teal_800">@*android:color/accent_device_default_light</color>
 
+    <!-- Possible color to contrast with the gradient -->
+    <color name="bootleg_accent_gradient_end_color">#ffbd2972</color>
+
 </resources>
