@@ -21,14 +21,4 @@
     <!-- Remote server that can provide NTP responses. -->
     <string translatable="false" name="config_ntpServer">2.android.pool.ntp.org</string>
 
-    <!-- Array of titles for sim color for multi-sim -->
-    <string-array name="color_picker">
-        <item>Accent</item>
-        <item>Blue</item>
-        <item>Indigo</item>
-        <item>Purple</item>
-        <item>Pink</item>
-        <item>Red</item>
-    </string-array>
-
 </resources>
