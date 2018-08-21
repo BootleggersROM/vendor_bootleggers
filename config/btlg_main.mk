@@ -11,6 +11,12 @@ PRODUCT_PACKAGES += \
     MusicPlayer \
     bootanimation.zip
 
+# Bootleg Apps, OTA 
+ifeq ($(BOOTLEG_BUILD_TYPE), Shishufied)
+    PRODUCT_PACKAGES += \
+        BootlegOTA
+endif
+
 # Some Extra packages required to be built from here
 PRODUCT_PACKAGES += \
     org.dirtyunicorns.utils \
