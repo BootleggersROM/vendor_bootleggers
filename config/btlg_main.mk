@@ -11,16 +11,6 @@ PRODUCT_PACKAGES += \
     MusicPlayer \
     bootanimation.zip
 
-# Some Extra packages required to be built from here
-PRODUCT_PACKAGES += \
-    org.dirtyunicorns.utils \
-    OmniStyle \
-    OmniJaws
-
-# DU Utils library
-PRODUCT_BOOT_JARS += \
-    org.dirtyunicorns.utils
-
 # Theme-Required overlays packages
 PRODUCT_PACKAGES += \
     DarkThemeAndroidOverlay \
@@ -79,10 +69,6 @@ PRODUCT_PACKAGES += \
     LimedGreen \
     AWMAWYOrange \
     IllusionsPurple
-
-# DU-Fonts
-PRODUCT_PACKAGES += \
-    CustomFonts
 
 # Fonts to copy
 PRODUCT_COPY_FILES += \
@@ -144,3 +130,16 @@ PRODUCT_COPY_FILES += \
 
 #Call special ringtones makefile
 include vendor/bootleggers/config/common_audio.mk
+
+# Some Extra packages required to be built from here
+#PRODUCT_PACKAGES += \
+#    org.dirtyunicorns.utils \
+#    OmniStyle \
+#    OmniJaws
+#
+# DU Utils library
+#PRODUCT_BOOT_JARS += \
+#    org.dirtyunicorns.utils
+# DU-Fonts
+#PRODUCT_PACKAGES += \
+#    CustomFonts
