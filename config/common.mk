@@ -1,12 +1,10 @@
 PRODUCT_BRAND ?= Bootleggers
 
-BOOTLEGGERS_VERSION_NUMBER := 3.0
-
 # Versioning System
 # Bootleggers version over here.
-PRODUCT_VERSION_MAJOR = Oreo
-PRODUCT_VERSION_MINOR = Fxxxxxxx
-BOOTLEGGERS_VERSION_NUMBER = 3.0-Testing
+PRODUCT_VERSION_MAJOR = Pie
+PRODUCT_VERSION_MINOR = GuessIDontKnow
+BOOTLEGGERS_VERSION_NUMBER := 3.5-Testing
 BOOTLEGGERS_SONGCODEURL = http://bit.ly/2vdDkSL
 BOOTLEGGERS_POSTFIX := -$(shell date +"%Y%m%d")
 
