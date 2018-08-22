@@ -7,6 +7,7 @@ PRODUCT_PACKAGES += \
     GoogleMarkup \
     ShishuWalls \
     VisualizationWallpapers \
+    LatinIME \
     Jelly \
     MusicPlayer \
     bootanimation.zip
