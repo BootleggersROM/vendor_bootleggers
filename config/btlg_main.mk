@@ -12,7 +12,7 @@ PRODUCT_PACKAGES += \
     bootanimation.zip
 
 # Bootleg Apps, OTA 
-ifeq ($(BOOTLEG_BUILD_TYPE), Shishufied)
+ifeq ($(BOOTLEGGERS_BUILD_TYPE), Shishufied)
     PRODUCT_PACKAGES += \
         BootlegOTA
 endif
