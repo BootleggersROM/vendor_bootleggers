@@ -12,30 +12,6 @@ PRODUCT_PACKAGES += \
     MusicPlayer \
     bootanimation.zip
 
-# Theme-Required overlays packages
-PRODUCT_PACKAGES += \
-    DarkThemeAndroidOverlay \
-    DarkThemeSettingsOverlay \
-    DarkThemeSystemUIOverlay \
-    BlackThemeAndroidOverlay \
-    BlackThemeSettingsOverlay \
-    BlackThemeSystemUIOverlay \
-    ShishuThemeAndroidOverlay \
-    ShishuThemeSettingsOverlay \
-    ShishuThemeSystemUIOverlay \
-    ShishuNightsThemeAndroidOverlay \
-    ShishuNightsThemeSettingsOverlay \
-    ShishuNightsThemeSystemUIOverlay \
-    ShishuIllusionsThemeAndroidOverlay \
-    ShishuIllusionsThemeSettingsOverlay \
-    ShishuIllusionsThemeSystemUIOverlay \
-    ShishuImmensityThemeAndroidOverlay \
-    ShishuImmensityThemeSettingsOverlay \
-    ShishuImmensityThemeSystemUIOverlay \
-    ShishuAmalgamationThemeAndroidOverlay \
-    ShishuAmalgamationThemeSettingsOverlay \
-    ShishuAmalgamationThemeSystemUIOverlay
-
 # Color required overlays packages
 PRODUCT_PACKAGES += \
     AndroidDarkThemeOverlay \
@@ -137,6 +113,33 @@ PRODUCT_COPY_FILES += \
 #Call special ringtones makefile
 include vendor/bootleggers/config/common_audio.mk
 
+
+### COMMENTED WASTELAND - MOVED TEMPORALLY HERE DUE TO WIP ###
+#
+# Theme-Required overlays packages
+#PRODUCT_PACKAGES += \
+#    DarkThemeAndroidOverlay \
+#    DarkThemeSettingsOverlay \
+#    DarkThemeSystemUIOverlay \
+#    BlackThemeAndroidOverlay \
+#    BlackThemeSettingsOverlay \
+#    BlackThemeSystemUIOverlay \
+#    ShishuThemeAndroidOverlay \
+#    ShishuThemeSettingsOverlay \
+#    ShishuThemeSystemUIOverlay \
+#    ShishuNightsThemeAndroidOverlay \
+#    ShishuNightsThemeSettingsOverlay \
+#    ShishuNightsThemeSystemUIOverlay \
+#    ShishuIllusionsThemeAndroidOverlay \
+#    ShishuIllusionsThemeSettingsOverlay \
+#    ShishuIllusionsThemeSystemUIOverlay \
+#    ShishuImmensityThemeAndroidOverlay \
+#    ShishuImmensityThemeSettingsOverlay \
+#    ShishuImmensityThemeSystemUIOverlay \
+#    ShishuAmalgamationThemeAndroidOverlay \
+#    ShishuAmalgamationThemeSettingsOverlay \
+#    ShishuAmalgamationThemeSystemUIOverlay
+#
 # Some Extra packages required to be built from here
 #PRODUCT_PACKAGES += \
 #    org.dirtyunicorns.utils \
@@ -146,6 +149,7 @@ include vendor/bootleggers/config/common_audio.mk
 # DU Utils library
 #PRODUCT_BOOT_JARS += \
 #    org.dirtyunicorns.utils
+#
 # DU-Fonts
 #PRODUCT_PACKAGES += \
 #    CustomFonts
