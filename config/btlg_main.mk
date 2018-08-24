@@ -3,6 +3,7 @@ PRODUCT_PACKAGES += \
     CameraRoll \
     MiXplorerPrebuilt \
     Launcher3 \
+    ShishuLauncher \
     WallpaperPickerGoogle \
     GoogleMarkup \
     ShishuWalls \
