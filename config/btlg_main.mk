@@ -7,6 +7,7 @@ PRODUCT_PACKAGES += \
     WallpaperPickerGoogle \
     GoogleMarkup \
     ShishuWalls \
+    GugelClock \
     VisualizationWallpapers \
     LatinIME \
     Jelly \
