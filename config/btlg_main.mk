@@ -6,6 +6,7 @@ PRODUCT_PACKAGES += \
     WallpaperPickerGoogle \
     GoogleMarkup \
     ShishuWalls \
+    GugelClock \
     VisualizationWallpapers \
     Jelly \
     MusicPlayer \
