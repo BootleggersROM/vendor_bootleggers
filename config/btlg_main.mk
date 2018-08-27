@@ -16,8 +16,6 @@ PRODUCT_PACKAGES += \
 
 # Color required overlays packages
 PRODUCT_PACKAGES += \
-    AndroidDarkThemeOverlay \
-    SettingsDarkThemeOverlay \
     ObfusBleu \
     NotImpPurple \
     Holillusion \
@@ -48,6 +46,23 @@ PRODUCT_PACKAGES += \
     LimedGreen \
     AWMAWYOrange \
     IllusionsPurple
+
+# Theme-Required overlays packages
+PRODUCT_PACKAGES += \
+    DarkThemeAndroidOverlay \
+    DarkThemeSettingsOverlay \
+    BlackThemeAndroidOverlay \
+    BlackThemeSettingsOverlay \
+    ShishuThemeAndroidOverlay \
+    ShishuThemeSettingsOverlay \
+    ShishuNightsThemeAndroidOverlay \
+    ShishuNightsThemeSettingsOverlay \
+    ShishuIllusionsThemeAndroidOverlay \
+    ShishuIllusionsThemeSettingsOverlay \
+    ShishuImmensityThemeAndroidOverlay \
+    ShishuImmensityThemeSettingsOverlay \
+    ShishuAmalgamationThemeAndroidOverlay \
+    ShishuAmalgamationThemeSettingsOverlay
 
 # Markup libs
 PRODUCT_COPY_FILES += \
@@ -119,29 +134,6 @@ include vendor/bootleggers/config/common_audio.mk
 
 ### COMMENTED WASTELAND - MOVED TEMPORALLY HERE DUE TO WIP ###
 #
-# Theme-Required overlays packages
-#PRODUCT_PACKAGES += \
-#    DarkThemeAndroidOverlay \
-#    DarkThemeSettingsOverlay \
-#    DarkThemeSystemUIOverlay \
-#    BlackThemeAndroidOverlay \
-#    BlackThemeSettingsOverlay \
-#    BlackThemeSystemUIOverlay \
-#    ShishuThemeAndroidOverlay \
-#    ShishuThemeSettingsOverlay \
-#    ShishuThemeSystemUIOverlay \
-#    ShishuNightsThemeAndroidOverlay \
-#    ShishuNightsThemeSettingsOverlay \
-#    ShishuNightsThemeSystemUIOverlay \
-#    ShishuIllusionsThemeAndroidOverlay \
-#    ShishuIllusionsThemeSettingsOverlay \
-#    ShishuIllusionsThemeSystemUIOverlay \
-#    ShishuImmensityThemeAndroidOverlay \
-#    ShishuImmensityThemeSettingsOverlay \
-#    ShishuImmensityThemeSystemUIOverlay \
-#    ShishuAmalgamationThemeAndroidOverlay \
-#    ShishuAmalgamationThemeSettingsOverlay \
-#    ShishuAmalgamationThemeSystemUIOverlay
 #
 # Some Extra packages required to be built from here
 #PRODUCT_PACKAGES += \
