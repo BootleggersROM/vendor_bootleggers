@@ -76,7 +76,8 @@ PRODUCT_COPY_FILES += \
 # Some permissions
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/config/permissions/privapp-permissions-recorder.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-recorder.xml \
-    vendor/bootleggers/config/permissions/org.pixelexperience.recorder.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/org.pixelexperience.recorder.xml
+    vendor/bootleggers/config/permissions/org.pixelexperience.recorder.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/org.pixelexperience.recorder.xml \
+    vendor/bootleggers/config/permissions/bootleggers-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/bootleggers-hiddenapi-package-whitelist.xml
 
 # TWRP
 ifeq ($(WITH_TWRP),true)
