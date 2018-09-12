@@ -55,14 +55,19 @@ PRODUCT_PACKAGES += \
     BlackThemeSettingsOverlay \
     ShishuThemeAndroidOverlay \
     ShishuThemeSettingsOverlay \
+    ShishuThemeSystemUIOverlay \
     ShishuNightsThemeAndroidOverlay \
     ShishuNightsThemeSettingsOverlay \
+    ShishuNightsThemeSystemUIOverlay \
     ShishuIllusionsThemeAndroidOverlay \
     ShishuIllusionsThemeSettingsOverlay \
+    ShishuIllusionsThemeSystemUIOverlay \
     ShishuImmensityThemeAndroidOverlay \
     ShishuImmensityThemeSettingsOverlay \
+    ShishuImmensityThemeSystemUIOverlay \
     ShishuAmalgamationThemeAndroidOverlay \
-    ShishuAmalgamationThemeSettingsOverlay
+    ShishuAmalgamationThemeSettingsOverlay \
+    ShishuAmalgamationThemeSystemUIOverlay
 
 # Markup libs
 PRODUCT_COPY_FILES += \
