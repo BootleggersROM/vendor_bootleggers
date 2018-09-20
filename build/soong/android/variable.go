@@ -15,9 +15,6 @@ type Product_variables struct {
 		Overrides []string
 		Shared_libs []string
 	}
-	Needs_text_relocations struct {
-		Cppflags []string
-	}
 	Should_wait_for_qsee struct {
 		Cflags []string
 	}
@@ -81,7 +78,6 @@ type ProductVariables struct {
 	Should_wait_for_qsee                  *bool `json:",omitempty"`
 	Supports_hw_fde                       *bool `json:",omitempty"`
 	Supports_hw_fde_perf                  *bool `json:",omitempty"`
-	Needs_text_relocations                *bool   `json:",omitempty"`
 	Specific_camera_parameter_library     *string `json:",omitempty"`
 	Target_init_vendor_lib  			  *string `json:",omitempty"`
 	Target_process_sdk_version_override   *string `json:",omitempty"`
