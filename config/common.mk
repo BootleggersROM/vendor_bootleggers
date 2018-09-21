@@ -1,3 +1,6 @@
+# Allow vendor/extra to override any property by setting it first
+$(call inherit-product-if-exists, vendor/extra/product.mk)
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
@@ -202,8 +205,6 @@ endif
 endif
 
 include vendor/bootleggers/config/btlg_main.mk
-
-$(call inherit-product-if-exists, vendor/extra/product.mk)
 
 # RRO Overlays
 PRODUCT_PACKAGES += \
