@@ -123,5 +123,8 @@
     <dimen name="config_dialogCornerRadius">8.0dip</dimen>
     <dimen name="config_buttonCornerRadius">4.0dip</dimen>
     <dimen name="config_progressBarCornerRadius">1000.0dip</dimen>
- 
+
+    <!-- Use a custom quickstep package and reference it for the quickstep layout on recents -->
+    <string name="config_recentsComponentName">ch.deletescape.lawnchair.ci/com.android.quickstep.RecentsActivity</string>
+
 </resources>
