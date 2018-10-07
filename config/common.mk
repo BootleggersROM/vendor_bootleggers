@@ -4,7 +4,7 @@ PRODUCT_BRAND ?= Bootleggers
 # Bootleggers version over here.
 PRODUCT_VERSION_MAJOR = Pie
 PRODUCT_VERSION_MINOR = GuessIDontKnow
-BOOTLEGGERS_VERSION_NUMBER := 3.5-Testing
+BOOTLEGGERS_VERSION_NUMBER := 3.5-MadStinky
 BOOTLEGGERS_SONGCODEURL = http://bit.ly/2vdDkSL
 BOOTLEGGERS_POSTFIX := -$(shell date +"%Y%m%d")
 
