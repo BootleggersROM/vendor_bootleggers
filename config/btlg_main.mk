@@ -53,18 +53,23 @@ PRODUCT_PACKAGES += \
     BlackThemeAndroidOverlay \
     BlackThemeSettingsOverlay \
     ShishuThemeAndroidOverlay \
+    ShishuThemeGMSOverlay \
     ShishuThemeSettingsOverlay \
     ShishuThemeSystemUIOverlay \
     ShishuNightsThemeAndroidOverlay \
+    ShishuNightsThemeGMSOverlay \
     ShishuNightsThemeSettingsOverlay \
     ShishuNightsThemeSystemUIOverlay \
     ShishuIllusionsThemeAndroidOverlay \
+    ShishuIllusionsThemeGMSOverlay \
     ShishuIllusionsThemeSettingsOverlay \
     ShishuIllusionsThemeSystemUIOverlay \
     ShishuImmensityThemeAndroidOverlay \
+    ShishuImmensityThemeGMSOverlay \
     ShishuImmensityThemeSettingsOverlay \
     ShishuImmensityThemeSystemUIOverlay \
     ShishuAmalgamationThemeAndroidOverlay \
+    ShishuAmalgamationThemeGMSOverlay \
     ShishuAmalgamationThemeSettingsOverlay \
     ShishuAmalgamationThemeSystemUIOverlay
 
