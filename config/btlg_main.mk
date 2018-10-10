@@ -73,6 +73,10 @@ PRODUCT_PACKAGES += \
     ShishuAmalgamationThemeSettingsOverlay \
     ShishuAmalgamationThemeSystemUIOverlay
 
+# DO NOT MERGE - 
+PRODUCT_PACKAGES += \
+    ShishuTestOv
+
 # Markup libs
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
