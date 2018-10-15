@@ -2,7 +2,7 @@
 PRODUCT_PACKAGES += \
     CameraRoll \
     MiXplorerPrebuilt \
-    Lawnchair \
+    Launcher3QuickStep \
     WallpaperPickerGoogle \
     GoogleMarkup \
     ShishuWalls \
