@@ -56,22 +56,27 @@ PRODUCT_PACKAGES += \
     ShishuThemeGMSOverlay \
     ShishuThemeSettingsOverlay \
     ShishuThemeSystemUIOverlay \
+    ShishuThemeWellbeingOverlay \
     ShishuNightsThemeAndroidOverlay \
     ShishuNightsThemeGMSOverlay \
     ShishuNightsThemeSettingsOverlay \
     ShishuNightsThemeSystemUIOverlay \
+    ShishuNightsThemeWellbeingOverlay \
     ShishuIllusionsThemeAndroidOverlay \
     ShishuIllusionsThemeGMSOverlay \
     ShishuIllusionsThemeSettingsOverlay \
     ShishuIllusionsThemeSystemUIOverlay \
+    ShishuIllusionsThemeWellbeingOverlay \
     ShishuImmensityThemeAndroidOverlay \
     ShishuImmensityThemeGMSOverlay \
     ShishuImmensityThemeSettingsOverlay \
     ShishuImmensityThemeSystemUIOverlay \
+    ShishuImmensityThemeWellbeingOverlay \
     ShishuAmalgamationThemeAndroidOverlay \
     ShishuAmalgamationThemeGMSOverlay \
     ShishuAmalgamationThemeSettingsOverlay \
-    ShishuAmalgamationThemeSystemUIOverlay
+    ShishuAmalgamationThemeSystemUIOverlay \
+    ShishuAmalgamationThemeWellbeingOverlay
 
 # DO NOT MERGE - 
 PRODUCT_PACKAGES += \
