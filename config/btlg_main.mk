@@ -78,6 +78,16 @@ PRODUCT_PACKAGES += \
     ShishuAmalgamationThemeSystemUIOverlay \
     ShishuAmalgamationThemeWellbeingOverlay
 
+#Quicksettings Tiles icons
+PRODUCT_PACKAGES += \
+	QSTileCircleDual \
+	QSTileCircleGradient \
+	QSTileInkdrop \
+	QSTileIconAccent \
+	QSTileShishuNights \
+	QSTileMemedoSquare \
+	QSTileWavey
+
 # DO NOT MERGE - 
 PRODUCT_PACKAGES += \
     ShishuTestOv
