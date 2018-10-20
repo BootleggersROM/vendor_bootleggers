@@ -161,6 +161,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.disable_rescue=true
 
+
+
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
@@ -178,6 +180,10 @@ DEVICE_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/common
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/bootleggers/config/partner_gms.mk
+
+ifeq ($(TARGET_PROVIDES_TELEPHONY_EXT),)
+include vendor/bootleggers/config/caf_fw.mk
+endif
 
 include vendor/bootleggers/config/btlg_main.mk
 
