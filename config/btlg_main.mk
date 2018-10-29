@@ -2,7 +2,6 @@
 PRODUCT_PACKAGES += \
     CameraRoll \
     MiXplorerPrebuilt \
-    Launcher3QuickStep \
     WallpaperPickerGoogle \
     GoogleMarkup \
     ShishuWalls \
@@ -12,6 +11,19 @@ PRODUCT_PACKAGES += \
     Jelly \
     MusicPlayer \
     bootanimation.zip
+
+# Launcher Selection just in case
+# Please, prepare for reports
+ifeq ($(BOOTLEGGERS_SITDOWN),true)
+    PRODUCT_PACKAGES += \
+        Lawnchair
+
+    DEVICE_PACKAGE_OVERLAYS += \
+        vendor/bootleggers/overlay/lawnchair
+else
+    PRODUCT_PACKAGES += \
+        SearchLauncherQuickStep
+endif
 
 # Color required overlays packages
 PRODUCT_PACKAGES += \
