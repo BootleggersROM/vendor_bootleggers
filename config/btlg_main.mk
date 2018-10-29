@@ -10,7 +10,8 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Jelly \
     MusicPlayer \
-    bootanimation.zip
+    bootanimation.zip \
+    WeatherClient
 
 # Launcher Selection just in case
 # Please, prepare for reports
@@ -123,6 +124,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
     vendor/bootleggers/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
+
+# Weather
+PRODUCT_COPY_FILES += \
+    vendor/bootleggers/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml
 
 # Fonts to copy
 PRODUCT_COPY_FILES += \
