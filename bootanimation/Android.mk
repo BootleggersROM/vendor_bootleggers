@@ -15,6 +15,21 @@
 # limitations under the License.
 #
 
+ifeq ($(TARGET_SCREEN_WIDTH),)
+ifeq ($(TARGET_SCREEN_HEIGHT),)
+    $(warning TARGET_SCREEN_WIDTH and TARGET_SCREEN_HEIGHT are not defined. For better support, declare the values on your device tree.)
+endif
+endif
+
+ifeq ($(TARGET_SCREEN_WIDTH),)
+    $(warning TARGET_SCREEN_WIDTH is not set, using default value: 1080)
+    TARGET_SCREEN_WIDTH := 1080
+endif
+ifeq ($(TARGET_SCREEN_HEIGHT),)
+    $(warning TARGET_SCREEN_HEIGHT is not set, using default value: 1920)
+    TARGET_SCREEN_HEIGHT := 1920
+endif
+
 ifeq ($(TARGET_BOOTANIMATION_HALF_RES),)
     TARGET_BOOTANIMATION_HALF_RES := false
 endif

@@ -59,34 +59,31 @@ esac
 ###
 # This is the size declaration and adjustments acording a TARGET_BOOTANIMATION_HALF_RES
 ###
+
 if [ -z "$WIDTH" ]; then
     echo "Warning: bootanimation width not specified"
     WIDTH="1080"
 fi
-
-if [ -z "$HEIGHT" ]; then
+ if [ -z "$HEIGHT" ]; then
     echo "Warning: bootanimation height not specified"
     HEIGHT="1080"
 fi
 
 if [ "$HEIGHT" -lt "$WIDTH" ]; then
-    SIZE="$HEIGHT"
+    SQUARESIZE="$HEIGHT"
 else
-    SIZE="$WIDTH"
+    SQUARESIZE="$WIDTH"
 fi
 
-IMAGESIZEH="$HEIGHT"
-IMAGESIZEW="$WIDTH"
-
 if [ "$HALF_RES" = "true" ] && [ "$ISQUARE" = "true" ]; then
-    IMAGESIZEH=$(expr $SIZE / 2)
-    IMAGESIZEW=$(expr $SIZE / 2)
+    IMAGESIZEH=$(expr $SQUARESIZE / 2)
+    IMAGESIZEW=$(expr $SQUARESIZE / 2)
 elif [ "$HALF_RES" = "true" ] && [ "$ISQUARE" = "false" ]; then
     IMAGESIZEH=$(expr $HEIGHT / 2)
     IMAGESIZEW=$(expr $WIDTH / 2)
 elif [ "$ISQUARE" = "true" ]; then
-    IMAGESIZEH="$SIZE"
-    IMAGESIZEW="$SIZE"
+    IMAGESIZEH="$SQUARESIZE"
+    IMAGESIZEW="$SQUARESIZE"
 else
     IMAGESIZEH="$HEIGHT"
     IMAGESIZEW="$WIDTH"
