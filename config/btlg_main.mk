@@ -31,32 +31,32 @@ PRODUCT_PACKAGES += \
     NotImpPurple \
     Holillusion \
     MoveMint \
-    FootprintPurple \
+    AlmostProBlue \
     BubblegumPink \
     FrenchBleu \
     Stock \
     ManiaAmber \
-    SeasideMint \
+    DrownedAquaBlue \
     BoucheRed \
     DreamyPurple \
-    KABlue \
+    GrapesPurple \
     SpookedPurple \
     MisleadingRed \
     FSRGrey \
     HeirloomBleu \
-    TruFilPink \
+    LunaBlue \
     WarmthOrange \
     NaturedGreen \
     ColdBleu \
     DiffDayGreen \
     DuskPurple \
     BurningRed \
-    HazedPink \
-    ColdYellow \
+    SimilarDawnRed \
+    SpoofyGreen \
     NewHouseOrange \
     LimedGreen \
-    AWMAWYOrange \
-    IllusionsPurple
+    SunsetOrange \
+    UiGradientsDIMIGO
 
 # Theme-Required overlays packages
 PRODUCT_PACKAGES += \
