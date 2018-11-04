@@ -88,7 +88,12 @@ PRODUCT_PACKAGES += \
     ShishuAmalgamationThemeGMSOverlay \
     ShishuAmalgamationThemeSettingsOverlay \
     ShishuAmalgamationThemeSystemUIOverlay \
-    ShishuAmalgamationThemeWellbeingOverlay
+    ShishuAmalgamationThemeWellbeingOverlay \
+    ShishuCosmosThemeAndroidOverlay \
+    ShishuCosmosThemeGMSOverlay \
+    ShishuCosmosThemeSettingsOverlay \
+    ShishuCosmosThemeSystemUIOverlay \
+    ShishuCosmosThemeWellbeingOverlay
 
 #Quicksettings Tiles icons
 PRODUCT_PACKAGES += \
