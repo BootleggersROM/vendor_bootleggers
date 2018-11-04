@@ -93,7 +93,12 @@ PRODUCT_PACKAGES += \
     ShishuCosmosThemeGMSOverlay \
     ShishuCosmosThemeSettingsOverlay \
     ShishuCosmosThemeSystemUIOverlay \
-    ShishuCosmosThemeWellbeingOverlay
+    ShishuCosmosThemeWellbeingOverlay \
+    ShishuProtostarThemeAndroidOverlay \
+    ShishuProtostarThemeGMSOverlay \
+    ShishuProtostarThemeSettingsOverlay \
+    ShishuProtostarThemeSystemUIOverlay \
+    ShishuProtostarThemeWellbeingOverlay
 
 #Quicksettings Tiles icons
 PRODUCT_PACKAGES += \
