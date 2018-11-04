@@ -103,7 +103,12 @@ PRODUCT_PACKAGES += \
 	QSTileIconAccent \
 	QSTileShishuNights \
 	QSTileMemedoSquare \
-	QSTileWavey
+	QSTileWavey \
+	QSTileAttemptMountain \
+	QSTileDottedCircle \
+	QSTileNinja \
+	QSTilePokesign \
+	QSTileShishuInk
 
 # DO NOT MERGE - 
 PRODUCT_PACKAGES += \
