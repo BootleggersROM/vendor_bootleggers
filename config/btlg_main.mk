@@ -103,6 +103,8 @@ PRODUCT_PACKAGES += \
 
 #Quicksettings Tiles icons
 PRODUCT_PACKAGES += \
+	QSTileSquircle \
+	QSTileTearDrop \
 	QSTileCircleDual \
 	QSTileCircleGradient \
 	QSTileInkdrop \
