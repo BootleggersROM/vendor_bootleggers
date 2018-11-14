@@ -120,7 +120,8 @@ PRODUCT_PACKAGES += \
 
 # DO NOT MERGE - 
 PRODUCT_PACKAGES += \
-    ShishuTestOv
+    ShishuTestOv \
+    ShishuTestOv2
 
 # Markup libs
 PRODUCT_COPY_FILES += \
