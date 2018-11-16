@@ -21,13 +21,18 @@ OUT="$ANDROID_PRODUCT_OUT/obj/BOOTANIMATION"
 #   2: Attempt of glitch made by us, bad attempt but it's clean anyways
 #   3: After effects reveal template: It's a template, more than that what do you expect?
 #   4: After effects reveal template (alternative): Another template but it got a circle except of lines and more glitching at the end.
+#   5: Moelle's CRT: Show the logo on a kind of CRT screen
+#   6: Moelle's Glitch Reveal: A very dark but glitchy way to show our logo, that ends on a CRT style.
+#   7: Moelle's Hackled: Shows more glitch but it loads the software on a monotype font style.
+#   8: Moelle's Shining Logo: A LED-Alike logo that glitches out and and ends showing up the ROM name with the main logo font
+#   9: Moelle's Smoke Pulse: The one that got shared everywhere, that ends on a smokey background.
 #
 #####
 if [ -z "$BOOTPICK" ]; then
-    RANDOM_BOOT=$(shuf -i 0-4 -n 1)
+    RANDOM_BOOT=$(shuf -i 0-9 -n 1)
     echo "Info: bootanimation was chosen randomly. The chosen one is the number $RANDOM_BOOT"
 else
-    if [ $BOOTPICK -lt -1 ] || [ $BOOTPICK -gt 5 ]; then
+    if [ $BOOTPICK -lt -1 ] || [ $BOOTPICK -gt 9 ]; then
         echo "ERROR: The declared value isn't on the bootanimation list bounds. Please refer to generate-bootanimation.sh to see the values"
         exit 1
     else
@@ -49,6 +54,16 @@ case "$RANDOM_BOOT" in
 
     [3-4])
         BOOTFPS="50"
+        ISQUARE="false"
+    ;;
+
+    [5-7])
+        BOOTFPS="25"
+        ISQUARE="false"
+    ;;
+
+    [8-9])
+        BOOTFPS="30"
         ISQUARE="false"
     ;;
 
