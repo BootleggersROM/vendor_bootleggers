@@ -130,7 +130,8 @@ PRODUCT_COPY_FILES += \
 
 # Weather
 PRODUCT_COPY_FILES += \
-    vendor/bootleggers/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml
+    vendor/bootleggers/prebuilt/common/etc/permissions/com.android.providers.weather.xml:system/etc/permissions/com.android.providers.weather.xml \
+    vendor/bootleggers/prebuilt/common/etc/default-permissions/com.android.providers.weather.xml:system/etc/default-permissions/com.android.providers.weather.xml
 
 # Fonts to copy
 PRODUCT_COPY_FILES += \
