@@ -64,6 +64,10 @@ PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
+# priv-app whitelist
+PRODUCT_COPY_FILES += \
+    vendor/bootleggers/prebuilt/common/etc/permissions/privapp-permissions-bootleg.xml:system/etc/permissions/privapp-permissions-bootleg.xml
+
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
