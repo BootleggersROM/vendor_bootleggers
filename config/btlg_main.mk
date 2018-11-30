@@ -123,6 +123,10 @@ PRODUCT_PACKAGES += \
     ShishuTestOv \
     ShishuTestOv2
 
+# DU-Fonts
+PRODUCT_PACKAGES += \
+    CustomFonts
+
 # Markup libs
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
@@ -209,6 +213,3 @@ include vendor/bootleggers/config/common_audio.mk
 #PRODUCT_BOOT_JARS += \
 #    org.dirtyunicorns.utils
 #
-# DU-Fonts
-#PRODUCT_PACKAGES += \
-#    CustomFonts
