@@ -63,8 +63,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DarkThemeAndroidOverlay \
     DarkThemeSettingsOverlay \
+    DarkThemeSystemUIOverlay \
     BlackThemeAndroidOverlay \
     BlackThemeSettingsOverlay \
+    BlackThemeSystemUIOverlay \
     ShishuThemeAndroidOverlay \
     ShishuThemeGMSOverlay \
     ShishuThemeSettingsOverlay \
