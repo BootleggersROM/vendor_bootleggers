@@ -16,5 +16,6 @@
 
     <privapp-permissions package="com.android.settings">
         <permission name="android.permission.NAVIGATION_EDITOR"/>
+        <permission name="android.permission.ACCESS_FONT_MANAGER"/>
     </privapp-permissions>
 </permissions>
