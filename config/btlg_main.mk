@@ -136,9 +136,14 @@ PRODUCT_PACKAGES += \
     CustomFonts
 
 # Markup libs
-PRODUCT_COPY_FILES += \
-    vendor/bootleggers/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
-    vendor/bootleggers/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
+ifeq ($(TARGET_ARCH),arm64)
+    PRODUCT_COPY_FILES += \
+           vendor/bootleggers/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
+           vendor/bootleggers/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
+else
+    PRODUCT_COPY_FILES += \
+           vendor/bootleggers/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so
+endif
 
 # Weather
 PRODUCT_COPY_FILES += \
