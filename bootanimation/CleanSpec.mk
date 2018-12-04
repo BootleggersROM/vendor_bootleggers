@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-$(call add-clean-step, rm -rf $(PRODUCT_OUT)/obj/BOOTANIMATION)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/obj/BOOTANIMATIONS)

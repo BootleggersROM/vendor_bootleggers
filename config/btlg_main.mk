@@ -10,7 +10,9 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Jelly \
     MusicPlayer \
-    bootanimation.zip \
+    bootanimation1.zip \
+    bootanimation2.zip \
+    bootanimation3.zip \
     WeatherClient
 
 # Launcher Selection just in case
