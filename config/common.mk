@@ -3,9 +3,9 @@ PRODUCT_BRAND ?= Bootleggers
 # Versioning System
 # Bootleggers version over here.
 PRODUCT_VERSION_MAJOR = Pie
-PRODUCT_VERSION_MINOR = GuessIDontKnow
+PRODUCT_VERSION_MINOR = Gray City Day
 BOOTLEGGERS_VERSION_NUMBER := 3.5-MadStinky
-BOOTLEGGERS_SONGCODEURL = http://bit.ly/2vdDkSL
+BOOTLEGGERS_SONGCODEURL = bit.ly/2SyWWe3
 BOOTLEGGERS_POSTFIX := -$(shell date +"%Y%m%d")
 
 ifndef BOOTLEGGERS_BUILD_TYPE
