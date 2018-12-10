@@ -9,10 +9,14 @@ HALF_RES="$3"
 BOOTNUM="$4"
 OUT="$ANDROID_PRODUCT_OUT/obj/BOOTANIMATIONS/$BOOTNUM"
 
+# remove OUT if it already exists
+if [[ -d $OUT ]]; then
+    rm -rf $OUT
+fi
+mkdir -p "$OUT/bootanimation"
+
 #####
-# This is the main AICP code but closed to an if because we want to make a variable
-# to declare a fixed bootanimation. Ideal for those who want a certain style or stick
-# to our classic and ugly bootanimation. 
+# This is the main AICP code except adjusted to generate 3 bootanimations.
 #
 # By now the current designs to declare are:
 #   0: Classic bootanimation
@@ -102,11 +106,10 @@ else
 fi
 
 RESOLUTION=""$IMAGESIZEW"x"$IMAGESIZEH""
-
 for part_cnt in 0 1 2; do
     mkdir -p $OUT/bootanimation/part$part_cnt
 done
-tar xfp "vendor/bootleggers/bootanimation/bootanimation$RANDOM_BOOT.tar" --to-command="convert - -resize '$RESOLUTION'^ -quality 50 -gravity center -crop '$RESOLUTION+0+0' +repage \"$OUT/bootanimation/\$TAR_FILENAME\""
+tar xfp "vendor/bootleggers/bootanimation/bootanimation$RANDOM_BOOT.tar" --to-command="convert - -strip -interlace Plane -gaussian-blur 0.05 -quality 55 -resize '$RESOLUTION'^ -gravity center -crop '$RESOLUTION+0+0' +repage \"$OUT/bootanimation/\$TAR_FILENAME\""
 
 # Create desc.txt
 echo "$IMAGESIZEW $IMAGESIZEH" "$BOOTFPS" > "$OUT/bootanimation/desc.txt"
