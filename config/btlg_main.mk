@@ -10,10 +10,17 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Jelly \
     MusicPlayer \
-    bootanimation1.zip \
-    bootanimation2.zip \
-    bootanimation3.zip \
+    bootanimation.zip \
     WeatherClient
+
+ifeq ($(TARGET_USE_SINGLE_BOOTANIMATION),true)
+    PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+        sys.random_bootanimation_disabled=1
+else
+    PRODUCT_PACKAGES += \
+        bootanimation2.zip \
+        bootanimation3.zip
+endif
 
 # Launcher Selection just in case
 # Please, prepare for reports

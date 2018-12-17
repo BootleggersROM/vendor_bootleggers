@@ -2,21 +2,26 @@
 ###
 # Getting variables from the makefile
 ###
+set -x #REMOVE LATER
 
 WIDTH="$1"
 HEIGHT="$2"
 HALF_RES="$3"
-BOOTNUM="$4"
-OUT="$ANDROID_PRODUCT_OUT/obj/BOOTANIMATIONS/$BOOTNUM"
+BUILDNUM="$4"
+SINGLE_BOOT="$5"
+PICK_BOOT="$6"
+
+OUT="$ANDROID_PRODUCT_OUT/obj/BOOTANIMATIONS/$BUILDNUM"
 
 # remove OUT if it already exists
 if [[ -d $OUT ]]; then
     rm -rf $OUT
 fi
+
 mkdir -p "$OUT/bootanimation"
 
 #####
-# This is the main AICP code except adjusted to generate 3 bootanimations.
+# This is based off AICP's code.
 #
 # By now the current designs to declare are:
 #   0: Classic bootanimation
@@ -31,16 +36,24 @@ mkdir -p "$OUT/bootanimation"
 #   9: Moelle's Smoke Pulse: The one that got shared everywhere, that ends on a smokey background.
 #
 #####
-RANDOM_BOOT=$(shuf -i 0-9 -n 1)
-BOOTANIM_NUMS="$OUT/../.bootanimation_numbers"
-if [[ -f $BOOTANIM_NUMS ]]; then
+if [[ $SINGLE_BOOT != "false" ]] && [[ $PICK_BOOT != "false" ]]; then
+    RANDOM_BOOT="$PICK_BOOT"
+    echo "Info: bootanimation was chosen manually. The chosen one is the number $RANDOM_BOOT"
+elif [[ $PICK_BOOT != "false" ]]; then
+    RANDOM_BOOT="${PICK_BOOT// /}"
+    RANDOM_BOOT="${RANDOM_BOOT:$BUILDNUM-1:1}"
+    echo "Info: bootanimation was chosen manually. The chosen one is the number $RANDOM_BOOT"
+else
+    # make sure the RANDOM_BOOT hasn't been chosen before
+    BOOTANIM_NUMS="$OUT/../.bootanimation_numbers"
+    RANDOM_BOOT=$(shuf -i 0-9 -n 1)
+    touch $BOOTANIM_NUMS
     until ! cat $BOOTANIM_NUMS | grep $RANDOM_BOOT &>/dev/null; do
         RANDOM_BOOT=$(shuf -i 0-9 -n 1)
     done
+    echo $RANDOM_BOOT >> $BOOTANIM_NUMS
+    echo "Info: bootanimation was chosen randomly. The chosen one is the number $RANDOM_BOOT"
 fi
-touch $BOOTANIM_NUMS
-echo $RANDOM_BOOT >> $BOOTANIM_NUMS
-echo "Info: bootanimation was chosen randomly. The chosen one is the number $RANDOM_BOOT"
 
 case "$RANDOM_BOOT" in
     [0-1])
@@ -73,31 +86,30 @@ case "$RANDOM_BOOT" in
 esac
 
 ###
-# This is the size declaration and adjustments acording a TARGET_BOOTANIMATION_HALF_RES
+# This is the size declaration and adjustments according a TARGET_BOOTANIMATION_HALF_RES
 ###
-
-if [ -z "$WIDTH" ]; then
+if [[ -z "$WIDTH" ]]; then
     echo "Warning: bootanimation width not specified"
     WIDTH="1080"
 fi
- if [ -z "$HEIGHT" ]; then
+ if [[ -z "$HEIGHT" ]]; then
     echo "Warning: bootanimation height not specified"
     HEIGHT="1920"
 fi
 
-if [ "$HEIGHT" -lt "$WIDTH" ]; then
+if [[ "$HEIGHT" -lt "$WIDTH" ]]; then
     SQUARESIZE="$HEIGHT"
 else
     SQUARESIZE="$WIDTH"
 fi
 
-if [ "$HALF_RES" = "true" ] && [ "$ISQUARE" = "true" ]; then
+if [[ "$HALF_RES" = "true" ]] && [[ "$ISQUARE" = "true" ]]; then
     IMAGESIZEH=$(expr $SQUARESIZE / 2)
     IMAGESIZEW=$(expr $SQUARESIZE / 2)
-elif [ "$HALF_RES" = "true" ] && [ "$ISQUARE" = "false" ]; then
+elif [[ "$HALF_RES" = "true" ]] && [[ "$ISQUARE" = "false" ]]; then
     IMAGESIZEH=$(expr $HEIGHT / 2)
     IMAGESIZEW=$(expr $WIDTH / 2)
-elif [ "$ISQUARE" = "true" ]; then
+elif [[ "$ISQUARE" = "true" ]]; then
     IMAGESIZEH="$SQUARESIZE"
     IMAGESIZEW="$SQUARESIZE"
 else
@@ -105,17 +117,22 @@ else
     IMAGESIZEW="$WIDTH"
 fi
 
-RESOLUTION=""$IMAGESIZEW"x"$IMAGESIZEH""
+RESOLUTION="${IMAGESIZEW}x${IMAGESIZEH}"
 for part_cnt in 0 1 2; do
     mkdir -p $OUT/bootanimation/part$part_cnt
 done
-tar xfp "vendor/bootleggers/bootanimation/bootanimation$RANDOM_BOOT.tar" --to-command="convert - -strip -interlace Plane -gaussian-blur 0.05 -quality 55 -resize '$RESOLUTION'^ -gravity center -crop '$RESOLUTION+0+0' +repage \"$OUT/bootanimation/\$TAR_FILENAME\""
+
+tar xfp "vendor/bootleggers/bootanimation/bootanimation$RANDOM_BOOT.tar" --to-command="convert - -strip -gaussian-blur 0.05 -quality 55 -resize '$RESOLUTION'^ -gravity center -crop '$RESOLUTION+0+0' +repage \"$OUT/bootanimation/\$TAR_FILENAME\""
 
 # Create desc.txt
-echo "$IMAGESIZEW $IMAGESIZEH" "$BOOTFPS" > "$OUT/bootanimation/desc.txt"
+echo "$IMAGESIZEW $IMAGESIZEH $BOOTFPS" > "$OUT/bootanimation/desc.txt"
 cat "vendor/bootleggers/bootanimation/desc.txt" >> "$OUT/bootanimation/desc.txt"
 
 # Create bootanimation.zip
 cd "$OUT/bootanimation"
 
-zip -qr0 "$OUT/bootanimation$BOOTNUM.zip" .
+if [[ $BUILDNUM = "1" ]]; then
+    zip -qr0 "$OUT/bootanimation.zip" .
+else
+    zip -qr0 "$OUT/bootanimation$BUILDNUM.zip" .
+fi
