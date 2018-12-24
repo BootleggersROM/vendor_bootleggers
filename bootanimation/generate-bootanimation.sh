@@ -2,8 +2,6 @@
 ###
 # Getting variables from the makefile
 ###
-set -x #REMOVE LATER
-
 WIDTH="$1"
 HEIGHT="$2"
 HALF_RES="$3"

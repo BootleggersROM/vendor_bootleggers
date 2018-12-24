@@ -13,10 +13,7 @@ PRODUCT_PACKAGES += \
     bootanimation.zip \
     WeatherClient
 
-ifeq ($(TARGET_USE_SINGLE_BOOTANIMATION),true)
-    PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-        sys.random_bootanimation_disabled=1
-else
+ifneq ($(TARGET_USE_SINGLE_BOOTANIMATION),true)
     PRODUCT_PACKAGES += \
         bootanimation2.zip \
         bootanimation3.zip
