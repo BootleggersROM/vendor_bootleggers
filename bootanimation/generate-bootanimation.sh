@@ -117,7 +117,14 @@ else
     IMAGESIZEW="$WIDTH"
 fi
 
+if [[ "$RANDOM_BOOT" = "9" ]]; then
+IMGSIZE80W=$(( ${IMAGESIZEW}*80/100 ))
+IMGSIZE80H=$(( ${IMAGESIZEH}*80/100 ))
+RESOLUTION="${IMGSIZE80W}x${IMGSIZE80H}"
+else
 RESOLUTION="${IMAGESIZEW}x${IMAGESIZEH}"
+fi
+
 for part_cnt in 0 1 2; do
     mkdir -p $OUT/bootanimation/part$part_cnt
 done
