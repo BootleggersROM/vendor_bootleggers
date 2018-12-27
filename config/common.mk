@@ -4,7 +4,7 @@ PRODUCT_BRAND ?= Bootleggers
 # Bootleggers version over here.
 PRODUCT_VERSION_MAJOR = Pie
 PRODUCT_VERSION_MINOR = niceparse.Goodbye_Star_Girl
-BOOTLEGGERS_VERSION_NUMBER := 3.5-MadStinky
+BOOTLEGGERS_VERSION_NUMBER := 4.0-Stable
 BOOTLEGGERS_SONGCODEURL = http://bit.ly/2Aa2WmA
 BOOTLEGGERS_POSTFIX := -$(shell date +"%Y%m%d")
 
