@@ -127,4 +127,7 @@
     <!-- Use a custom quickstep package and reference it for the quickstep layout on recents 
     <string name="config_recentsComponentName">ch.deletescape.lawnchair.ci/com.android.quickstep.RecentsActivity</string>-->
 
+    <!-- Allow automatic adjusting of the screen brightness while dozing in low power state. -->
+    <bool name="config_allowAutoBrightnessWhileDozing">true</bool>
+
 </resources>
