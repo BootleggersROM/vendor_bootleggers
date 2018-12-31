@@ -150,6 +150,11 @@ PRODUCT_PACKAGES += \
     ShishuTestOv \
     ShishuTestOv2
 
+# Cutout control overlays
+PRODUCT_PACKAGES += \
+    HideCutout \
+    StatusBarStock
+
 # DU-Fonts
 PRODUCT_PACKAGES += \
     CustomFonts
