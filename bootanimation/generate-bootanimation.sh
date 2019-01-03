@@ -6,8 +6,7 @@ WIDTH="$1"
 HEIGHT="$2"
 HALF_RES="$3"
 BUILDNUM="$4"
-SINGLE_BOOT="$5"
-PICK_BOOT="$6"
+PICK_BOOT="$5"
 
 OUT="$ANDROID_PRODUCT_OUT/obj/BOOTANIMATIONS/$BUILDNUM"
 
@@ -34,27 +33,14 @@ mkdir -p "$OUT/bootanimation"
 #   9: Moelle's Smoke Pulse: The one that got shared everywhere, that ends on a smokey background.
 #
 #####
-choose_random() {
-    # choose a random animation, and make sure it isn't already chosen
-    touch $OUT/../.bootanimation_numbers
-    BOOTANIM_NUMS=$(cat $OUT/../.bootanimation_numbers)
-    while [[ "$BOOTANIM_NUMS" =~ $RANDOM_BOOT ]]; do
-        RANDOM_BOOT=$(shuf -i 0-9 -n 1)
-    done
-    echo $RANDOM_BOOT >> $OUT/../.bootanimation_numbers
-    echo "Info: bootanimation was chosen randomly. The chosen one is the number $RANDOM_BOOT"
-}
-
-if [[ $PICK_BOOT != "false" ]]; then
-    RANDOM_BOOT="$(cut -d, -f $BUILDNUM <<< $PICK_BOOT)"
-    if [[ -z $RANDOM_BOOT ]]; then
-        choose_random   # if RANDOM_BOOT is blank, pick a different animation randomly.
-    else
-        echo "Info: bootanimation was chosen manually. The chosen one is the number $RANDOM_BOOT"
-    fi
-else
-    choose_random
-fi
+BOOTANIM_NUMS="$OUT/../.ba_nums"
+RANDOM_BOOT="$(cut -d, -f $BUILDNUM <<< "$PICK_BOOT",)"
+[[ -z $RANDOM_BOOT ]] && RANDOM_BOOT=$(shuf -i 0-9 -n 1)
+while cat $BOOTANIM_NUMS | grep $RANDOM_BOOT; do
+    RANDOM_BOOT=$(shuf -i 0-9 -n 1)
+done
+echo $RANDOM_BOOT >> $BOOTANIM_NUMS
+echo "Info: the chosen bootanimation is the number $RANDOM_BOOT."
 
 case "$RANDOM_BOOT" in
     [0-1])
