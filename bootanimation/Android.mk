@@ -34,21 +34,12 @@ ifeq ($(TARGET_BOOTANIMATION_HALF_RES),)
     TARGET_BOOTANIMATION_HALF_RES := false
 endif
 
-ifeq ($(TARGET_USE_SINGLE_BOOTANIMATION),)
-    TARGET_USE_SINGLE_BOOTANIMATION := false
-endif
-
-ifeq ($(TARGET_PICK_BOOTANIMATION),)
-    TARGET_PICK_BOOTANIMATION := false
-endif
-
 define build-bootanimation
     ./vendor/bootleggers/bootanimation/generate-bootanimation.sh \
     $(TARGET_SCREEN_WIDTH) \
     $(TARGET_SCREEN_HEIGHT) \
     $(TARGET_BOOTANIMATION_HALF_RES) \
     $(TARGET_BOOTANIMATION_BUILDNUMBER) \
-    $(TARGET_USE_SINGLE_BOOTANIMATION) \
     "$(TARGET_PICK_BOOTANIMATION)"
 endef
 
