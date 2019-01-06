@@ -73,6 +73,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/config/permissions/privapp-permissions-custom.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-custom.xml
 
+# Power whitelist
+PRODUCT_COPY_FILES += \
+    vendor/bootleggers/config/permissions/bootleg-power-whitelist.xml:system/etc/sysconfig/bootleg-power-whitelist.xml
+
 # Some permissions
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/config/permissions/privapp-permissions-recorder.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-recorder.xml \
