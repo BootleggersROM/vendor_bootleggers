@@ -13,6 +13,11 @@ PRODUCT_PACKAGES += \
     bootanimation.zip \
     WeatherClient
 
+ifeq ($(BOOTLEGGERS_BUILD_TYPE),Shishufied)
+    PRODUCT_PACKAGES += \
+        ShishuOTA
+endif
+
 ifneq ($(TARGET_USE_SINGLE_BOOTANIMATION),true)
     PRODUCT_PACKAGES += \
         bootanimation2.zip \
