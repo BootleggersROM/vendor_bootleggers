@@ -18,4 +18,10 @@
         <permission name="android.permission.NAVIGATION_EDITOR"/>
         <permission name="android.permission.ACCESS_FONT_MANAGER"/>
     </privapp-permissions>
+
+    <privapp-permissions package="com.bootleggers.shishuota">
+        <permission name="android.permission.ACCESS_CACHE_FILESYSTEM"/>
+        <permission name="android.permission.REBOOT"/>
+        <permission name="android.permission.RECOVERY"/>
+    </privapp-permissions>
 </permissions>
