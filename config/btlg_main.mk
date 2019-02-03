@@ -11,7 +11,8 @@ PRODUCT_PACKAGES += \
     Jelly \
     MusicPlayer \
     bootanimation.zip \
-    WeatherClient
+    WeatherClient \
+    OmniStyle
 
 ifeq ($(BOOTLEGGERS_BUILD_TYPE),Shishufied)
     PRODUCT_PACKAGES += \
