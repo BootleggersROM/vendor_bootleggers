@@ -7,7 +7,7 @@ PRODUCT_PACKAGES += \
     ShishuWalls \
     GugelClock \
     VisualizationWallpapers \
-    LatinIME \
+    GboardGoPreb \
     Jelly \
     MusicPlayer \
     bootanimation.zip \
