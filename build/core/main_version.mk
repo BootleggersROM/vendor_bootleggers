@@ -6,4 +6,5 @@ ADDITIONAL_BUILD_PROPERTIES += \
     ro.bootleggers.buildshort=$(BOOTLEGGERS_MOD_SHORT) \
     ro.bootleggers.songcodename=$(PRODUCT_VERSION_MINOR) \
     ro.bootleggers.songcodeurl=$(BOOTLEGGERS_SONGCODEURL) \
-    ro.bootleggers.display.version=$(BOOTLEGGERS_VERSION)
+    ro.bootleggers.display.version=$(BOOTLEGGERS_VERSION) \
+    ro.bootleggers.build.date=$(BOOTLEGGERS_EPOCH)
