@@ -37,10 +37,9 @@ endif
 #PRODUCT_PACKAGES += \
 #    CustomFonts
 
-# Cutout control overlays
-#PRODUCT_PACKAGES += \
-#    HideCutout \
-#    StatusBarStock
+# Cutout control overlay
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay
 
 # Call the overlays folder to build all the rest 
 include packages/overlays/Shishufied/shishu.mk
