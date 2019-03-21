@@ -31,6 +31,10 @@ ifeq ($(BOOTLEGGERS_SITDOWN),true)
     PRODUCT_PACKAGES += \
         Lawnchair
 
+PRODUCT_COPY_FILES += \
+    vendor/bootleggers/prebuilt/lawnchair/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
+    vendor/bootleggers/prebuilt/lawnchair/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
+
     DEVICE_PACKAGE_OVERLAYS += \
         vendor/bootleggers/overlay/lawnchair
 else
