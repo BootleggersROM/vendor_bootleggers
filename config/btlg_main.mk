@@ -9,7 +9,7 @@ PRODUCT_PACKAGES += \
     VisualizationWallpapers \
     GboardGoPreb \
     Jelly \
-    MusicPlayer \
+    Phonograph \
     bootanimation.zip \
     WeatherClient \
     OmniStyle
