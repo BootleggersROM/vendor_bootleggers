@@ -78,43 +78,52 @@ PRODUCT_PACKAGES += \
 # Theme-Required overlays packages
 PRODUCT_PACKAGES += \
     DarkThemeAndroidOverlay \
+    DarkThemeOTAOverlay \
     DarkThemeSettingsOverlay \
     DarkThemeSystemUIOverlay \
     BlackThemeAndroidOverlay \
+    BlackThemeOTAOverlay \
     BlackThemeSettingsOverlay \
     BlackThemeSystemUIOverlay \
     ShishuThemeAndroidOverlay \
     ShishuThemeGMSOverlay \
+    ShishuThemeOTAOverlay \
     ShishuThemeSettingsOverlay \
     ShishuThemeSystemUIOverlay \
     ShishuThemeWellbeingOverlay \
     ShishuNightsThemeAndroidOverlay \
     ShishuNightsThemeGMSOverlay \
+    ShishuNightsThemeOTAOverlay \
     ShishuNightsThemeSettingsOverlay \
     ShishuNightsThemeSystemUIOverlay \
     ShishuNightsThemeWellbeingOverlay \
     ShishuIllusionsThemeAndroidOverlay \
     ShishuIllusionsThemeGMSOverlay \
+    ShishuIllusionsThemeOTAOverlay \
     ShishuIllusionsThemeSettingsOverlay \
     ShishuIllusionsThemeSystemUIOverlay \
     ShishuIllusionsThemeWellbeingOverlay \
     ShishuImmensityThemeAndroidOverlay \
     ShishuImmensityThemeGMSOverlay \
+    ShishuImmensityThemeOTAOverlay \
     ShishuImmensityThemeSettingsOverlay \
     ShishuImmensityThemeSystemUIOverlay \
     ShishuImmensityThemeWellbeingOverlay \
     ShishuAmalgamationThemeAndroidOverlay \
     ShishuAmalgamationThemeGMSOverlay \
+    ShishuAmalgamationThemeOTAOverlay \
     ShishuAmalgamationThemeSettingsOverlay \
     ShishuAmalgamationThemeSystemUIOverlay \
     ShishuAmalgamationThemeWellbeingOverlay \
     ShishuCosmosThemeAndroidOverlay \
     ShishuCosmosThemeGMSOverlay \
+    ShishuCosmosThemeOTAOverlay \
     ShishuCosmosThemeSettingsOverlay \
     ShishuCosmosThemeSystemUIOverlay \
     ShishuCosmosThemeWellbeingOverlay \
     ShishuProtostarThemeAndroidOverlay \
     ShishuProtostarThemeGMSOverlay \
+    ShishuProtostarThemeOTAOverlay \
     ShishuProtostarThemeSettingsOverlay \
     ShishuProtostarThemeSystemUIOverlay \
     ShishuProtostarThemeWellbeingOverlay
