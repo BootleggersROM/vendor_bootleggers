@@ -12,6 +12,7 @@
         <permission name="android.permission.FORCE_STOP_PACKAGES"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
         <permission name="android.permission.NAVIGATION_EDITOR"/>
+        <permission name="android.permission.MODIFY_DAY_NIGHT_MODE"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.android.settings">
