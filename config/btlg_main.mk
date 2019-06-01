@@ -3,7 +3,7 @@ PRODUCT_PACKAGES += \
     CameraRoll \
     MiXplorerPrebuilt \
     WallpaperPickerGoogle \
-    GoogleMarkup \
+    MarkupGoogle \
     ShishuWalls \
     GugelClock \
     VisualizationWallpapers \
