@@ -42,6 +42,15 @@ else
         Launcher3QuickStep
 endif
 
+# Wallpaper overlay selection for widescreen devices.
+ifeq ($(BOOTLEGGERS_NOTCHED),true)
+    DEVICE_PACKAGE_OVERLAYS += \
+        vendor/bootleggers/overlay/wallpaper/widebois
+else
+    DEVICE_PACKAGE_OVERLAYS += \
+        vendor/bootleggers/overlay/wallpaper/common
+endif
+
 # Color required overlays packages
 PRODUCT_PACKAGES += \
     ObfusBleu \
