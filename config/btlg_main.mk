@@ -189,7 +189,12 @@ PRODUCT_PACKAGES += \
 	QSTileNinja \
 	QSTilePokesign \
 	QSTileShishuInk \
-    QSTileCookie
+    QSTileCookie \
+    QSTileCosmos \
+    QSTileDividedCircle \
+    QSTileNeonLight \
+    QSTileOxygen \
+    QSTileTriangles
 
 # DO NOT MERGE - 
 PRODUCT_PACKAGES += \
