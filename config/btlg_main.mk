@@ -188,7 +188,8 @@ PRODUCT_PACKAGES += \
 	QSTileDottedCircle \
 	QSTileNinja \
 	QSTilePokesign \
-	QSTileShishuInk
+	QSTileShishuInk \
+    QSTileCookie
 
 # DO NOT MERGE - 
 PRODUCT_PACKAGES += \
