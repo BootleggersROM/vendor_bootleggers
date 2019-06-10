@@ -39,7 +39,7 @@ PRODUCT_COPY_FILES += \
         vendor/bootleggers/overlay/lawnchair
 else
     PRODUCT_PACKAGES += \
-        SearchLauncherQuickStep
+        Launcher3QuickStep
 endif
 
 # Color required overlays packages
