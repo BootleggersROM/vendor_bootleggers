@@ -3,9 +3,9 @@ PRODUCT_BRAND ?= Bootleggers
 # Versioning System
 # Bootleggers version over here.
 PRODUCT_VERSION_MAJOR = Pie
-PRODUCT_VERSION_MINOR = niceparse.Highlights
-BOOTLEGGERS_VERSION_NUMBER := 4.1-Stable
-BOOTLEGGERS_SONGCODEURL = http://bit.ly/2CJoGHk
+PRODUCT_VERSION_MINOR = niceparse.IIIIII
+BOOTLEGGERS_VERSION_NUMBER := 4.2-Stable
+BOOTLEGGERS_SONGCODEURL = http://bit.ly/2R2fQKs
 BOOTLEGGERS_EPOCH := $(shell date +%s)
 BOOTLEGGERS_POSTFIX := -$(shell date -d @$(BOOTLEGGERS_EPOCH) +"%Y%m%d-%H%M%S")
 
