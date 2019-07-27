@@ -284,7 +284,7 @@ PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/fonts/fontagev2/Vibur.ttf:system/fonts/Vibur.ttf \
     vendor/bootleggers/prebuilt/fonts/fontagev2/Voltaire.ttf:system/fonts/Voltaire.ttf
 
-#Call special ringtones makefile
+# Call special ringtones makefile
 include vendor/bootleggers/config/common_audio.mk
 
 
