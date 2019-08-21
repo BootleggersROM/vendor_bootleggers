@@ -12,7 +12,8 @@ PRODUCT_PACKAGES += \
     Phonograph \
     WeatherClient \
     OmniStyle \
-    Longshot
+    Longshot \
+    Recorder
 
 ifeq ($(BOOTLEGGERS_BUILD_TYPE),Shishufied)
     PRODUCT_PACKAGES += \

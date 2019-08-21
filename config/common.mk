@@ -73,6 +73,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/config/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml
 
+# Some permissions
+PRODUCT_COPY_FILES += \
+    vendor/bootleggers/config/permissions/privapp-permissions-recorder.xml:system/etc/permissions/privapp-permissions-recorder.xml \
+    vendor/bootleggers/config/permissions/org.pixelexperience.recorder.xml:system/etc/permissions/org.pixelexperience.recorder.xml
+
 # TWRP
 ifeq ($(WITH_TWRP),true)
 include vendor/bootleggers/config/twrp.mk
