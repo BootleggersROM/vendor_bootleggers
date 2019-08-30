@@ -11,7 +11,8 @@ PRODUCT_PACKAGES += \
     Jelly \
     Phonograph \
     WeatherClient \
-    OmniStyle
+    OmniStyle \
+    Longshot
 
 ifeq ($(BOOTLEGGERS_BUILD_TYPE),Shishufied)
     PRODUCT_PACKAGES += \
