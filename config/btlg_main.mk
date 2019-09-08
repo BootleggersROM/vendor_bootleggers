@@ -1,5 +1,5 @@
 # Markup libs
-ifeq ($(TARGET_ARCH),arm64)
+ifeq ($(TARGET_BOOTLEG_ARCH),arm64)
     PRODUCT_COPY_FILES += \
            vendor/bootleggers/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
            vendor/bootleggers/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
