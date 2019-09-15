@@ -1,3 +1,9 @@
+# Build fingerprint
+ifneq ($(BUILD_FINGERPRINT),)
+ADDITIONAL_BUILD_PROPERTIES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+endif
+
 # Bootleggers System Version
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.bootleggers.version_number=$(BOOTLEGGERS_VERSION_NUMBER) \
