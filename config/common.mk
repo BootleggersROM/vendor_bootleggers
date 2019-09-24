@@ -41,6 +41,10 @@ PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 endif
 
+# system mount
+PRODUCT_COPY_FILES += \
+    vendor/bootleggers/build/tools/system-mount.sh:install/bin/system-mount.sh
+
 # priv-app whitelist
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/etc/permissions/privapp-permissions-bootleg.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-bootleg.xml
