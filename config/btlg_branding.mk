@@ -2,10 +2,10 @@ PRODUCT_BRAND ?= Bootleggers
 
 # Versioning System
 # Bootleggers version over here.
-PRODUCT_VERSION_MAJOR = Pie
+PRODUCT_VERSION_MAJOR = Queue
 PRODUCT_VERSION_MINOR = niceparse.+_jason_is_dead_+
-BOOTLEGGERS_VERSION_NUMBER := 4.3-Stable
-BOOTLEGGERS_SONGCODEURL = https://kutt.it/9L7LAv
+BOOTLEGGERS_VERSION_NUMBER := 4.7-MadStinky
+BOOTLEGGERS_SONGCODEURL = https://kutt.it/3nl6wf
 BOOTLEGGERS_EPOCH := $(shell date +%s)
 BOOTLEGGERS_POSTFIX := -$(shell date -d @$(BOOTLEGGERS_EPOCH) +"%Y%m%d-%H%M%S")
 

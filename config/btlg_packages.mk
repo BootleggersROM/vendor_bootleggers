@@ -2,17 +2,11 @@
 PRODUCT_PACKAGES += \
     CameraRoll \
     MiXplorerPrebuilt \
-    WallpaperPickerGoogle \
+    WallpaperPicker2 \
     MarkupGoogle \
-    ShishuWalls \
     GugelClock \
-    VisualizationWallpapers \
-    GboardGoPreb \
     Jelly \
     Phonograph \
-    WeatherClient \
-    OmniStyle \
-    Longshot \
     Recorder
 
 ifeq ($(BOOTLEGGERS_BUILD_TYPE),Shishufied)
@@ -38,16 +32,16 @@ else
 endif
 
 # DU-Fonts
-PRODUCT_PACKAGES += \
-    CustomFonts
+#PRODUCT_PACKAGES += \
+#    CustomFonts
 
 # Cutout control overlays
-PRODUCT_PACKAGES += \
-    HideCutout \
-    StatusBarStock
+#PRODUCT_PACKAGES += \
+#    HideCutout \
+#    StatusBarStock
 
 # Call the overlays folder to build all the rest 
-include packages/overlays/Shishufied/shishu.mk
+#include packages/overlays/Shishufied/shishu.mk
 
 ### COMMENTED WASTELAND - MOVED TEMPORALLY HERE DUE TO WIP ###
 #
