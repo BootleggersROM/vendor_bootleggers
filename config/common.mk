@@ -177,7 +177,7 @@ DEVICE_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/common
 -include vendor/bootleggers/config/partner_gms.mk
 
 ifeq ($(TARGET_PROVIDES_TELEPHONY_EXT),)
-ifneq ($(TARGET_NOT_REQUIRING_TELEPHONY_EXT),true)
+ifeq ($(TARGET_REQUIRES_TELEPHONY_EXT),true)
 include vendor/bootleggers/config/caf_fw.mk
 endif
 endif
