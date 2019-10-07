@@ -152,10 +152,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # These packages are excluded from user builds
 PRODUCT_PACKAGES_DEBUG += \
-    micro_bench \
-    procmem \
-    procrank \
-    strace
+    procmem
 
 # Conditionally build in su
 ifneq ($(TARGET_BUILD_VARIANT),user)
