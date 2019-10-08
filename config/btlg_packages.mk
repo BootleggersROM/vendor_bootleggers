@@ -6,8 +6,10 @@ PRODUCT_PACKAGES += \
     MarkupGoogle \
     GugelClock \
     Jelly \
+    LatinIME \
     Phonograph \
-    Recorder
+    Recorder \
+    ThemePicker
 
 ifeq ($(BOOTLEGGERS_BUILD_TYPE),Shishufied)
     PRODUCT_PACKAGES += \
