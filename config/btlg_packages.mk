@@ -43,7 +43,7 @@ endif
 #    StatusBarStock
 
 # Call the overlays folder to build all the rest 
-#include packages/overlays/Shishufied/shishu.mk
+include packages/overlays/Shishufied/shishu.mk
 
 ### COMMENTED WASTELAND - MOVED TEMPORALLY HERE DUE TO WIP ###
 #
