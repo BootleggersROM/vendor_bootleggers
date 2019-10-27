@@ -54,8 +54,27 @@ $(TARGET_GENERATED_BOOTANIMATION1): $(SOONG_ZIP)
 	for part_cnt in 0 1 2; do \
 	    mkdir -p $(INTERMEDIATES)/part$$part_cnt; \
 	done; \
+	case "$$BOOTSELECTED" in \
+	    [0-1]) \
+	        BOOTFPS="30"; \
+	    ;; \
+	    2) \
+	        BOOTFPS="48"; \
+	    ;; \
+	    [3-4]) \
+	        BOOTFPS="50"; \
+	    ;; \
+	    [5-7]) \
+	        BOOTFPS="25"; \
+	    ;; \
+	    [8-9]) \
+	        BOOTFPS="30"; \
+	    ;; \
+	    *) \
+	        echo "Info: Something went wrong at the time of taking the number."; \
+	esac; \
 	tar xfp "vendor/bootleggers/bootanimation/bootanimation$$BOOTSELECTED.tar" --to-command="prebuilts/tools-lineage/${HOST_OS}-x86/bin/convert - -strip -quality 55 -resize $$RESOLUTION^ -colors 250 -gravity center -crop $$RESOLUTION+0+0 +repage \"$(INTERMEDIATES)/\$$TAR_FILENAME\""; \
-	echo "$$IMAGESCALEWIDTH $$IMAGESCALEHEIGHT 25" > $(INTERMEDIATES)/desc.txt; \
+	echo "$$IMAGESCALEWIDTH $$IMAGESCALEHEIGHT $$BOOTFPS" > $(INTERMEDIATES)/desc.txt; \
 	cat vendor/bootleggers/bootanimation/desc.txt >> $(INTERMEDIATES)/desc.txt
 	$(hide) $(SOONG_ZIP) -L 0 -o $(TARGET_GENERATED_BOOTANIMATION1) -C $(INTERMEDIATES) -D $(INTERMEDIATES)
 
