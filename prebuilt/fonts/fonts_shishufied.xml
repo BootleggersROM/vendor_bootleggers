@@ -138,6 +138,9 @@
     <family name="codystar">
         <font weight="300" style="normal">Codystar.ttf</font>
     </family>
+    <family name="hanken">
+        <font weight="300" style="normal">Hanken-Light.ttf</font>
+    </family>
     <family name="ibmplex-mono">
         <font weight="300" style="normal">IBMPlexMono.ttf</font>
     </family>
@@ -149,6 +152,9 @@
     </family>
     <family name="kellyslab">
         <font weight="300" style="normal">KellySlab-Regular.ttf</font>
+    </family>
+    <family name="mittelschrift">
+        <font weight="300" style="normal">din1451alt.ttf</font>
     </family>
     <family name="pompiere">
         <font weight="300" style="normal">Pompiere-Regular.ttf</font>
