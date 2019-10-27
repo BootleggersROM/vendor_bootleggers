@@ -15,6 +15,7 @@ PRODUCT_COPY_FILES += \
 
 # Fonts to copy
 PRODUCT_COPY_FILES += \
+    vendor/bootleggers/prebuilt/fonts/fonts_shishufied.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_shishufied.xml \
     vendor/bootleggers/prebuilt/fonts/gobold/Gobold.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Gobold.ttf \
     vendor/bootleggers/prebuilt/fonts/gobold/Gobold-Italic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Gobold-Italic.ttf \
     vendor/bootleggers/prebuilt/fonts/gobold/GoboldBold.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoboldBold.ttf \
