@@ -12,7 +12,7 @@
     limitations under the License.
 -->
 <fonts-modification version="1">
-    <family name="gobold-sys">
+    <family customizationType="new-named-family" name="gobold-sys">
         <font weight="300" style="normal">GoboldThinLight.ttf</font>
         <font weight="300" style="italic">GoboldThinLight-Italic.ttf</font>
         <font weight="400" style="normal">Gobold.ttf</font>
@@ -24,160 +24,160 @@
     <alias name="gobold-light-sys" to="gobold-sys" weight="300" />
 
     <!-- Lockscren Fonts -->
-    <family name="roadrage-sys">
+    <family customizationType="new-named-family" name="roadrage-sys">
         <font weight="300" style="normal">RoadRage-Regular.ttf</font>
     </family>
-    <family name="snowstorm-sys">
+    <family customizationType="new-named-family" name="snowstorm-sys">
         <font weight="300" style="normal">Snowstorm-Regular.ttf</font>
     </family>
-    <family name="googlesans-sys">
+    <family customizationType="new-named-family" name="googlesans-sys">
         <font weight="300" style="normal">GoogleSans-Medium.ttf</font>
     </family>
-    <family name="themeable-clock">
+    <family customizationType="new-named-family" name="themeable-clock">
         <font weight="300" style="normal">ThemeableClock-vcrosd.ttf</font>
     </family>
-    <family name="themeable-date">
+    <family customizationType="new-named-family" name="themeable-date">
         <font weight="300" style="normal">ThemeableDate-fc.ttf</font>
     </family>
-    <family name="themeable-owner">
+    <family customizationType="new-named-family" name="themeable-owner">
         <font weight="300" style="normal">ThemeableOwner-fc.ttf</font>
     </family>
-    <family name="adamcg-pro">
+    <family customizationType="new-named-family" name="adamcg-pro">
         <font weight="300" style="normal">AdamCGPro-Regular.ttf</font>
     </family>
-    <family name="alexana-neue">
+    <family customizationType="new-named-family" name="alexana-neue">
         <font weight="300" style="normal">AlexanaNeue-Regular.ttf</font>
     </family>
-    <family name="alien-league">
+    <family customizationType="new-named-family" name="alien-league">
         <font weight="300" style="normal">AlienLeague-Regular.ttf</font>
     </family>
-    <family name="azedo-light">
+    <family customizationType="new-named-family" name="azedo-light">
         <font weight="300" style="normal">Azedo-Light.ttf</font>
     </family>
-    <family name="bignoodle-italic">
+    <family customizationType="new-named-family" name="bignoodle-italic">
         <font weight="300" style="normal">BigNoodleTilting-Italic.ttf</font>
     </family>
-    <family name="bignoodle-regular">
+    <family customizationType="new-named-family" name="bignoodle-regular">
         <font weight="300" style="normal">BigNoodleTilting-Regular.ttf</font>
     </family>
-    <family name="biko">
+    <family customizationType="new-named-family" name="biko">
         <font weight="300" style="normal">Biko-Regular.ttf</font>
     </family>
-    <family name="blern">
+    <family customizationType="new-named-family" name="blern">
         <font weight="300" style="normal">Blern-Regular.ttf</font>
     </family>
-    <family name="cocobiker">
+    <family customizationType="new-named-family" name="cocobiker">
         <font weight="300" style="normal">CoCoBiker-Regular.ttf</font>
     </family>
-    <family name="fester">
+    <family customizationType="new-named-family" name="fester">
         <font weight="300" style="normal">Fester-Medium.ttf</font>
     </family>
-    <family name="ginora-sans">
+    <family customizationType="new-named-family" name="ginora-sans">
         <font weight="300" style="normal">GinoraSans-Regular.ttf</font>
     </family>
-    <family name="inkferno">
+    <family customizationType="new-named-family" name="inkferno">
         <font weight="300" style="normal">Inkferno-Regular.ttf</font>
     </family>
-    <family name="instruction">
+    <family customizationType="new-named-family" name="instruction">
         <font weight="300" style="normal">Instruction-Regular.ttf</font>
     </family>
-    <family name="jacklane">
+    <family customizationType="new-named-family" name="jacklane">
         <font weight="300" style="normal">JackLane-Regular.ttf</font>
     </family>
-    <family name="metropolis1920">
+    <family customizationType="new-named-family" name="metropolis1920">
         <font weight="300" style="normal">Metropolis1920-Regular.ttf</font>
     </family>
-    <family name="monad">
+    <family customizationType="new-named-family" name="monad">
         <font weight="300" style="normal">Monad-Regular.ttf</font>
     </family>
-    <family name="neonneon">
+    <family customizationType="new-named-family" name="neonneon">
         <font weight="300" style="normal">Neoneon-Regular.ttf</font>
     </family>
-    <family name="noir">
+    <family customizationType="new-named-family" name="noir">
         <font weight="300" style="normal">Noir-Regular.ttf</font>
     </family>
-    <family name="northfont">
+    <family customizationType="new-named-family" name="northfont">
         <font weight="300" style="normal">North-Regular.ttf</font>
     </family>
-    <family name="outrun-future">
+    <family customizationType="new-named-family" name="outrun-future">
         <font weight="300" style="normal">OutrunFuture-Regular.ttf</font>
     </family>
-    <family name="qontra">
+    <family customizationType="new-named-family" name="qontra">
         <font weight="300" style="normal">Qontra-Regular.ttf</font>
     </family>
-    <family name="riviera">
+    <family customizationType="new-named-family" name="riviera">
         <font weight="300" style="normal">Riviera-Regular.ttf</font>
     </family>
-    <family name="the-outbox">
+    <family customizationType="new-named-family" name="the-outbox">
         <font weight="300" style="normal">TheOutbox-Regular.ttf</font>
     </family>
-    <family name="unionfont">
+    <family customizationType="new-named-family" name="unionfont">
         <font weight="300" style="normal">Union-Regular.ttf</font>
     </family>
-    <family name="abelreg">
+    <family customizationType="new-named-family" name="abelreg">
         <font weight="300" style="normal">Abel-Regular.ttf</font>
     </family>
-    <family name="adventpro">
+    <family customizationType="new-named-family" name="adventpro">
         <font weight="300" style="normal">AdventPro-Regular.ttf</font>
     </family>
-    <family name="archivonar">
+    <family customizationType="new-named-family" name="archivonar">
         <font weight="300" style="normal">ArchivoNarrow-Regular.ttf</font>
     </family>
-    <family name="autourone">
+    <family customizationType="new-named-family" name="autourone">
         <font weight="300" style="normal">AutourOne-Regular.ttf</font>
     </family>
-    <family name="badscript">
+    <family customizationType="new-named-family" name="badscript">
         <font weight="300" style="normal">BadScript-Regular.ttf</font>
     </family>
-    <family name="bariol-reg">
+    <family customizationType="new-named-family" name="bariol-reg">
         <font weight="300" style="normal">Bariol-Regular.ttf</font>
     </family>
-    <family name="cherryswash">
+    <family customizationType="new-named-family" name="cherryswash">
         <font weight="300" style="normal">CherrySwash-Regular.ttf</font>
     </family>
-    <family name="codystar">
+    <family customizationType="new-named-family" name="codystar">
         <font weight="300" style="normal">Codystar.ttf</font>
     </family>
-    <family name="hanken">
+    <family customizationType="new-named-family" name="hanken">
         <font weight="300" style="normal">Hanken-Light.ttf</font>
     </family>
-    <family name="ibmplex-mono">
+    <family customizationType="new-named-family" name="ibmplex-mono">
         <font weight="300" style="normal">IBMPlexMono.ttf</font>
     </family>
-    <family name="ibmplex-light">
+    <family customizationType="new-named-family" name="ibmplex-light">
         <font weight="300" style="normal">IBMPlexMono-Light.ttf</font>
     </family>
-    <family name="jura-reg">
+    <family customizationType="new-named-family" name="jura-reg">
         <font weight="300" style="normal">Jura-Regular.ttf</font>
     </family>
-    <family name="kellyslab">
+    <family customizationType="new-named-family" name="kellyslab">
         <font weight="300" style="normal">KellySlab-Regular.ttf</font>
     </family>
-    <family name="mittelschrift">
+    <family customizationType="new-named-family" name="mittelschrift">
         <font weight="300" style="normal">din1451alt.ttf</font>
     </family>
-    <family name="pompiere">
+    <family customizationType="new-named-family" name="pompiere">
         <font weight="300" style="normal">Pompiere-Regular.ttf</font>
     </family>
-    <family name="raleway-light">
+    <family customizationType="new-named-family" name="raleway-light">
         <font weight="300" style="normal">Raleway-Light.ttf</font>
     </family>
-    <family name="reemkufi">
+    <family customizationType="new-named-family" name="reemkufi">
         <font weight="300" style="normal">ReemKufi-Regular.ttf</font>
     </family>
-    <family name="satisfy">
+    <family customizationType="new-named-family" name="satisfy">
         <font weight="300" style="normal">Satisfy-Regular.ttf</font>
     </family>
-    <family name="seaweedsc">
+    <family customizationType="new-named-family" name="seaweedsc">
         <font weight="300" style="normal">SeaweedScript-Regular.ttf</font>
     </family>
-    <family name="sedgwick-ave">
+    <family customizationType="new-named-family" name="sedgwick-ave">
         <font weight="300" style="normal">SedgwickAveDisplay-Regular.ttf</font>
     </family>
-    <family name="vibur">
+    <family customizationType="new-named-family" name="vibur">
         <font weight="300" style="normal">Vibur.ttf</font>
     </family>
-    <family name="voltaire">
+    <family customizationType="new-named-family" name="voltaire">
         <font weight="300" style="normal">Voltaire.ttf</font>
     </family>
 </fonts-modification>
