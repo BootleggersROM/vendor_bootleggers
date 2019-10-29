@@ -3,7 +3,7 @@ PRODUCT_BRAND ?= Bootleggers
 # Versioning System
 # Bootleggers version over here.
 PRODUCT_VERSION_MAJOR = Queue
-PRODUCT_VERSION_MINOR = niceparse.+_jason_is_dead_+
+PRODUCT_VERSION_MINOR = niceparse.9C1FA3
 BOOTLEGGERS_VERSION_NUMBER := 4.7-MadStinky
 BOOTLEGGERS_SONGCODEURL = https://kutt.it/3nl6wf
 BOOTLEGGERS_EPOCH := $(shell date +%s)
@@ -22,9 +22,9 @@ endif
 
 BOOTLEGGERS_VERSION := BootleggersROM-$(PRODUCT_VERSION_MAJOR)4$(BOOTLEGGERS_BUILD).$(BOOTLEGGERS_VERSION_NUMBER)-$(BOOTLEGGERS_BUILD_TYPE)$(BOOTLEGGERS_POSTFIX)
 
-#PRODUCT_PACKAGES += \
-#    bootanimation.zip
-#
+PRODUCT_PACKAGES += \
+    bootanimation.zip
+
 #ifneq ($(TARGET_USE_SINGLE_BOOTANIMATION),true)
 #    PRODUCT_PACKAGES += \
 #        bootanimation2.zip \
