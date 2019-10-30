@@ -49,16 +49,16 @@ done
 
 # Imagemagick generation part
 for foldername in "${imgdir0[@]}";
-    do $(dirname "$0")/../../../prebuilts/tools-lineage/linux-x86/bin/convert $IMGURL -strip -colors 255 -quality 55 -resize $res0^ -gravity center -crop $res0+0+0 +repage ${workdir}/drawable-$foldername/default_wallpaper.png;
+    do $(dirname "$0")/../../../prebuilts/tools-bootleg/linux-x86/bin/convert $IMGURL -strip -colors 255 -quality 55 -resize $res0^ -gravity center -crop $res0+0+0 +repage ${workdir}/drawable-$foldername/default_wallpaper.png;
 done
 for foldername in "${imgdir1[@]}";
-    do $(dirname "$0")/../../../prebuilts/tools-lineage/linux-x86/bin/convert $IMGURL -strip -colors 255 -quality 55 -resize $res1^ -gravity center -crop $res1+0+0 +repage ${workdir}/drawable-$foldername/default_wallpaper.png;
+    do $(dirname "$0")/../../../prebuilts/tools-bootleg/linux-x86/bin/convert $IMGURL -strip -colors 255 -quality 55 -resize $res1^ -gravity center -crop $res1+0+0 +repage ${workdir}/drawable-$foldername/default_wallpaper.png;
 done
 for foldername in "${imgdir2[@]}";
-    do $(dirname "$0")/../../../prebuilts/tools-lineage/linux-x86/bin/convert $IMGURL -strip -colors 255 -quality 55 -resize $res2^ -gravity center -crop $res2+0+0 +repage ${workdir}/drawable-$foldername/default_wallpaper.png;
+    do $(dirname "$0")/../../../prebuilts/tools-bootleg/linux-x86/bin/convert $IMGURL -strip -colors 255 -quality 55 -resize $res2^ -gravity center -crop $res2+0+0 +repage ${workdir}/drawable-$foldername/default_wallpaper.png;
 done
 for foldername in "${imgdir3[@]}";
-    do $(dirname "$0")/../../../prebuilts/tools-lineage/linux-x86/bin/convert $IMGURL -strip -colors 255 -quality 55 -resize $res3^ -gravity center -crop $res3+0+0 +repage ${workdir}/drawable-$foldername/default_wallpaper.png;
+    do $(dirname "$0")/../../../prebuilts/tools-bootleg/linux-x86/bin/convert $IMGURL -strip -colors 255 -quality 55 -resize $res3^ -gravity center -crop $res3+0+0 +repage ${workdir}/drawable-$foldername/default_wallpaper.png;
 done
 }
 

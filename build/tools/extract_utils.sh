@@ -1192,16 +1192,16 @@ function oat2dex() {
     local HOST="$(uname)"
 
     if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
-        export BAKSMALIJAR="$LINEAGE_ROOT"/prebuilts/tools-lineage/common/smali/baksmali.jar
-        export SMALIJAR="$LINEAGE_ROOT"/prebuilts/tools-lineage/common/smali/smali.jar
+        export BAKSMALIJAR="$LINEAGE_ROOT"/prebuilts/tools-bootleg/common/smali/baksmali.jar
+        export SMALIJAR="$LINEAGE_ROOT"/prebuilts/tools-bootleg/common/smali/smali.jar
     fi
 
     if [ -z "$VDEXEXTRACTOR" ]; then
-        export VDEXEXTRACTOR="$LINEAGE_ROOT"/prebuilts/tools-lineage/"${HOST,,}"-x86/bin/vdexExtractor
+        export VDEXEXTRACTOR="$LINEAGE_ROOT"/prebuilts/tools-bootleg/"${HOST,,}"-x86/bin/vdexExtractor
     fi
 
     if [ -z "$CDEXCONVERTER" ]; then
-        export CDEXCONVERTER="$LINEAGE_ROOT"/prebuilts/tools-lineage/"${HOST,,}"-x86/bin/compact_dex_converter
+        export CDEXCONVERTER="$LINEAGE_ROOT"/prebuilts/tools-bootleg/"${HOST,,}"-x86/bin/compact_dex_converter
     fi
 
     # Extract existing boot.oats to the temp folder

@@ -31,12 +31,12 @@ $(TARGET_GENERATED_BOOTANIMATION1): $(SOONG_ZIP)
 	@rm -rf $(dir $@)
 	@mkdir -p $(dir $@)
 	$(hide) if [ -z $(TARGET_PICK_BOOTANIMATION)]; then \
-      BOOTSELECTED=$$(prebuilts/tools-lineage/common/shuffle/shuf -i 0-9 -n 1); \
+      BOOTSELECTED=$$(prebuilts/tools-bootleg/common/shuffle/shuf -i 0-9 -n 1); \
   else \
       if [ $(TARGET_PICK_BOOTANIMATION) -lt 9]; then \
           BOOTSELECTED=$(TARGET_PICK_BOOTANIMATION); \
       else \
-          BOOTSELECTED=$$(prebuilts/tools-lineage/common/shuffle/shuf -i 0-9 -n 1); \
+          BOOTSELECTED=$$(prebuilts/tools-bootleg/common/shuffle/shuf -i 0-9 -n 1); \
       fi; \
   fi; \
   if [ $(TARGET_SCREEN_HEIGHT) -lt $(TARGET_SCREEN_WIDTH) ]; then \
@@ -73,7 +73,7 @@ $(TARGET_GENERATED_BOOTANIMATION1): $(SOONG_ZIP)
 	    *) \
 	        echo "Info: Something went wrong at the time of taking the number."; \
 	esac; \
-	tar xfp "vendor/bootleggers/bootanimation/bootanimation$$BOOTSELECTED.tar" --to-command="prebuilts/tools-lineage/${HOST_OS}-x86/bin/convert - -strip -quality 55 -resize $$RESOLUTION^ -colors 250 -gravity center -crop $$RESOLUTION+0+0 +repage \"$(INTERMEDIATES)/\$$TAR_FILENAME\""; \
+	tar xfp "vendor/bootleggers/bootanimation/bootanimation$$BOOTSELECTED.tar" --to-command="prebuilts/tools-bootleg/${HOST_OS}-x86/bin/convert - -strip -quality 55 -resize $$RESOLUTION^ -colors 250 -gravity center -crop $$RESOLUTION+0+0 +repage \"$(INTERMEDIATES)/\$$TAR_FILENAME\""; \
 	echo "$$IMAGESCALEWIDTH $$IMAGESCALEHEIGHT $$BOOTFPS" > $(INTERMEDIATES)/desc.txt; \
 	cat vendor/bootleggers/bootanimation/desc.txt >> $(INTERMEDIATES)/desc.txt
 	$(hide) $(SOONG_ZIP) -L 0 -o $(TARGET_GENERATED_BOOTANIMATION1) -C $(INTERMEDIATES) -D $(INTERMEDIATES)
