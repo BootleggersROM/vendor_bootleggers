@@ -69,10 +69,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/Vendor_045e_Product_0719.kl
 
-# Livedisplay
-PRODUCT_COPY_FILES += \
-    vendor/bootleggers/config/permissions/privapp-permissions-custom.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-custom.xml
-
 # Power whitelist
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/config/permissions/bootleg-power-whitelist.xml:system/etc/sysconfig/bootleg-power-whitelist.xml
