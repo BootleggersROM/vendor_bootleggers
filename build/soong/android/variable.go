@@ -1,5 +1,4 @@
 package android
-
 type Product_variables struct {
 	Additional_gralloc_10_usage_bits struct {
 		Cppflags []string
@@ -45,7 +44,7 @@ type Product_variables struct {
 		Cppflags []string
 	}
 	Uses_qti_camera_device struct {
-		Cppflags    []string
+		Cppflags []string
 		Shared_libs []string
 	}
 	Uses_qcom_um_family struct {
@@ -71,24 +70,24 @@ type Product_variables struct {
 }
 
 type ProductVariables struct {
-	Additional_gralloc_10_usage_bits      *string `json:",omitempty"`
+	Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
 	Apply_msm8974_1440p_egl_workaround  *bool `json:",omitempty"`
 	Bootloader_message_offset  *int `json:",omitempty"`
-	Has_legacy_camera_hal1                *bool   `json:",omitempty"`
-	Should_wait_for_qsee                  *bool `json:",omitempty"`
-	Supports_hw_fde                       *bool `json:",omitempty"`
-	Supports_hw_fde_perf                  *bool `json:",omitempty"`
-	Specific_camera_parameter_library     *string `json:",omitempty"`
-	Target_init_vendor_lib  			  *string `json:",omitempty"`
-	Target_process_sdk_version_override   *string `json:",omitempty"`
-	Target_shim_libs                      *string `json:",omitempty"`
-	Uses_generic_camera_parameter_library *bool   `json:",omitempty"`
-	Uses_nvidia_enhancements              *bool   `json:",omitempty"`
-	Uses_qcom_bsp_legacy                  *bool   `json:",omitempty"`
-	Uses_qti_camera_device                *bool   `json:",omitempty"`
-	Uses_qcom_um_family  				  *bool `json:",omitempty"`
-	Uses_qcom_um_3_18_family  			  *bool `json:",omitempty"`
-	Uses_qcom_um_4_4_family  			  *bool `json:",omitempty"`
-	Uses_qcom_um_4_9_family  			  *bool `json:",omitempty"`
-	Uses_qcom_um_4_14_family  			  *bool `json:",omitempty"`
+	Has_legacy_camera_hal1  *bool `json:",omitempty"`
+	Should_wait_for_qsee  *bool `json:",omitempty"`
+	Specific_camera_parameter_library  *string `json:",omitempty"`
+	Supports_hw_fde  *bool `json:",omitempty"`
+	Supports_hw_fde_perf  *bool `json:",omitempty"`
+	Target_init_vendor_lib  *string `json:",omitempty"`
+	Target_process_sdk_version_override  *string `json:",omitempty"`
+	Target_shim_libs  *string `json:",omitempty"`
+	Uses_generic_camera_parameter_library  *bool `json:",omitempty"`
+	Uses_nvidia_enhancements  *bool `json:",omitempty"`
+	Uses_qcom_bsp_legacy  *bool `json:",omitempty"`
+	Uses_qti_camera_device  *bool `json:",omitempty"`
+	Uses_qcom_um_family  *bool `json:",omitempty"`
+	Uses_qcom_um_3_18_family  *bool `json:",omitempty"`
+	Uses_qcom_um_4_4_family  *bool `json:",omitempty"`
+	Uses_qcom_um_4_9_family  *bool `json:",omitempty"`
+	Uses_qcom_um_4_14_family  *bool `json:",omitempty"`
 }
