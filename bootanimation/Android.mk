@@ -31,12 +31,12 @@ $(TARGET_GENERATED_BOOTANIMATION1): $(SOONG_ZIP)
 	@rm -rf $(dir $@)
 	@mkdir -p $(dir $@)
 	$(hide) if [ -z $(TARGET_PICK_BOOTANIMATION)]; then \
-      BOOTSELECTED=$$(prebuilts/tools-bootleg/common/shuffle/shuf -i 0-9 -n 1); \
+      BOOTSELECTED=$$(expr $$RANDOM % 10); \
   else \
       if [ $(TARGET_PICK_BOOTANIMATION) -lt 9]; then \
           BOOTSELECTED=$(TARGET_PICK_BOOTANIMATION); \
       else \
-          BOOTSELECTED=$$(prebuilts/tools-bootleg/common/shuffle/shuf -i 0-9 -n 1); \
+          BOOTSELECTED=$$(expr $$RANDOM % 10); \
       fi; \
   fi; \
   if [ $(TARGET_SCREEN_HEIGHT) -lt $(TARGET_SCREEN_WIDTH) ]; then \
