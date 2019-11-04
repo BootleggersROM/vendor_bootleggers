@@ -24,62 +24,71 @@ ifeq ($(TARGET_SCREEN_HEIGHT),)
     TARGET_SCREEN_HEIGHT := 1920
 endif
 
-TARGET_GENERATED_BOOTANIMATION1 := $(TARGET_OUT_INTERMEDIATES)/BOOTANIMATION1/bootanimation.zip
-$(TARGET_GENERATED_BOOTANIMATION1): INTERMEDIATES := $(TARGET_OUT_INTERMEDIATES)/BOOTANIMATION1
-$(TARGET_GENERATED_BOOTANIMATION1): $(SOONG_ZIP)
+TARGET_GENERATED_BOOTANIMATION := $(TARGET_OUT_INTERMEDIATES)/BOOTANIMATION/bootanimation.zip
+$(TARGET_GENERATED_BOOTANIMATION): INTERMEDIATES := $(TARGET_OUT_INTERMEDIATES)/BOOTANIMATION
+$(TARGET_GENERATED_BOOTANIMATION): $(SOONG_ZIP)
 	@echo "Building bootanimation.zip"
 	@rm -rf $(dir $@)
 	@mkdir -p $(dir $@)
-	$(hide) if [ -z $(TARGET_PICK_BOOTANIMATION)]; then \
-      BOOTSELECTED=$$(expr $$RANDOM % 10); \
-  else \
-      if [ $(TARGET_PICK_BOOTANIMATION) -lt 9]; then \
-          BOOTSELECTED=$(TARGET_PICK_BOOTANIMATION); \
-      else \
-          BOOTSELECTED=$$(expr $$RANDOM % 10); \
-      fi; \
-  fi; \
-  if [ $(TARGET_SCREEN_HEIGHT) -lt $(TARGET_SCREEN_WIDTH) ]; then \
+	$(hide) if [ -z $(TARGET_PICK_BOOTANIMATION) ]; then \
+            BOOTSELECTED=$$(expr $$RANDOM % 10); \
+        else \
+            if [ $(TARGET_PICK_BOOTANIMATION) -lt 10 ]; then \
+                BOOTSELECTED=$(TARGET_PICK_BOOTANIMATION); \
+            else \
+                BOOTSELECTED=$$(expr $$RANDOM % 10); \
+            fi; \
+        fi; \
+        case "$$BOOTSELECTED" in \
+	    [0-1]) \
+	        BOOTFPS="30"; \
+	        ISQUARE="true"; \
+	    ;; \
+	    2) \
+	        BOOTFPS="48"; \
+	        ISQUARE="true"; \
+	    ;; \
+	    [3-4]) \
+	        BOOTFPS="50"; \
+	        ISQUARE="false"; \
+	    ;; \
+	    [5-7]) \
+	        BOOTFPS="25"; \
+	        ISQUARE="false"; \
+	    ;; \
+	    [8-9]) \
+	        BOOTFPS="30"; \
+	        ISQUARE="false"; \
+	esac; \
+	tar xfp "vendor/bootleggers/bootanimation/bootanimation$$BOOTSELECTED.tar" -C $(INTERMEDIATES); \
+	if [ $(TARGET_SCREEN_HEIGHT) -lt $(TARGET_SCREEN_WIDTH) ]; then \
 	    IMAGEWIDTH=$(TARGET_SCREEN_HEIGHT); \
 	else \
 	    IMAGEWIDTH=$(TARGET_SCREEN_WIDTH); \
 	fi; \
+	if [ "$$ISQUARE" = "true" ]; then \
+		IMAGEHEIGHT="$$IMAGEWIDTH"; \
+		IMAGESCALEHEIGHT="$$IMAGEWIDTH"; \
+	else \
+		IMAGEHEIGHT=$(TARGET_SCREEN_HEIGHT); \
+		IMAGESCALEHEIGHT="$$IMAGEHEIGHT"; \
+	fi; \
 	IMAGESCALEWIDTH=$$IMAGEWIDTH; \
-	IMAGESCALEHEIGHT=$$(expr $$IMAGESCALEWIDTH / 3); \
 	if [ "$(TARGET_BOOTANIMATION_HALF_RES)" = "true" ]; then \
+	    IMAGEHEIGHT="$$(expr "$$IMAGEHEIGHT" / 2)"; \
 	    IMAGEWIDTH="$$(expr "$$IMAGEWIDTH" / 2)"; \
 	fi; \
-	IMAGEHEIGHT=$$(expr $$IMAGEWIDTH / 3); \
 	RESOLUTION="$$IMAGEWIDTH"x"$$IMAGEHEIGHT"; \
 	for part_cnt in 0 1 2; do \
 	    mkdir -p $(INTERMEDIATES)/part$$part_cnt; \
 	done; \
-	case "$$BOOTSELECTED" in \
-	    [0-1]) \
-	        BOOTFPS="30"; \
-	    ;; \
-	    2) \
-	        BOOTFPS="48"; \
-	    ;; \
-	    [3-4]) \
-	        BOOTFPS="50"; \
-	    ;; \
-	    [5-7]) \
-	        BOOTFPS="25"; \
-	    ;; \
-	    [8-9]) \
-	        BOOTFPS="30"; \
-	    ;; \
-	    *) \
-	        echo "Info: Something went wrong at the time of taking the number."; \
-	esac; \
-	tar xfp "vendor/bootleggers/bootanimation/bootanimation$$BOOTSELECTED.tar" --to-command="prebuilts/tools-bootleg/${HOST_OS}-x86/bin/convert - -strip -quality 55 -resize $$RESOLUTION^ -colors 250 -gravity center -crop $$RESOLUTION+0+0 +repage \"$(INTERMEDIATES)/\$$TAR_FILENAME\""; \
+	prebuilts/tools-bootleg/${HOST_OS}-x86/bin/mogrify -strip -gaussian-blur 0.05 -quality 55 -resize $$RESOLUTION^ -gravity center -crop $$RESOLUTION+0+0 -colors 250 $(INTERMEDIATES)/*/*.jpg; \
 	echo "$$IMAGESCALEWIDTH $$IMAGESCALEHEIGHT $$BOOTFPS" > $(INTERMEDIATES)/desc.txt; \
 	cat vendor/bootleggers/bootanimation/desc.txt >> $(INTERMEDIATES)/desc.txt
-	$(hide) $(SOONG_ZIP) -L 0 -o $(TARGET_GENERATED_BOOTANIMATION1) -C $(INTERMEDIATES) -D $(INTERMEDIATES)
+	$(hide) $(SOONG_ZIP) -L 0 -o $(TARGET_GENERATED_BOOTANIMATION) -C $(INTERMEDIATES) -D $(INTERMEDIATES)
 
-ifeq ($(TARGET_BOOTANIMATION1),)
-    TARGET_BOOTANIMATION1 := $(TARGET_GENERATED_BOOTANIMATION1)
+ifeq ($(TARGET_BOOTANIMATION),)
+    TARGET_BOOTANIMATION := $(TARGET_GENERATED_BOOTANIMATION)
 endif
 
 include $(CLEAR_VARS)
@@ -89,5 +98,5 @@ LOCAL_MODULE_PATH := $(TARGET_OUT)/media
 
 include $(BUILD_SYSTEM)/base_rules.mk
 
-$(LOCAL_BUILT_MODULE): $(TARGET_BOOTANIMATION1)
-	@cp $(TARGET_BOOTANIMATION1) $@
+$(LOCAL_BUILT_MODULE): $(TARGET_BOOTANIMATION)
+	@cp $(TARGET_BOOTANIMATION) $@
