@@ -3,7 +3,7 @@ PRODUCT_PACKAGES += \
     CameraRoll \
     MiXplorerPrebuilt \
     WallpaperPicker2 \
-    MarkupGoogle \
+    MarkupGugel \
     GugelClock \
     Jelly \
     LatinIME \
