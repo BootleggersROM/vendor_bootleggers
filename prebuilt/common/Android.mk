@@ -71,17 +71,6 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := PRESIGNED
 include $(BUILD_PREBUILT)
 
-# WallpaperPickerGoogle
-include $(CLEAR_VARS)
-LOCAL_MODULE := WallpaperPickerGoogle
-LOCAL_SRC_FILES := app/WallpaperPickerGoogle.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_PRIVILEGED_MODULE := true
-LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
-include $(BUILD_PREBUILT)
-
 # GoogleMarkup
 include $(CLEAR_VARS)
 LOCAL_MODULE := MarkupGoogle
