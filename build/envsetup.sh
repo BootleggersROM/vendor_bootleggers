@@ -1,16 +1,15 @@
-function __print_lineage_functions_help() {
+function __print_bootleggers_functions_help() {
 cat <<EOF
-Additional LineageOS functions:
+Additional BootleggersROM functions:
 - cout:            Changes directory to out.
 - mmp:             Builds all of the modules in the current directory and pushes them to the device.
 - mmap:            Builds all of the modules in the current directory and its dependencies, then pushes the package to the device.
 - mmmp:            Builds all of the modules in the supplied directories and pushes them to the device.
-- lineagegerrit:   A Git wrapper that fetches/pushes patch from/to LineageOS Gerrit Review.
-- lineagerebase:   Rebase a Gerrit change and push it again.
-- lineageremote:   Add git remote for LineageOS Gerrit Review.
+- bootleggerrit:   A Git wrapper that fetches/pushes patch from/to BootleggersROM Gerrit Review.
+- bootlegrebase:   Rebase a Gerrit change and push it again.
+- bootlegremote:   Add git remote for BootleggersROM Gerrit Review.
 - aospremote:      Add git remote for matching AOSP repository.
 - cafremote:       Add git remote for matching CodeAurora repository.
-- githubremote:    Add git remote for LineageOS Github.
 - mka:             Builds using SCHED_BATCH on all processors.
 - mkap:            Builds the module(s) using mka and pushes them to the device.
 - cmka:            Cleans and builds using mka.
@@ -78,12 +77,12 @@ function breakfast()
             # A buildtype was specified, assume a full device name
             lunch $target
         else
-            # This is probably just the Lineage model name
+            # This is probably just the Bootleggers model name
             if [ -z "$variant" ]; then
                 variant="userdebug"
             fi
 
-            lunch lineage_$target-$variant
+            lunch bootleg_$target-$variant
         fi
     fi
     return $?
@@ -94,7 +93,7 @@ alias bib=breakfast
 function eat()
 {
     if [ "$OUT" ] ; then
-        ZIPPATH=`ls -tr "$OUT"/lineage-*.zip | tail -1`
+        ZIPPATH=`ls -tr "$OUT"/BootleggersROM-*.zip | tail -1`
         if [ ! -f $ZIPPATH ] ; then
             echo "Nothing to eat"
             return 1
@@ -108,7 +107,7 @@ function eat()
             done
             echo "Device Found.."
         fi
-        if (adb shell getprop ro.lineage.device | grep -q "$LINEAGE_BUILD"); then
+        if (adb shell getprop ro.bootleggers.device | grep -q "$BOOTLEGGERS_BUILD"); then
             # if adbd isn't root we can't write to /cache/recovery/
             adb root
             sleep 1
@@ -124,7 +123,7 @@ EOF
             fi
             rm /tmp/command
         else
-            echo "The connected device does not appear to be $LINEAGE_BUILD, run away!"
+            echo "The connected device does not appear to be $BOOTLEGGERS_BUILD, run away!"
         fi
         return $?
     else
@@ -248,43 +247,30 @@ function dddclient()
    fi
 }
 
-function lineageremote()
+function bootlegremote()
 {
     if ! git rev-parse --git-dir &> /dev/null
     then
         echo ".git directory not found. Please run this from the root directory of the Android repository you wish to set up."
         return 1
     fi
-    git remote rm lineage 2> /dev/null
-    local REMOTE=$(git config --get remote.github.projectname)
-    local LINEAGE="true"
-    if [ -z "$REMOTE" ]
+    git remote rm gerrit 2> /dev/null
+    local PROJECT=$(git config --get remote.bootleggers.projectname)
+    local PFX="Bootleggers-BrokenLab/"
+    if [ -z "$PROJECT" ]
     then
-        REMOTE=$(git config --get remote.aosp.projectname)
-        LINEAGE="false"
-    fi
-    if [ -z "$REMOTE" ]
-    then
-        REMOTE=$(git config --get remote.caf.projectname)
-        LINEAGE="false"
+        echo "hmm. you don't seem to be in a bootleg fork"
+        return 1
     fi
 
-    if [ $LINEAGE = "false" ]
+    local BOOTLEG_USER=$(git config --get review.review.bootleggersrom.xyz.username)
+    if [ -z "$BOOTLEG_USER" ]
     then
-        local PROJECT=$(echo $REMOTE | sed -e "s#platform/#android/#g; s#/#_#g")
-        local PFX="LineageOS/"
+        git remote add gerrit ssh://review.bootleggersrom.xyz:29418/$PFX$PROJECT
     else
-        local PROJECT=$REMOTE
+        git remote add gerrit ssh://$BOOTLEG_USER@review.bootleggersrom.xyz:29418/$PFX$PROJECT
     fi
-
-    local LINEAGE_USER=$(git config --get review.review.lineageos.org.username)
-    if [ -z "$LINEAGE_USER" ]
-    then
-        git remote add lineage ssh://review.lineageos.org:29418/$PFX$PROJECT
-    else
-        git remote add lineage ssh://$LINEAGE_USER@review.lineageos.org:29418/$PFX$PROJECT
-    fi
-    echo "Remote 'lineage' created"
+    echo "Remote 'gerrit' created"
 }
 
 function aospremote()
@@ -335,27 +321,6 @@ function cafremote()
     echo "Remote 'caf' created"
 }
 
-function githubremote()
-{
-    if ! git rev-parse --git-dir &> /dev/null
-    then
-        echo ".git directory not found. Please run this from the root directory of the Android repository you wish to set up."
-        return 1
-    fi
-    git remote rm github 2> /dev/null
-    local REMOTE=$(git config --get remote.aosp.projectname)
-
-    if [ -z "$REMOTE" ]
-    then
-        REMOTE=$(git config --get remote.caf.projectname)
-    fi
-
-    local PROJECT=$(echo $REMOTE | sed -e "s#platform/#android/#g; s#/#_#g")
-
-    git remote add github https://github.com/LineageOS/$PROJECT
-    echo "Remote 'github' created"
-}
-
 function installboot()
 {
     if [ ! -e "$OUT/recovery/root/system/etc/recovery.fstab" ];
@@ -386,7 +351,7 @@ function installboot()
     sleep 1
     adb wait-for-online shell mount /system 2>&1 > /dev/null
     adb wait-for-online remount
-    if (adb shell getprop ro.lineage.device | grep -q "$LINEAGE_BUILD");
+    if (adb shell getprop ro.bootleggers.device | grep -q "$BOOTLEGGERS_BUILD");
     then
         adb push $OUT/boot.img /cache/
         if [ -e "$OUT/system/lib/modules/*" ];
@@ -401,7 +366,7 @@ function installboot()
         adb shell rm -rf /cache/boot.img
         echo "Installation complete."
     else
-        echo "The connected device does not appear to be $LINEAGE_BUILD, run away!"
+        echo "The connected device does not appear to be $BOOTLEGGERS_BUILD, run away!"
     fi
 }
 
@@ -452,23 +417,23 @@ function makerecipe() {
         echo "No branch name provided."
         return 1
     fi
-    cd android
+    cd manifest
     sed -i s/'default revision=.*'/'default revision="refs\/heads\/'$1'"'/ default.xml
     git commit -a -m "$1"
     cd ..
 
     repo forall -c '
 
-    if [ "$REPO_REMOTE" = "github" ]
+    if [ "$REPO_REMOTE" = "bootleggers" ]
     then
         pwd
-        lineageremote
-        git push lineage HEAD:refs/heads/'$1'
+        bootlegremote
+        git push gerrit HEAD:refs/heads/'$1'
     fi
     '
 }
 
-function lineagegerrit() {
+function bootleggerrit() {
     if [ "$(__detect_shell)" = "zsh" ]; then
         # zsh does not define FUNCNAME, derive from funcstack
         local FUNCNAME=$funcstack[1]
@@ -478,9 +443,9 @@ function lineagegerrit() {
         $FUNCNAME help
         return 1
     fi
-    local user=`git config --get review.review.lineageos.org.username`
-    local review=`git config --get remote.github.review`
-    local project=`git config --get remote.github.projectname`
+    local user=`git config --get review.review.bootleggersrom.xyz.username`
+    local review=`git config --get remote.bootleggers.review`
+    local project=`git config --get remote.bootleggers.projectname`
     local command=$1
     shift
     case $command in
@@ -514,7 +479,7 @@ EOF
             case $1 in
                 __cmg_*) echo "For internal use only." ;;
                 changes|for)
-                    if [ "$FUNCNAME" = "lineagegerrit" ]; then
+                    if [ "$FUNCNAME" = "bootleggerrit" ]; then
                         echo "'$FUNCNAME $1' is deprecated."
                     fi
                     ;;
@@ -607,7 +572,7 @@ EOF
                 $local_branch:refs/for/$remote_branch || return 1
             ;;
         changes|for)
-            if [ "$FUNCNAME" = "lineagegerrit" ]; then
+            if [ "$FUNCNAME" = "bootleggerrit" ]; then
                 echo >&2 "'$FUNCNAME $command' is deprecated."
             fi
             ;;
@@ -706,15 +671,15 @@ EOF
     esac
 }
 
-function lineagerebase() {
+function bootlegrebase() {
     local repo=$1
     local refs=$2
     local pwd="$(pwd)"
     local dir="$(gettop)/$repo"
 
     if [ -z $repo ] || [ -z $refs ]; then
-        echo "LineageOS Gerrit Rebase Usage: "
-        echo "      lineagerebase <path to project> <patch IDs on Gerrit>"
+        echo "BootleggersROM Gerrit Rebase Usage: "
+        echo "      bootlegrebase <path to project> <patch IDs on Gerrit>"
         echo "      The patch IDs appear on the Gerrit commands that are offered."
         echo "      They consist on a series of numbers and slashes, after the text"
         echo "      refs/changes. For example, the ID in the following command is 26/8126/2"
@@ -729,13 +694,13 @@ function lineagerebase() {
         return
     fi
     cd $dir
-    repo=$(cat .git/config  | grep git://github.com | awk '{ print $NF }' | sed s#git://github.com/##g)
+    repo=$(git config --get remote.bootleggers.projectname)
     echo "Starting branch..."
     repo start tmprebase .
     echo "Bringing it up to date..."
     repo sync .
     echo "Fetching change..."
-    git fetch "http://review.lineageos.org/p/$repo" "refs/changes/$refs" && git cherry-pick FETCH_HEAD
+    git fetch "http://review.bootleggersrom.xyz/p/$repo" "refs/changes/$refs" && git cherry-pick FETCH_HEAD
     if [ "$?" != "0" ]; then
         echo "Error cherry-picking. Not uploading!"
         return
@@ -820,7 +785,7 @@ function dopush()
         echo "Device Found."
     fi
 
-    if (adb shell getprop ro.lineage.device | grep -q "$LINEAGE_BUILD") || [ "$FORCE_PUSH" = "true" ];
+    if (adb shell getprop ro.bootleggers.device | grep -q "$BOOTLEGGERS_BUILD") || [ "$FORCE_PUSH" = "true" ];
     then
     # retrieve IP and PORT info if we're using a TCP connection
     TCPIPPORT=$(adb devices \
@@ -938,7 +903,7 @@ EOF
     rm -f $OUT/.log
     return 0
     else
-        echo "The connected device does not appear to be $LINEAGE_BUILD, run away!"
+        echo "The connected device does not appear to be $BOOTLEGGERS_BUILD, run away!"
     fi
 }
 
@@ -951,14 +916,14 @@ alias cmkap='dopush cmka'
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/lineage/build/tools/repopick.py $@
+    $T/vendor/bootleggers/build/tools/repopick.py $@
 }
 
 function fixup_common_out_dir() {
     common_out_dir=$(get_build_var OUT_DIR)/target/common
     target_device=$(get_build_var TARGET_DEVICE)
     common_target_out=common-${target_device}
-    if [ ! -z $LINEAGE_FIXUP_COMMON_OUT ]; then
+    if [ ! -z $BOOTLEGGERS_FIXUP_COMMON_OUT ]; then
         if [ -d ${common_out_dir} ] && [ ! -L ${common_out_dir} ]; then
             mv ${common_out_dir} ${common_out_dir}-${target_device}
             ln -s ${common_target_out} ${common_out_dir}
