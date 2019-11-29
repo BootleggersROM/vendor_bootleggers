@@ -31,12 +31,12 @@ $(TARGET_GENERATED_BOOTANIMATION): $(SOONG_ZIP)
 	@rm -rf $(dir $@)
 	@mkdir -p $(dir $@)
 	$(hide) if [ -z $(TARGET_PICK_BOOTANIMATION) ]; then \
-            BOOTSELECTED=$$(expr $$RANDOM % 10); \
+            BOOTSELECTED=$$(expr $$RANDOM % 9); \
         else \
-            if [ $(TARGET_PICK_BOOTANIMATION) -lt 10 ]; then \
+            if [ $(TARGET_PICK_BOOTANIMATION) -lt 9 ]; then \
                 BOOTSELECTED=$(TARGET_PICK_BOOTANIMATION); \
             else \
-                BOOTSELECTED=$$(expr $$RANDOM % 10); \
+                BOOTSELECTED=$$(expr $$RANDOM % 9); \
             fi; \
         fi; \
         case "$$BOOTSELECTED" in \
@@ -56,7 +56,7 @@ $(TARGET_GENERATED_BOOTANIMATION): $(SOONG_ZIP)
 	        BOOTFPS="25"; \
 	        ISQUARE="false"; \
 	    ;; \
-	    [8-9]) \
+	    8) \
 	        BOOTFPS="30"; \
 	        ISQUARE="false"; \
 	esac; \
