@@ -163,7 +163,7 @@ endif
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUIGoogle
+    SystemUI
 
 # Some props that we need for the google stuff we're adding
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
