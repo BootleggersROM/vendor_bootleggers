@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <permissions>
-    <privapp-permissions package="org.pixelexperience.recorder">
-        <permission name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
-        <permission name="android.permission.CAPTURE_SECURE_VIDEO_OUTPUT"/>
-        <permission name="android.permission.CAPTURE_VIDEO_OUTPUT"/>
+    <privapp-permissions package="org.lineageos.recorder">
+        <permission name="android.permission.FOREGROUND_SERVICE"/>
+        <permission name="android.permission.READ_PHONE_STATE"/>
+        <permission name="android.permission.RECORD_AUDIO"/>
+        <permission name="android.permission.SYSTEM_ALERT_WINDOW"/>
+        <permission name="android.permission.WAKE_LOCK"/>
+        <permission name="android.permission.WRITE_SETTINGS"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
-        <permission name="android.permission.MANAGE_USERS"/>
     </privapp-permissions>
 </permissions>
