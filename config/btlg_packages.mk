@@ -7,6 +7,8 @@ PRODUCT_PACKAGES += \
     GugelClock \
     Jelly \
     LatinIME \
+    OmniStyle \
+    OmniJaws \
     Phonograph \
     Recorder \
     ThemePicker
