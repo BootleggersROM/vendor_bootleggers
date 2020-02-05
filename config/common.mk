@@ -26,8 +26,7 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/bootleggers/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/bootleggers/prebuilt/common/bin/50-bootleggers.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-bootleggers.sh \
-    vendor/bootleggers/prebuilt/common/bin/blacklist:$(TARGET_COPY_OUT_SYSTEM)/addon.d/blacklist
+    vendor/bootleggers/prebuilt/common/bin/50-bootleggers.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-bootleggers.sh
 
 ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
 PRODUCT_COPY_FILES += \
