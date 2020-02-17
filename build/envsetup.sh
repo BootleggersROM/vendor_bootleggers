@@ -256,7 +256,7 @@ function bootlegremote()
     fi
     git remote rm gerrit 2> /dev/null
     local PROJECT=$(git config --get remote.bootleggers.projectname)
-    local PFX="Bootleggers-BrokenLab/"
+    local PFX="BootleggersROM/"
     if [ -z "$PROJECT" ]
     then
         echo "hmm. you don't seem to be in a bootleg fork"
