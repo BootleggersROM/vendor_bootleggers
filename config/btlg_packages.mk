@@ -1,5 +1,6 @@
 # Our Bootleg apps
 PRODUCT_PACKAGES += \
+    Email \
     CameraRoll \
     MiXplorerPrebuilt \
     WallpaperPicker2 \
