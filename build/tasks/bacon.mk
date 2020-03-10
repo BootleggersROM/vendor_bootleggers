@@ -43,9 +43,9 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	@echo -e ${CL_CYN}"The build is done, be sure to get it on:"${CL_CYN}
 	@echo -e ${CL_CYN}"$(BOOTLEGGERS_TARGET_PACKAGE)"${CL_CYN}
 ifeq ($(BOOTLEGGERS_BUILD_TYPE),Shishufied)
-	@echo -e ${CL_CYN}"And your build size is:" $(shell ls -l --block-size=M $(BOOTLEGGERS_TARGET_PACKAGE)|cut -d" " -f5)"B ("$(shell stat -L -t -c %s $(BOOTLEGGERS_TARGET_PACKAGE))")"${CL_CYN}
+	@echo -e ${CL_CYN}"And your build size is:" $(shell ls -lh $(BOOTLEGGERS_TARGET_PACKAGE)|cut -d" " -f5)"B ("$(shell stat -L -t -c %s $(BOOTLEGGERS_TARGET_PACKAGE))")"${CL_CYN}
 else
-	@echo -e ${CL_CYN}"Your build size is" $(shell ls -l --block-size=M $(BOOTLEGGERS_TARGET_PACKAGE)|cut -d" " -f5)"B"${CL_CYN}
+	@echo -e ${CL_CYN}"Your build size is" $(shell ls -lh $(BOOTLEGGERS_TARGET_PACKAGE)|cut -d" " -f5)"B"${CL_CYN}
 endif
 	@echo -e ${CL_CYN}"                "${CL_CYN}
 	@echo -e ${CL_CYN}"Also, enjoy your $(BOOTLEGGERS_BUILD_TYPE) build"${CL_CYN}  
