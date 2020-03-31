@@ -44,7 +44,7 @@ include $(BUILD_PREBUILT)
 #
 #Gallery app
 include $(CLEAR_VARS)
-LOCAL_MODULE := CameraRoll
+LOCAL_MODULE := QPGallery
 LOCAL_SRC_FILES := app/$(LOCAL_MODULE).apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional

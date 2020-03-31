@@ -1,7 +1,7 @@
 # Our Bootleg apps
 PRODUCT_PACKAGES += \
     Email \
-    CameraRoll \
+    QPGallery \
     MiXplorerPrebuilt \
     WallpaperPicker2 \
     MarkupGugel \
