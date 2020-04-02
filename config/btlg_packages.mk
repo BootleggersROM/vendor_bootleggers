@@ -36,6 +36,10 @@ else
         Launcher3QuickStep
 endif
 
+# Long Screenshot
+PRODUCT_PACKAGES += \
+    StitchImage
+
 # DU-Fonts
 #PRODUCT_PACKAGES += \
 #    CustomFonts
