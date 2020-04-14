@@ -11,7 +11,6 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     OmniJaws \
     Phonograph \
-    Recorder \
     ThemePicker
 
 ifeq ($(BOOTLEGGERS_BUILD_TYPE),Shishufied)
