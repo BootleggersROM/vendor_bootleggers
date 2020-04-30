@@ -101,6 +101,11 @@ PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/fonts/fontagev3/SofiaSansSemiCond-Regular.ttf:$(TARGET_COPY_OUT_PRODUCT)/fonts/SofiaSansSemiCond-Regular.ttf \
     vendor/bootleggers/prebuilt/fonts/fontagev3/SofiaSansSemiCond-Medium.ttf:$(TARGET_COPY_OUT_PRODUCT)/fonts/SofiaSansSemiCond-Medium.ttf
 
+
+# Ignore overlays on RRO builds
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    vendor/bootleggers/overlays/common/packages/apps/Messaging
+
 # Call our special makefiles before anything
 include vendor/bootleggers/config/btlg_branding.mk
 include vendor/bootleggers/config/btlg_packages.mk
