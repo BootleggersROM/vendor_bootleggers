@@ -6,6 +6,7 @@ PRODUCT_PACKAGES += \
     WallpaperPicker2 \
     MarkupGugel \
     GugelClock \
+    ShishuWalls \
     Jelly \
     LatinIME \
     OmniStyle \
