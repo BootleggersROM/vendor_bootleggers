@@ -49,8 +49,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
 
-# Call the overlays folder to build all the rest 
+# Call the overlays folder to build all the rest
 include packages/overlays/Shishufied/shishu.mk
+
+# Include Potato volume panels
+include packages/modules/PotatoPlugins/plugins.mk
 
 ### COMMENTED WASTELAND - MOVED TEMPORALLY HERE DUE TO WIP ###
 #
