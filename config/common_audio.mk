@@ -7,6 +7,9 @@ ALARM_PATH := vendor/bootleggers/prebuilt/common/media/audio/alarms
 NOTIFICATION_PATH := vendor/bootleggers/prebuilt/common/media/audio/notifications
 RINGTONE_PATH := vendor/bootleggers/prebuilt/common/media/audio/ringtones
 
+# Include some more AOSP sounds
+include vendor/bootleggers/config/common_aosp_media.mk
+
 # Alarms
 PRODUCT_COPY_FILES += \
     $(ALARM_PATH)/BeyondTheDream.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/BeyondTheDream.ogg \
