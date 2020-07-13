@@ -13,7 +13,7 @@ include vendor/bootleggers/config/common_aosp_media.mk
 # Alarms
 PRODUCT_COPY_FILES += \
     $(ALARM_PATH)/BeyondTheDream.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/BeyondTheDream.ogg \
-    $(ALARM_PATH)/LikeWhat.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/LikeWhat.ogg
+    $(ALARM_PATH)/DreamDelyrium.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/DreamDelyrium.ogg
 
 # Notifications
 PRODUCT_COPY_FILES += \
@@ -26,11 +26,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(RINGTONE_PATH)/Caraway.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Caraway.ogg \
     $(RINGTONE_PATH)/Frost.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Frost.ogg \
+    $(RINGTONE_PATH)/Missingnissim.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Missingnissim.ogg \
     $(RINGTONE_PATH)/Myst.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Myst.ogg
     
     
 # Default notification/alarm sounds
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.notification_sound=Electra.ogg \
-    ro.config.alarm_alert=LikeWhat.ogg \
-    ro.config.ringtone=Frost.ogg
+    ro.config.alarm_alert=DreamDelyrium.ogg \
+    ro.config.ringtone=Missingnissim.ogg
