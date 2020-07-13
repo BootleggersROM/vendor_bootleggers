@@ -13,7 +13,7 @@ include vendor/bootleggers/config/common_aosp_media.mk
 # Alarms
 PRODUCT_COPY_FILES += \
     $(ALARM_PATH)/BeyondTheDream.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/BeyondTheDream.ogg \
-    $(ALARM_PATH)/LikeWhat.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/LikeWhat.ogg
+    $(ALARM_PATH)/Missingnissim.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Missingnissim.ogg
 
 # Notifications
 PRODUCT_COPY_FILES += \
@@ -32,5 +32,5 @@ PRODUCT_COPY_FILES += \
 # Default notification/alarm sounds
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.notification_sound=Electra.ogg \
-    ro.config.alarm_alert=LikeWhat.ogg \
+    ro.config.alarm_alert=Missingnissim.ogg \
     ro.config.ringtone=Frost.ogg
