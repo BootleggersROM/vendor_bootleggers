@@ -258,5 +258,86 @@
     <family customizationType="new-named-family" name="sofia-semicondensed-medium">
         <font weight="300" style="normal">SofiaSansSemiCond-Medium.ttf</font>
     </family>
+    <family customizationType="new-named-family" name="authentic-sans-medium">
+        <font weight="300" style="normal">AuthenticSans-Medium.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="authentic-sans">
+        <font weight="300" style="normal">AuthenticSans-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="decalotype-medium">
+        <font weight="300" style="normal">Decalotype-Medium.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="decalotype">
+        <font weight="300" style="normal">Decalotype-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="fantasque-mono">
+        <font weight="300" style="normal">FantasqueMono-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="fleuron">
+        <font weight="300" style="normal">Fleuron-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="gothamono">
+        <font weight="300" style="normal">Gothamono-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="ignazio-text">
+        <font weight="300" style="normal">IgnazioText-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="jakarta-plus-medium">
+        <font weight="300" style="normal">JakartaPlus-Medium.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="jakarta-plus">
+        <font weight="300" style="normal">JakartaPlus-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="lumie">
+        <font weight="300" style="normal">Lumie-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="milimetre">
+        <font weight="300" style="normal">Millimetre-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="now-medium">
+        <font weight="300" style="normal">Now-Medium.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="now-regular">
+        <font weight="300" style="normal">Now-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="open-sauce-medium">
+        <font weight="300" style="normal">OpenSauceSans-Medium.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="open-sauce">
+        <font weight="300" style="normal">OpenSauceSans-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="qt-vagaround-bold">
+        <font weight="300" style="normal">QTVagaRound-Bold.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="qt-vagaround">
+        <font weight="300" style="normal">QTVagaRound-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="scientifica">
+        <font weight="300" style="normal">Scientifica-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="universalis-bold">
+        <font weight="300" style="normal">Universalis-Bold.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="universalis">
+        <font weight="300" style="normal">Universalis-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="universalis-cond-bold">
+        <font weight="300" style="normal">UniversalisCond-Bold.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="universalis-cond">
+        <font weight="300" style="normal">UniversalisCond-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="vg5000">
+        <font weight="300" style="normal">VG5000-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="vladivostok">
+        <font weight="300" style="normal">Vladisvostok-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="volte-bold">
+        <font weight="300" style="normal">Volte-Bold.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="volte-medium">
+        <font weight="300" style="normal">Volte-Medium.ttf</font>
+    </family>
 
 </fonts-modification>
