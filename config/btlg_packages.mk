@@ -12,6 +12,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     OmniStyle \
     OmniJaws \
+    ShishufiedHeaders \
     Phonograph \
     ThemePicker
 
