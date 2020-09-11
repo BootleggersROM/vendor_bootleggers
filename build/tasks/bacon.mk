@@ -20,12 +20,13 @@ ifneq ($(BUILD_WITH_COLORS),0)
     include $(TOP_DIR)vendor/bootleggers/build/core/colors.mk
 endif
 
+MD5 := prebuilts/build-tools/path/$(HOST_OS)-x86/md5sum
 BOOTLEGGERS_TARGET_PACKAGE := $(PRODUCT_OUT)/$(BOOTLEGGERS_VERSION).zip
 
 .PHONY: bacon bootleg bootleggers
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(BOOTLEGGERS_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(BOOTLEGGERS_TARGET_PACKAGE) > $(BOOTLEGGERS_TARGET_PACKAGE).md5sum
+	$(hide) $(MD5) $(BOOTLEGGERS_TARGET_PACKAGE) > $(BOOTLEGGERS_TARGET_PACKAGE).md5sum
 	@echo -e ${CL_BLU}""${CL_BLU}
 	@echo -e ${CL_BLU}" ######  ####### #        #####  "${CL_BLU}
 	@echo -e ${CL_BLU}" #     #    #    #       #     # "${CL_BLU}
