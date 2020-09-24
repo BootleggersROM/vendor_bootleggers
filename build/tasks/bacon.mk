@@ -1,5 +1,5 @@
 # Copyright (C) 2017 Unlegacy-Android
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017,2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ ifneq ($(BUILD_WITH_COLORS),0)
     include $(TOP_DIR)vendor/bootleggers/build/core/colors.mk
 endif
 
-MD5 := prebuilts/build-tools/path/$(HOST_OS)-x86/md5sum
+MD5 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/md5sum
 BOOTLEGGERS_TARGET_PACKAGE := $(PRODUCT_OUT)/$(BOOTLEGGERS_VERSION).zip
 
 .PHONY: bacon bootleg bootleggers
