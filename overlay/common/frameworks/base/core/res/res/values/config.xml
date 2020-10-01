@@ -137,4 +137,8 @@
     <!-- Name of the font family used for system surfaces where the font should use medium weight -->
     <string name="config_headlineFontFamilyMedium" translatable="false">sans-serif-condensed-medium</string>
 
+    <!-- Amount of time in ms the user needs to press the relevant keys to trigger the
+         screenshot chord -->
+    <integer name="config_screenshotChordKeyTimeout">1</integer>
+
 </resources>
