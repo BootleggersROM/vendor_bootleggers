@@ -10,7 +10,7 @@ BOOTLEGGERS_EPOCH := $(shell date +%s)
 BOOTLEGGERS_POSTFIX := -$(shell date -d @$(BOOTLEGGERS_EPOCH) +"%Y%m%d-%H%M%S")
 
 ifndef BOOTLEGGERS_BUILD_TYPE
-    BOOTLEGGERS_BUILD_TYPE := Unshishufied
+    BOOTLEGGERS_BUILD_TYPE := Testing
 endif
 
 ifdef BOOTLEGGERS_BUILD_EXTRA
