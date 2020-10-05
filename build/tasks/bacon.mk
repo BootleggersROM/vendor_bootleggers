@@ -27,14 +27,16 @@ BOOTLEGGERS_TARGET_PACKAGE := $(PRODUCT_OUT)/$(BOOTLEGGERS_VERSION).zip
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(BOOTLEGGERS_TARGET_PACKAGE)
 	$(hide) $(MD5) $(BOOTLEGGERS_TARGET_PACKAGE) > $(BOOTLEGGERS_TARGET_PACKAGE).md5sum
-	@echo -e ${CL_BLU}""${CL_BLU}
-	@echo -e ${CL_BLU}" ######  ####### #        #####  "${CL_BLU}
-	@echo -e ${CL_BLU}" #     #    #    #       #     # "${CL_BLU}
-	@echo -e ${CL_BLU}" #     #    #    #       #       "${CL_BLU}
-	@echo -e ${CL_BLU}" ######     #    #       #  #### "${CL_BLU}
-	@echo -e ${CL_BLU}" #     #    #    #       #     # "${CL_BLU}
-	@echo -e ${CL_BLU}" #     #    #    #       #     # "${CL_BLU}
-	@echo -e ${CL_BLU}" ######     #    #######  #####  "${CL_BLU}
+	@echo -e ${CL_CYN}""${CL_CYN}
+	@echo -e ${CL_CYN}"        ▄ █ "${CL_CYN}${CL_BLU}"███████▄▄      ▐██████████████     ████                ▄▄███████▀▄"${CL_BLU}
+	@echo -e ${CL_CYN}" ████████ █ "${CL_CYN}${CL_BLU}"██████████▄    ▐██████████████▌    ████             ▄██████████████"${CL_BLU}
+	@echo -e ${CL_CYN}"▐█▌▄▄▄▄▄▄ █ "${CL_CYN}${CL_BLU}"████  ▐███▌          ████          ████            ▄████▀        ▀"${CL_BLU}
+	@echo -e ${CL_CYN}"     ▄███ █ "${CL_CYN}${CL_BLU}"██████████▄          ████          ████           ▐████"${CL_BLU}
+	@echo -e ${CL_CYN}" ▄██▀▀▐██ █ "${CL_CYN}${CL_BLU}"████████████▄        ████          ████           ▐███▌       ██████"${CL_BLU}
+	@echo -e ${CL_CYN}"   ▄▄█▀ █ █ "${CL_CYN}${CL_BLU}"████     ████        ████          ████           ▐████       ▀▀▀███"${CL_BLU}
+	@echo -e ${CL_CYN}" ▀▀  ▄▄█▀ █ "${CL_CYN}${CL_BLU}"████    ▄████        ████          ████            ▀████▄       ▐███"${CL_BLU}
+	@echo -e ${CL_CYN}"▄▄██▀▀    █ "${CL_CYN}${CL_BLU}"████████████▀        ████          ████████████     ▀███████████████"${CL_BLU}
+	@echo -e ${CL_CYN}"     ▐▀█▀ █ "${CL_CYN}${CL_BLU}"████████▀▀▀          ████          ████████████        ▀▀███████▀▀"${CL_BLU}
 	@echo -e ${CL_BLU}"                                 "${CL_BLU}
 	@echo -e ${CL_CYN}"          Bootleggers ROM         "${CL_CYN}
 	@echo -e ${CL_CYN}"          #KeepTheBootleg        "${CL_CYN}
