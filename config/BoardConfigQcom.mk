@@ -89,6 +89,11 @@ endif
 PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/$(QCOM_HARDWARE_VARIANT)
 
+# Add data-ipa-cfg-mgr to PRODUCT_SOONG_NAMESPACES if needed
+ifneq ($(USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR),true)
+    PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr
+endif
+
 # Required for frameworks/native
 ifeq ($(TARGET_USE_QCOM_SURFACEFLINGER), true)
     ifeq ($(QCOM_HARDWARE_VARIANT),msm8996)
