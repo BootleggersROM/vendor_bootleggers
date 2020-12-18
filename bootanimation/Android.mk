@@ -24,6 +24,8 @@ ifeq ($(TARGET_SCREEN_HEIGHT),)
     TARGET_SCREEN_HEIGHT := 1920
 endif
 
+TARBIN := prebuilts/build-tools/path/$(HOST_OS)-x86/tar
+
 TARGET_GENERATED_BOOTANIMATION := $(TARGET_OUT_INTERMEDIATES)/BOOTANIMATION/bootanimation.zip
 $(TARGET_GENERATED_BOOTANIMATION): INTERMEDIATES := $(TARGET_OUT_INTERMEDIATES)/BOOTANIMATION
 $(TARGET_GENERATED_BOOTANIMATION): $(SOONG_ZIP)
@@ -60,7 +62,7 @@ $(TARGET_GENERATED_BOOTANIMATION): $(SOONG_ZIP)
 	        BOOTFPS="30"; \
 	        ISQUARE="false"; \
 	esac; \
-	tar xfp "vendor/bootleggers/bootanimation/bootanimation$$BOOTSELECTED.tar" -C $(INTERMEDIATES); \
+	$(TARBIN) xfp "vendor/bootleggers/bootanimation/bootanimation$$BOOTSELECTED.tar" -C $(INTERMEDIATES); \
 	if [ $(TARGET_SCREEN_HEIGHT) -lt $(TARGET_SCREEN_WIDTH) ]; then \
 	    IMAGEWIDTH=$(TARGET_SCREEN_HEIGHT); \
 	else \
