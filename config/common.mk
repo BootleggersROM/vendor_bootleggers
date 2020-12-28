@@ -29,7 +29,7 @@ PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/bin/50-bootleggers.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-bootleggers.sh \
     vendor/bootleggers/prebuilt/common/bin/blacklist:$(TARGET_COPY_OUT_SYSTEM)/addon.d/blacklist
 
-ifneq ($(AB_OTA_PARTITIONS),)
+ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
     vendor/bootleggers/prebuilt/common/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
