@@ -14,6 +14,7 @@ export all_V3_partitions="vendor product system_ext odm oem"
 
 # Scripts in /system/addon.d expect to find backuptool.functions in /tmp
 mkdir -p /postinstall/tmp/
+mountpoint /postinstall/tmp >/dev/null 2>&1 || mount -t tmpfs tmpfs /postinstall/tmp
 cp -f /postinstall/system/bin/backuptool_ab.functions /postinstall/tmp/backuptool.functions
 
 get_script_version() {
@@ -69,8 +70,7 @@ if [ -d /postinstall/tmp/addon.d/ ]; then
     # we have no /sbin/sh in android, only recovery
     # use /system/bin/sh here instead
     sed -i '0,/#!\/sbin\/sh/{s|#!/sbin/sh|#!/system/bin/sh|}' $script
-    # we can't count on /tmp existing on an A/B device, so utilize /postinstall/tmp
-    # as a pseudo-/tmp dir
+    # we can't count on /tmp existing on an A/B device, so utilize /postinstall/tmp as tmpfs
     sed -i 's|. /tmp/backuptool.functions|. /postinstall/tmp/backuptool.functions|g' $script
 
     v=$(get_script_version $script)
@@ -178,6 +178,7 @@ case "$1" in
       umount_extra $all_V3_partitions
       restore_addon_d
       rm -rf $C
+      umount /postinstall/tmp
       rm -rf /postinstall/tmp
       sync
     fi
