@@ -128,15 +128,6 @@
          Example: "com.android.wellbeing" -->
     <string name="config_defaultWellbeingPackage">com.google.android.apps.wellbeing</string>
 
-     <!-- Name of a font family to use for body text. -->
-    <string name="config_bodyFontFamily" translatable="false">sans-serif-condensed</string>
-    <!-- Name of a font family to use for medium body text. -->
-    <string name="config_bodyFontFamilyMedium" translatable="false">sans-serif-condensed-medium</string>
-    <!-- Name of a font family to use for headlines. If empty, falls back to platform default -->
-    <string name="config_headlineFontFamily" translatable="false">sans-serif-condensed</string>
-    <!-- Name of the font family used for system surfaces where the font should use medium weight -->
-    <string name="config_headlineFontFamilyMedium" translatable="false">sans-serif-condensed-medium</string>
-
     <!-- Amount of time in ms the user needs to press the relevant keys to trigger the
          screenshot chord -->
     <integer name="config_screenshotChordKeyTimeout">1</integer>

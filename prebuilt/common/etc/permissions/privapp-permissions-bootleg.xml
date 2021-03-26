@@ -16,6 +16,7 @@
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
         <permission name="android.permission.NAVIGATION_EDITOR"/>
         <permission name="android.permission.MODIFY_DAY_NIGHT_MODE"/>
+        <permission name="android.permission.ACCESS_FONT_MANAGER"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.android.settings">
@@ -27,6 +28,7 @@
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="android.permission.SET_WALLPAPER_COMPONENT"/>
         <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
+        <permission name="android.permission.ACCESS_FONT_MANAGER"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.bootleggers.shishuota">

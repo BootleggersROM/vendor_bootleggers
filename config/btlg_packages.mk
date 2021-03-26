@@ -43,8 +43,8 @@ endif
 #    StitchImage
 
 # DU-Fonts
-#PRODUCT_PACKAGES += \
-#    CustomFonts
+PRODUCT_PACKAGES += \
+    CustomFonts
 
 # Cutout control overlay
 #PRODUCT_PACKAGES += \
