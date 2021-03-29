@@ -65,7 +65,7 @@ PRODUCT_PACKAGES += \
 include packages/overlays/Shishufied/shishu.mk
 
 # Include Potato volume panels
-#include packages/modules/PotatoPlugins/plugins.mk
+include packages/modules/VolumePanelPlugins/plugins.mk
 
 ### COMMENTED WASTELAND - MOVED TEMPORALLY HERE DUE TO WIP ###
 #
