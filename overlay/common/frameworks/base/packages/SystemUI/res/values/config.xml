@@ -40,4 +40,6 @@
     <!-- Whether to show activity indicators in the status bar -->
     <bool name="config_showActivity">false</bool>
 
+    <!-- SystemUIFactory component -->
+    <string name="config_systemUIFactoryComponent" translatable="false">org.protonaosp.systemui.CustomSystemUIFactory</string>
 </resources>
