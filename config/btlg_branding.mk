@@ -3,9 +3,9 @@ PRODUCT_BRAND ?= Bootleggers
 # Versioning System
 # Bootleggers version over here.
 PRODUCT_VERSION_MAJOR = Rimbon
-PRODUCT_VERSION_MINOR = niceparse.L
-BOOTLEGGERS_VERSION_NUMBER := 5.7-Alpha
-BOOTLEGGERS_SONGCODEURL = https://cutt.ly/UfgBmik
+PRODUCT_VERSION_MINOR = niceparse.N
+BOOTLEGGERS_VERSION_NUMBER := 5.8-Alpha
+BOOTLEGGERS_SONGCODEURL = https://cutt.ly/xc0pxEL
 BOOTLEGGERS_EPOCH := $(shell date +%s)
 BOOTLEGGERS_POSTFIX := -$(shell date -d @$(BOOTLEGGERS_EPOCH) +"%Y%m%d-%H%M%S")
 
