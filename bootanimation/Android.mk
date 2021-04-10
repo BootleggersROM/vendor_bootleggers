@@ -33,12 +33,12 @@ $(TARGET_GENERATED_BOOTANIMATION): $(SOONG_ZIP)
 	@rm -rf $(dir $@)
 	@mkdir -p $(dir $@)
 	$(hide) if [ -z $(TARGET_PICK_BOOTANIMATION) ]; then \
-            BOOTSELECTED=$$(expr $$RANDOM % 11); \
+            BOOTSELECTED=$$(expr $$RANDOM % 9); \
         else \
-            if [ $(TARGET_PICK_BOOTANIMATION) -lt 12 ]; then \
+            if [ $(TARGET_PICK_BOOTANIMATION) -lt 9 ]; then \
                 BOOTSELECTED=$(TARGET_PICK_BOOTANIMATION); \
             else \
-                BOOTSELECTED=$$(expr $$RANDOM % 11); \
+                BOOTSELECTED=$$(expr $$RANDOM % 9); \
             fi; \
         fi; \
         case "$$BOOTSELECTED" in \
@@ -61,10 +61,6 @@ $(TARGET_GENERATED_BOOTANIMATION): $(SOONG_ZIP)
 	    8) \
 	        BOOTFPS="30"; \
 	        ISQUARE="false"; \
-	    ;; \
-	    [9-11]) \
-	        BOOTFPS="50"; \
-	        ISQUARE="true"; \
 	esac; \
 	$(TARBIN) xfp "vendor/bootleggers/bootanimation/bootanimation$$BOOTSELECTED.tar" -C $(INTERMEDIATES); \
 	if [ $(TARGET_SCREEN_HEIGHT) -lt $(TARGET_SCREEN_WIDTH) ]; then \
