@@ -5,6 +5,5 @@ android_app {
     dex_preopt: {
         enabled: false,
     },
-    product_specific: true,
     installable: false
 }
