@@ -38,11 +38,15 @@ upstream=()
 # This is the array of repos with merge errors
 failed=()
 
+# This is the array of merged repos
+merged=()
+
 # This is the array of repos to blacklist and not merge
 blacklist=('external/google' 'prebuilts/clang/host/linux-x86' 'prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9')
 
 # Colors
 COLOR_RED='\033[0;31m'
+COLOR_GREEN='\033[0;32m'
 COLOR_BLANK='\033[0m'
 
 function is_in_blacklist() {
@@ -101,6 +105,11 @@ function merge() {
   if [ $? -ne 0 ]; then # If merge failed
     failed+=($1) # Add to the list
   fi
+  # Verify the merge commit is there
+  logOutput=$(git log --oneline -n1)
+  if [[ $logOutput == *$BRANCH* ]]; then # If merge commit is there
+    merged+=($1) # Add to the list
+  fi
 }
 
 function build_repo() {
@@ -108,6 +117,11 @@ function build_repo() {
   git pull $REPO/build.git -t $BRANCH
   if [ $? -ne 0 ]; then # If merge failed
     failed+=('build/make') # Add to the list
+  fi
+  # Verify the merge commit is there
+  logOutput=$(git log --oneline -n1)
+  if [[ $logOutput == *$BRANCH* ]]; then # If merge commit is there
+    merged+=('build/make') # Add to the list
   fi
 }
 
@@ -121,6 +135,15 @@ function print_result() {
     echo -e $COLOR_RED
     echo -e "These repos have merge errors: \n"
     for i in ${failed[@]}
+    do
+      echo -e "$i"
+    done
+    echo -e $COLOR_BLANK
+  fi
+  if [ ${#failed[@]} -ne 0 ]; then
+    echo -e $COLOR_GREEN
+    echo -e "These repos have been sucessfully merged: \n"
+    for i in ${merged[@]}
     do
       echo -e "$i"
     done
