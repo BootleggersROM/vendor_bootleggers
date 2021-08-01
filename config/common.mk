@@ -190,6 +190,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/common
 
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/bootleggers/config/device_framework_matrix.xml
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/bootleggers/config/partner_gms.mk
 
