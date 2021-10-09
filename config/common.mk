@@ -180,6 +180,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.ime.height_ratio=1.05 \
     ro.com.google.ime.emoji_key=false
 
+# Enable one-handed mode
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_one_handed_mode=true
+
 PRODUCT_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/common
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
