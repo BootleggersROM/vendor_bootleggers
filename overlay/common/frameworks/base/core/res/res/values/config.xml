@@ -150,4 +150,9 @@
         <item>com.linkedin.android</item>
         <item>com.tencent.mm</item>
     </string-array>
+
+    <!-- Wallpaper cropper package. Used as the default cropper if the active launcher doesn't
+         handle wallpaper cropping.
+    -->
+    <string name="config_wallpaperCropperPackage" translatable="false">com.android.wallpaper</string>
 </resources>
