@@ -33,9 +33,9 @@ PRODUCT_PACKAGES += \
 
 # Wallpaper overlay selection for widescreen devices.
 ifeq ($(BOOTLEGGERS_NOTCHED),true)
-    DEVICE_PACKAGE_OVERLAYS += \
+    PRODUCT_PACKAGE_OVERLAYS += \
         vendor/bootleggers/overlay/wallpaper/widebois
 else
-    DEVICE_PACKAGE_OVERLAYS += \
+    PRODUCT_PACKAGE_OVERLAYS += \
         vendor/bootleggers/overlay/wallpaper/common
 endif

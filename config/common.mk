@@ -180,7 +180,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.ime.height_ratio=1.05 \
     ro.com.google.ime.emoji_key=false
 
-DEVICE_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/common
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/bootleggers/config/partner_gms.mk
