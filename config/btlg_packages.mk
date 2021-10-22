@@ -1,20 +1,34 @@
-# Our Bootleg apps
+# Our Bootleg apps bundle
+## Core apps
 PRODUCT_PACKAGES += \
-    Email \
-    Etar \
-    QPGallery \
-    MiXplorerPrebuilt \
     WallpaperPicker2 \
-    MarkupGugel \
-    GugelClock \
     ShishuWalls \
-    Jelly \
     LatinIME \
     OmniStyle \
     OmniJaws \
     ShishufiedHeaders \
-    Phonograph \
     ThemePicker
+
+## Setting this as true to build our main apps, can be disabled
+BOOTLEGGERS_BUILD_APPS_BUNDLE ?= true
+## Adding our app bundle for AOSP and GApps
+ifeq ($(BOOTLEGGERS_BUILD_APPS_BUNDLE),true)
+    ifeq ($(WITH_GAPPS),true)
+        # TODO: Add our gapps bundle
+    else
+        PRODUCT_PACKAGES += \
+            Browser2 \
+            Calendar \
+            Camera2 \
+            Email \
+            Gallery2 \
+            Etar \
+            QPGallery \
+            MiXplorerPrebuilt \
+            Jelly \
+            Phonograph
+    endif
+endif
 
 ifeq ($(BOOTLEGGERS_BUILD_TYPE),Shishufied)
     PRODUCT_PACKAGES += \
