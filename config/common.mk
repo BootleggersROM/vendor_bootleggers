@@ -198,3 +198,7 @@ endif
 include vendor/bootleggers/config/btlg_main.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
+
+# RRO Overlays
+PRODUCT_PACKAGES += \
+    NavigationBarModeGesturalOverlayFS
