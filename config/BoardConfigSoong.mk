@@ -27,6 +27,7 @@ SOONG_CONFIG_bootleggersGlobalVars += \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
     camera_needs_client_info \
+    camera_needs_client_info_lib \
     disable_postrender_cleanup \
     has_legacy_camera_hal1 \
     has_memfd_backport \
@@ -96,6 +97,7 @@ SOONG_CONFIG_bootleggersGlobalVars_target_process_sdk_version_override := $(TARG
 SOONG_CONFIG_bootleggersGlobalVars_target_surfaceflinger_udfps_lib := $(TARGET_SURFACEFLINGER_UDFPS_LIB)
 SOONG_CONFIG_bootleggersGlobalVars_uses_camera_parameter_lib := $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY)
 SOONG_CONFIG_bootleggersGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
+SOONG_CONFIG_bootleggersGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_bootleggersQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
 else
