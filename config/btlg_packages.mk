@@ -64,8 +64,8 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Long Screenshot
-#PRODUCT_PACKAGES += \
-#    StitchImage
+PRODUCT_PACKAGES += \
+    StitchImage
 
 # DU-Fonts
 PRODUCT_PACKAGES += \
