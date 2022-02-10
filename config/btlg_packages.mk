@@ -29,6 +29,11 @@ ifeq ($(BOOTLEGGERS_BUILD_APPS_BUNDLE),true)
             Jelly \
             Phonograph
     endif
+else
+    PRODUCT_PACKAGES += \
+        Jelly \
+        Camera2
+        
 endif
 
 ifeq ($(BOOTLEGGERS_BUILD_TYPE),Shishufied)
