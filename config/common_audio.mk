@@ -31,7 +31,7 @@ PRODUCT_COPY_FILES += \
     
     
 # Default notification/alarm sounds
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.notification_sound=Electra.ogg \
     ro.config.alarm_alert=DreamDelyrium.ogg \
     ro.config.ringtone=Missingnissim.ogg
