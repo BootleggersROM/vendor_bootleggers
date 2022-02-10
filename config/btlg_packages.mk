@@ -23,6 +23,7 @@ ifeq ($(BOOTLEGGERS_BUILD_APPS_BUNDLE),true)
             Email \
             Gallery2 \
             Etar \
+            NotallyPrebuilt \
             QPGallery \
             MiXplorerPrebuilt \
             Jelly \
