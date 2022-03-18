@@ -2,9 +2,9 @@ PRODUCT_BRAND ?= Bootleggers
 
 # Versioning System
 # Bootleggers version over here.
-PRODUCT_VERSION_MAJOR = Sambun
+PRODUCT_VERSION_MAJOR = Sambunimbo
 PRODUCT_VERSION_MINOR = niceparse.N
-BOOTLEGGERS_VERSION_NUMBER := 6.7-Alpha
+BOOTLEGGERS_VERSION_NUMBER := 6.8-Alpha
 BOOTLEGGERS_SONGCODEURL = https://cutt.ly/xc0pxEL
 BOOTLEGGERS_EPOCH := $(shell date +%s)
 BOOTLEGGERS_POSTFIX := -$(shell date -d @$(BOOTLEGGERS_EPOCH) +"%Y%m%d-%H%M%S")
