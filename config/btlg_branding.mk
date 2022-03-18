@@ -31,10 +31,13 @@ BOOTLEGGERS_VERSION := BootleggersROM-$(PRODUCT_VERSION_MAJOR)4$(BOOTLEGGERS_BUI
 #        bootanimation3.zip
 #endif
 
-# Wallpaper overlay selection for widescreen devices.
-ifeq ($(BOOTLEGGERS_NOTCHED),true)
+# Wallpaper overlay selection for larger (18:9) devices
+#
+# Enabled by default because most phones uses a 18:9 resolution, but can be disabled
+BOOTLEGGERS_IS_LARGE_DEVICE ?= true
+ifeq ($(BOOTLEGGERS_IS_LARGE_DEVICE),true)
     PRODUCT_PACKAGE_OVERLAYS += \
-        vendor/bootleggers/overlay/wallpaper/widebois
+        vendor/bootleggers/overlay/wallpaper/largelads
 else
     PRODUCT_PACKAGE_OVERLAYS += \
         vendor/bootleggers/overlay/wallpaper/common
