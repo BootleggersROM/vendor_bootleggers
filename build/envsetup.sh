@@ -713,7 +713,7 @@ function bootlegrebase() {
 }
 
 function mka() {
-    m
+    m "$@"
 }
 
 function cmka() {
