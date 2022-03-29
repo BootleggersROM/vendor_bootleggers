@@ -49,6 +49,7 @@ LOCAL_SRC_FILES := app/$(LOCAL_MODULE).apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_OPTIONAL_USES_LIBRARIES := com.sec.android.app.multiwindow
 LOCAL_OVERRIDES_PACKAGES := Gallery Gallery2 SnapdragonGallery VanillaGallery
 include $(BUILD_PREBUILT)
 
@@ -59,6 +60,7 @@ LOCAL_SRC_FILES := app/$(LOCAL_MODULE).apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_OPTIONAL_USES_LIBRARIES := com.sec.android.app.multiwindow
 LOCAL_OVERRIDES_PACKAGES := CMFileManager Amaze AmazeFM crDroidFileManager
 include $(BUILD_PREBUILT)
 
