@@ -2,7 +2,7 @@
 ## Core apps
 PRODUCT_PACKAGES += \
     WallpaperPicker2 \
-    ShishuWalls \
+    ShishufiedWalls \
     LatinIME \
     OmniStyle \
     OmniJaws \
