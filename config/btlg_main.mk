@@ -137,8 +137,8 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     vendor/bootleggers/overlay
 
 # Call our special makefiles before anything
-include vendor/bootleggers/config/btlg_branding.mk
 include vendor/bootleggers/config/btlg_packages.mk
+include vendor/bootleggers/config/btlg_branding.mk
 
 # Call special ringtones makefile
 include vendor/bootleggers/config/common_audio.mk

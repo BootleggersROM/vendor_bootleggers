@@ -4,6 +4,7 @@ PRODUCT_PACKAGES += \
     WallpaperPicker2 \
     ShishufiedWalls \
     LatinIME \
+    MiXplorerPrebuilt \
     OmniStyle \
     OmniJaws \
     ShishufiedHeaders \
@@ -11,29 +12,31 @@ PRODUCT_PACKAGES += \
 
 ## Setting this as true to build our main apps, can be disabled
 BOOTLEGGERS_BUILD_APPS_BUNDLE ?= true
+## Setting this as false to not ship gapps, can be enabled
+WITH_GAPPS ?= false
+
 ## Adding our app bundle for AOSP and GApps
 ifeq ($(BOOTLEGGERS_BUILD_APPS_BUNDLE),true)
-    ifeq ($(WITH_GAPPS),true)
-        # TODO: Add our gapps bundle
-    else
         PRODUCT_PACKAGES += \
             Browser2 \
             Calendar \
             Camera2 \
             Email \
-            Gallery2 \
             Etar \
-            NotallyPrebuilt \
-            QPGallery \
-            MiXplorerPrebuilt \
             Jelly \
-            PrebuiltAuxio
-    endif
+            NotallyPrebuilt \
+            PrebuiltAuxio \
+            QPGallery
+
 else
     PRODUCT_PACKAGES += \
         Jelly \
         Camera2
-        
+endif
+
+# Inlcude Google Apps
+ifeq ($(WITH_GAPPS),true)
+    $(call inherit-product, vendor/gapps/basic/config.mk)
 endif
 
 ifeq ($(BOOTLEGGERS_BUILD_TYPE),Shishufied)
