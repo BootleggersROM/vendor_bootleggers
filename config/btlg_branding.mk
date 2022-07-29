@@ -22,14 +22,14 @@ endif
 
 BOOTLEGGERS_VERSION := BootleggersROM-$(PRODUCT_VERSION_MAJOR)4$(BOOTLEGGERS_BUILD).$(BOOTLEGGERS_VERSION_NUMBER)-$(BOOTLEGGERS_BUILD_TYPE)$(BOOTLEGGERS_POSTFIX)
 
-#PRODUCT_PACKAGES += \
-#    bootanimation.zip
+PRODUCT_PACKAGES += \
+    bootanimation.zip
 
-#ifneq ($(TARGET_USE_SINGLE_BOOTANIMATION),true)
-#    PRODUCT_PACKAGES += \
-#        bootanimation2.zip \
-#        bootanimation3.zip
-#endif
+ifneq ($(TARGET_USE_SINGLE_BOOTANIMATION),true)
+    PRODUCT_PACKAGES += \
+        bootanimation2.zip \
+        bootanimation3.zip
+endif
 
 # Wallpaper overlay selection for larger (18:9) devices
 #
