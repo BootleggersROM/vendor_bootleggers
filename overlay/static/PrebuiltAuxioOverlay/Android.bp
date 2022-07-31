@@ -1,0 +1,10 @@
+android_app {
+    name: "PrebuiltAuxioOverlay",
+    platform_apis: true,
+    resource_dirs: ["res"],
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+    installable: false
+}

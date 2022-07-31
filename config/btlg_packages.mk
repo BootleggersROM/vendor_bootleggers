@@ -27,7 +27,7 @@ ifeq ($(BOOTLEGGERS_BUILD_APPS_BUNDLE),true)
             QPGallery \
             MiXplorerPrebuilt \
             Jelly \
-            Phonograph
+            PrebuiltAuxio
     endif
 else
     PRODUCT_PACKAGES += \

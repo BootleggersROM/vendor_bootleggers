@@ -107,6 +107,18 @@ LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_OVERRIDES_PACKAGES := Launcher3 Launcher3Go Launcher3QuickStep Launcher3QuickStepGo Quickstep
 include $(BUILD_PREBUILT)
 
+#Music App
+include $(CLEAR_VARS)
+LOCAL_MODULE := PrebuiltAuxio
+LOCAL_SRC_FILES := app/$(LOCAL_MODULE).apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_REQUIRED_MODULES := PrebuiltAuxioOverlay
+LOCAL_PRODUCT_MODULE := true
+LOCAL_OPTIONAL_USES_LIBRARIES := androidx.window.extensions androidx.window.sidecar
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
+
 #Notes App
 include $(CLEAR_VARS)
 LOCAL_MODULE := NotallyPrebuilt
