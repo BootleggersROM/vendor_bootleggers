@@ -48,6 +48,10 @@ PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/etc/permissions/privapp-permissions-bootleg.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-bootleg.xml \
     vendor/bootleggers/prebuilt/common/etc/permissions/privapp-permissions-bootleg.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-bootleg.xml
 
+# our sysconfig
+PRODUCT_COPY_FILES += \
+    vendor/bootleggers/config/permissions/bootleg-sysconfig.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/bootleg-sysconfig.xml
+
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/config/permissions/backup.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/backup.xml
