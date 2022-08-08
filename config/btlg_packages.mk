@@ -14,6 +14,7 @@ PRODUCT_PACKAGES += \
 BOOTLEGGERS_BUILD_APPS_BUNDLE ?= true
 ## Setting this as false to not ship gapps, can be enabled
 WITH_GAPPS ?= false
+WITH_MICROG ?= false
 
 ## Adding our app bundle for AOSP and GApps
 ifeq ($(BOOTLEGGERS_BUILD_APPS_BUNDLE),true)
@@ -37,6 +38,11 @@ endif
 # Inlcude Google Apps
 ifeq ($(WITH_GAPPS),true)
     $(call inherit-product, vendor/gapps/basic/config.mk)
+endif
+
+# Inlcude MicroG
+ifeq ($(WITH_MICROG),true)
+    $(call inherit-product, vendor/foss/foss.mk)
 endif
 
 ifeq ($(BOOTLEGGERS_BUILD_TYPE),Shishufied)
