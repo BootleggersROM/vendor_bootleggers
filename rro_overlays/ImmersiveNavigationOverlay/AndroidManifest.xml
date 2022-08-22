@@ -16,12 +16,12 @@
  */
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.krypton.overlay.systemui.navbar.gestural"
+        package="com.bootleg.overlay.immnav.gestural"
         android:versionCode="1"
         android:versionName="1.0">
     <overlay android:targetPackage="android"
         android:category="com.android.internal.navigation_bar_mode"
-        android:priority="69"/>
+        android:priority="1"/>
 
-    <application android:label="@string/navigation_bar_mode_title" android:hasCode="false"/>
+    <application android:label="@string/immersive_navigation_mode_title" android:hasCode="false"/>
 </manifest>
