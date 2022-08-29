@@ -31,7 +31,6 @@ SOONG_CONFIG_bootleggersGlobalVars += \
     disable_postrender_cleanup \
     has_legacy_camera_hal1 \
     needs_camera_boottime \
-    needs_netd_direct_connect_rule \
     target_init_vendor_lib \
     target_inputdispatcher_skip_event_key \
     target_ld_shim_libs \
@@ -59,7 +58,6 @@ endif
 SOONG_CONFIG_bootleggersGlobalVars_disable_postrender_cleanup := $(TARGET_DISABLE_POSTRENDER_CLEANUP)
 SOONG_CONFIG_bootleggersGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA_HAL1)
 SOONG_CONFIG_bootleggersGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
-SOONG_CONFIG_bootleggersGlobalVars_needs_netd_direct_connect_rule := $(TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE)
 SOONG_CONFIG_bootleggersGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_ARRAY)
 SOONG_CONFIG_bootleggersNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
 SOONG_CONFIG_bootleggersQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
