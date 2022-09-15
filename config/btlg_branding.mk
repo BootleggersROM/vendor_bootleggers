@@ -47,15 +47,3 @@ ifneq ($(TARGET_USE_SINGLE_BOOTANIMATION),true)
         bootanimation2.zip \
         bootanimation3.zip
 endif
-
-# Wallpaper overlay selection for larger (18:9) devices
-#
-# Enabled by default because most phones uses a 18:9 resolution, but can be disabled
-BOOTLEGGERS_IS_LARGE_DEVICE ?= true
-ifeq ($(BOOTLEGGERS_IS_LARGE_DEVICE),true)
-    PRODUCT_PACKAGE_OVERLAYS += \
-        vendor/bootleggers/overlay/wallpaper/largelads
-else
-    PRODUCT_PACKAGE_OVERLAYS += \
-        vendor/bootleggers/overlay/wallpaper/common
-endif

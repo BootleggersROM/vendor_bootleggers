@@ -82,16 +82,9 @@ endif
 PRODUCT_PACKAGES += \
     StitchImage
 
-# DU-Fonts
-PRODUCT_PACKAGES += \
-    CustomFonts
-
 # Cutout control overlay
 #PRODUCT_PACKAGES += \
 #    NoCutoutOverlay
-
-# Call the overlays folder to build all the rest
--include packages/overlays/Shishufied/shishu.mk
 
 # Include Potato volume panels
 -include packages/modules/VolumePanelPlugins/plugins.mk
