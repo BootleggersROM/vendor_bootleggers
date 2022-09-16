@@ -28,6 +28,7 @@ SOONG_CONFIG_bootleggersGlobalVars += \
     camera_needs_client_info \
     camera_needs_client_info_lib \
     has_legacy_camera_hal1 \
+    gralloc_handle_has_reserved_size \
     needs_camera_boottime \
     target_init_vendor_lib \
     target_inputdispatcher_skip_event_key \
@@ -52,6 +53,7 @@ SOONG_CONFIG_bootleggersQcomVars += \
 endif
 
 # Soong bool variables
+SOONG_CONFIG_bootleggersGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_bootleggersGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA_HAL1)
 SOONG_CONFIG_bootleggersGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 SOONG_CONFIG_bootleggersGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_ARRAY)
@@ -61,6 +63,7 @@ SOONG_CONFIG_bootleggersQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_US
 
 # Set default values
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
+TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY ?= 0
 TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY ?= libcamera_parameters
