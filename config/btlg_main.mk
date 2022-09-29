@@ -19,7 +19,8 @@ PRODUCT_COPY_FILES += \
 
 # Ignore overlays on RRO builds
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    vendor/bootleggers/overlay
+    vendor/bootleggers/overlay \
+    vendor/shishufied/overlays
 
 # Call our special makefiles before anything
 include vendor/bootleggers/config/btlg_packages.mk
