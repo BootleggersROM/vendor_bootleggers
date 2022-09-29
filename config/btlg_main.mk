@@ -1,13 +1,3 @@
-# Markup libs
-ifeq ($(TARGET_BOOTLEG_ARCH),arm64)
-    PRODUCT_COPY_FILES += \
-           vendor/bootleggers/prebuilt/common/lib/libsketchology_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsketchology_native.so \
-           vendor/bootleggers/prebuilt/common/lib64/libsketchology_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsketchology_native.so
-else
-    PRODUCT_COPY_FILES += \
-           vendor/bootleggers/prebuilt/common/lib/libsketchology_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsketchology_native.so
-endif
-
 # Weather
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/etc/permissions/com.android.providers.weather.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.android.providers.weather.xml \
