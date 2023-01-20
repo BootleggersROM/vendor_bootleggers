@@ -33,7 +33,7 @@ endif
 
 # Inlcude Google Apps
 ifeq ($(WITH_GAPPS),true)
-    $(call inherit-product, vendor/gapps/basic/config.mk)
+    $(call inherit-product, vendor/gapps/common/common-vendor.mk)
 endif
 
 # Inlcude MicroG
