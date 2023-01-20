@@ -68,7 +68,7 @@ else
 endif
 
 # Face Unlock
-TARGET_FACE_UNLOCK_SUPPORTED ?= false
+TARGET_FACE_UNLOCK_SUPPORTED ?= true
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
 PRODUCT_PACKAGES += \
     FaceUnlockService
