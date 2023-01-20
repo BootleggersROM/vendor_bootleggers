@@ -3,8 +3,10 @@
 PRODUCT_PACKAGES += \
     WallpaperPicker2 \
     ShishufiedWalls \
+    Camera2 \
     LatinIME \
     MiXplorerPrebuilt \
+    Jelly \
     OmniStyle \
     OmniJaws \
     ShishufiedHeaders \
@@ -18,21 +20,15 @@ WITH_MICROG ?= false
 
 ## Adding our app bundle for AOSP and GApps
 ifeq ($(BOOTLEGGERS_BUILD_APPS_BUNDLE),true)
-        PRODUCT_PACKAGES += \
-            Browser2 \
-            Calendar \
-            Camera2 \
-            Email \
-            Etar \
-            Jelly \
-            NotallyPrebuilt \
-            PrebuiltAuxio \
-            QPGallery
-
-else
     PRODUCT_PACKAGES += \
-        Jelly \
-        Camera2
+        Browser2 \
+        Calendar \
+        Email \
+        Etar \
+        ExactCalculator \
+        NotallyPrebuilt \
+        PrebuiltAuxio \
+        QPGallery
 endif
 
 # Inlcude Google Apps
