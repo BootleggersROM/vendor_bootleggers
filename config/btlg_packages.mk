@@ -1,15 +1,14 @@
 # Our Bootleg apps bundle
 ## Core apps
 PRODUCT_PACKAGES += \
-    WallpaperPicker2 \
-    ShishufiedWalls \
     Camera2 \
+    Jelly \
     LatinIME \
     MiXplorerPrebuilt \
-    Jelly \
     OmniStyle \
     OmniJaws \
     ShishufiedHeaders \
+    ShishufiedWalls \
     ThemePicker
 
 ## Setting this as true to build our main apps, can be disabled
@@ -21,7 +20,6 @@ WITH_MICROG ?= false
 ## Adding our app bundle for AOSP and GApps
 ifeq ($(BOOTLEGGERS_BUILD_APPS_BUNDLE),true)
     PRODUCT_PACKAGES += \
-        Browser2 \
         Calendar \
         Email \
         Etar \
