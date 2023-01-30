@@ -10,7 +10,7 @@ BOOTLEGGERS_EPOCH := $(shell date +%s)
 BOOTLEGGERS_POSTFIX := -$(shell date -d @$(BOOTLEGGERS_EPOCH) +"%Y%m%d-%H%M%S")
 
 ifndef BOOTLEGGERS_RELEASE_STATUS
-    BOOTLEGGERS_RELEASE_STATUS := Testing
+    BOOTLEGGERS_BUILD_TYPE := Unshishufied
 endif
 
 ifeq ($(BOOTLEGGERS_BUILD_APPS_BUNDLE),true)
@@ -27,7 +27,6 @@ else
     else
         BOOTLEGGERS_BUILD_TYPE := $(BOOTLEGGERS_RELEASE_STATUS)-Minimal
     endif
-
 endif
 
 ifdef BOOTLEGGERS_BUILD_EXTRA
