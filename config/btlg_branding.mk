@@ -3,9 +3,9 @@ PRODUCT_BRAND ?= Bootleggers
 # Versioning System
 # Bootleggers version over here.
 PRODUCT_VERSION_MAJOR = Tirimbino
-PRODUCT_VERSION_MINOR = niceparse.Nice
-BOOTLEGGERS_VERSION_NUMBER := 6.9-Alpha
-BOOTLEGGERS_SONGCODEURL = https://cutt.ly/AVfICef
+PRODUCT_VERSION_MINOR = niceparse.Night_Drive
+BOOTLEGGERS_VERSION_NUMBER := 7.0-Stable
+BOOTLEGGERS_SONGCODEURL = https://cutt.ly/yL56Rk3
 BOOTLEGGERS_EPOCH := $(shell date +%s)
 BOOTLEGGERS_POSTFIX := -$(shell date -d @$(BOOTLEGGERS_EPOCH) +"%Y%m%d-%H%M%S")
 
