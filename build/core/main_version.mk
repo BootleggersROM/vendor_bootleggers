@@ -14,3 +14,12 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.bootleggers.songcodeurl=$(BOOTLEGGERS_SONGCODEURL) \
     ro.bootleggers.display.version=$(BOOTLEGGERS_VERSION) \
     ro.bootleggers.build.date=$(BOOTLEGGERS_EPOCH)
+
+# Device maintainers
+# Fallback string
+DEVICE_MAINTAINERS ?= "I-forgor"
+
+ifeq ($(BOOTLEGGERS_BUILD_TYPE),Shishufied)
+    ADDITIONAL_SYSTEM_PROPERTIES += \
+        ro.bootleggers.maintainer=$(DEVICE_MAINTAINERS)
+endif
