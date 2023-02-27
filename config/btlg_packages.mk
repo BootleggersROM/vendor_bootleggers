@@ -7,6 +7,7 @@ PRODUCT_PACKAGES += \
     MiXplorerPrebuilt \
     OmniStyle \
     OmniJaws \
+    ParallelSpace \
     ShishufiedHeaders \
     ShishufiedWalls \
     ThemePicker
