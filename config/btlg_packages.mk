@@ -1,7 +1,6 @@
 # Our Bootleg apps bundle
 ## Core apps
 PRODUCT_PACKAGES += \
-    Camera2 \
     Jelly \
     LatinIME \
     MiXplorerPrebuilt \
@@ -14,9 +13,23 @@ PRODUCT_PACKAGES += \
 
 ## Setting this as true to build our main apps, can be disabled
 BOOTLEGGERS_BUILD_APPS_BUNDLE ?= true
+## Whether we want to use Aperture instead of Camera2, can be disabled
+BOOTLEGGERS_DEVICE_SUPPORTS_APERTURE ?= true
 ## Setting this as false to not ship gapps, can be enabled
 WITH_GAPPS ?= false
 WITH_MICROG ?= false
+
+## Whether the device supports Aperture or want to use the regular camera2
+ifeq ($(BOOTLEGGERS_DEVICE_SUPPORTS_APERTURE),true)
+    PRODUCT_PACKAGES += \
+        Aperture
+
+    PRODUCT_PACKAGE_OVERLAYS += \
+        vendor/bootleggers/overlay/qrscan/aperture
+else
+    PRODUCT_PACKAGES += \
+        Camera2
+endif
 
 ## Adding our app bundle for AOSP and GApps
 ifeq ($(BOOTLEGGERS_BUILD_APPS_BUNDLE),true)
