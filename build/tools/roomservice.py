@@ -30,7 +30,7 @@ import urllib.parse
 import urllib.request
 
 custom_local_manifest = ".repo/local_manifests/local_bootleggers.xml"
-custom_default_revision = "sambunimbo"
+custom_default_revision = "tirimbino"
 custom_dependencies = "bootleg.dependencies"
 org_manifest = "bootleg-devices"  # leave empty if org is provided in manifest
 org_display = "BootleggersROM-Devices"  # needed for displaying
