@@ -200,12 +200,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/bootleggers/overlay/common
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/bootleggers/config/partner_gms.mk
 
-ifeq ($(TARGET_PROVIDES_TELEPHONY_EXT),)
-ifeq ($(TARGET_REQUIRES_TELEPHONY_EXT),true)
-include vendor/bootleggers/config/caf_fw.mk
-endif
-endif
-
 include vendor/bootleggers/config/btlg_main.mk
 
 # RRO Overlays
